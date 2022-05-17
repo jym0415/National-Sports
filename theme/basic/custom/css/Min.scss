@@ -1,0 +1,28 @@
+#ft{
+    .ft_wr{
+        padding: 0 3rem;
+        .leftWrap{
+            .ft_cnt{
+                a{
+                    margin: 2rem;
+                }
+            }
+            .ft_company{
+                a,p{
+                    color: white;
+                }
+            }
+            .snsWrap{
+                i{
+                    color: white;
+                }
+            }
+        }
+        #logoWrap{
+            svg{
+                width: 150px;
+                fill: white;
+            }
+        }
+    }
+}
