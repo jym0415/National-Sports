@@ -1,26 +1,39 @@
 #ft{
     .ft_wr{
-        padding: 0 3rem;
         .leftWrap{
             .ft_cnt{
                 a{
-                    margin: 2rem;
+                    font-size: 0.8rem;
+                    line-height: 1.8rem;
+                    letter-spacing: 0.2rem;
                 }
             }
             .ft_company{
                 a,p{
                     color: white;
+                    font-size: 0.8rem;
+                    line-height: 2rem;
+                    letter-spacing: 0.2rem;
+                    word-wrap: break-word;
                 }
             }
             .snsWrap{
+                padding-bottom: 2rem;
                 i{
                     color: white;
+                }
+                .fa-youtube{
+                    font-size: 2rem;
+                    margin-right: 1rem;
+                }
+                .fa-instagram{
+                    font-size: 1.75rem;
                 }
             }
         }
         #logoWrap{
             svg{
-                width: 150px;
+                width: 250px;
                 fill: white;
             }
         }

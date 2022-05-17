@@ -6,12 +6,9 @@ add_stylesheet('<link rel="stylesheet" href="'.$latest_skin_url.'/style.css">', 
 $list_count = (is_array($list) && $list) ? count($list) : 0;
 ?>
 
-
-    <p class="lat_title"><?php echo $bo_subject ?></p>
-
     <?php for ($i=0; $i<$list_count; $i++) {  ?>
         
-        <?php echo $list[$i]['wr_content'] ?>
+        <p class="text-center text-md-left"><?php echo $list[$i]['wr_content'] ?></p>
 
 
 

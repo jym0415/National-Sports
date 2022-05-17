@@ -16,29 +16,30 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 <hr>
 
 <!-- 하단 시작 { -->
-<div id="ft" >
-    <div class="ft_wr d-flex justify-content-between align-items-center">
-        <div class="leftWrap">
-            <div id="ft_link" class="ft_cnt ">
-                <a href="<?php echo get_pretty_url('content', 'privacy'); ?>">개인정보취급방침</a>
-                <a href="<?php echo get_pretty_url('content', 'provision'); ?>">서비스이용약관</a>
-                <a href="<?php echo get_pretty_url('content', 'company'); ?>">회사소개</a>
+<div id="ft">
+    <div class="hjinner m-auto">
+        <div class="ft_wr d-block d-md-flex justify-content-between align-items-center">
+            <div class="leftWrap">
+                <div id="ft_link" class="ft_cnt text-center text-md-left d-block d-md-flex pt-3 pb-5">
+                    <a href="<?php echo get_pretty_url('content', 'privacy'); ?>" class="mr-md-4">개인정보취급방침</a>
+                    <a href="<?php echo get_pretty_url('content', 'provision'); ?>" class="mr-md-4">서비스이용약관</a>
+                    <a href="<?php echo get_pretty_url('content', 'company'); ?>" class="mr-md-4">회사소개</a>
+                </div>
+                <div class="ft_company pb-5">
+                    <?php echo latest ('company','companyInfo',1,100)?>
+                </div>
+                <div class="snsWrap d-flex justify-content-center justify-content-md-start">
+                    <a href="https://www.youtube.com/channel/UCHWMRiygHQuqAsG7kin_Y4Q" target="_blank" class="my-auto"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://www.instagram.com/joy_academy_/" target="_blank" class="my-auto"><i class="fa-brands fa-instagram"></i></a>
+                </div>
             </div>
-            <div class="ft_company">
-                <?php echo latest ('company','companyInfo',1,100)?>
-            </div>
-            <div class="snsWrap">
-                <a href="https://www.youtube.com/channel/UCHWMRiygHQuqAsG7kin_Y4Q" target="_blank"><i class="fa-brands fa-youtube"></i></a>
-                <a href="https://www.instagram.com/joy_academy_/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+
+            <div id="logoWrap" class="">
+                <?php echo latest('logo', 'logo', 1, 100)?>
             </div>
         </div>
-
-        <div id="logoWrap">
-            <?php echo latest('logo', 'logo', 1, 100)?>
-        </div>
-	</div>    
-
-    
+    </div>
+        
     
     <button type="button" id="top_btn">
     	<i class="fa fa-arrow-up" aria-hidden="true"></i><span class="sound_only">상단으로</span>
