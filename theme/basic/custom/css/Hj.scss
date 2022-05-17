@@ -11,14 +11,16 @@ ul, dl, ol, li, dt, dd{ list-style: none;}
 body{
     font-family: 'nexL' !important;
 }
+a:hover{
+    text-decoration: none !important;
+}
 
 /////////////// 관리자 로그아웃 ///////////////
 
 #tnb{
     left: 0;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
+    right: 3%;
+    top: 6%;
     .hd_login{
         font-family: 'nexM'
     }
@@ -29,21 +31,46 @@ body{
 
 
 #hd_wrapper{
+    @media(max-width : 991px){
+        position: relative;
+    }
     .logoBox{
+        min-width: 150px;
+        @media(max-width : 991px){
+            position: unset;
+        }
         #logo{
             max-width: 400px;
+            min-width: 144px;
             height: auto;
         }
         .snsBox{
-            i{
-                font-size: 40px;
+            @media(max-width:991px){
+                position: absolute;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                transform: translateX(-2rem);
+                justify-content: flex-end;
+                align-items: center;
+            }
+            i.fa-youtube{
+                font-size: 30px;
+                @media(max-width:991px){
+                    font-size: 20px;
+                }
+            }
+            i.fa-instagram{
+                font-size: 27px;
+                @media(max-width:991px){
+                    font-size: 20px;
+                }
             }
         }
     }    
 }
 
 #hd{
-
     #hd_wrapper{
         nav#gnb{
             position: unset;
@@ -57,6 +84,7 @@ body{
                     background-color: rgb(255, 255, 255);
                     height: 0;
                     transition: 0.5s;
+                    border-bottom: 1px solid #dee2e6;
                 }
                 &:hover:after{
                     height: 150px;
@@ -81,6 +109,7 @@ body{
                         overflow: hidden;
                         transition: 0.5s;
                         z-index: 1111;
+                        text-align: center;
                         .gnb_2da{
                             font-family: 'nexM';
                             &:hover{
@@ -90,6 +119,11 @@ body{
                     }
     
                 }
+            }
+        }
+        button#mb_menu{
+            i{
+                font-size: 23px;
             }
         }
     }    

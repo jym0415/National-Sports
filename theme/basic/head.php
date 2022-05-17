@@ -9,7 +9,7 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
 ?>
 
 <!-- 상단 시작 { -->
-<div id="hd" class='border-bottom position-relative py-3'>
+<div id="hd" class='border-bottom position-relative py-lg-3 py-1'>
     <h1 id="hd_h1">
 
     </h1>
@@ -23,9 +23,9 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
      <?php if ($is_member) {  ?>
             <div id="tnb" class="position-absolute text-right">
                 <div class="inner">
-                    <ul class="hd_login">       
+                    <ul class="hd_login d-flex justify-content-end">       
                         <?php if ($is_admin) {  ?>
-                            <li class="tnb_admin"><a href="<?php echo correct_goto_url(G5_ADMIN_URL); ?>">관리자</a></li>
+                            <li class="tnb_admin col"><a href="<?php echo correct_goto_url(G5_ADMIN_URL); ?>">관리자</a></li>
                             <li><a href="<?php echo G5_BBS_URL ?>/logout.php">로그아웃</a></li>
                         <?php }  ?>                            
                     </ul>                    
@@ -33,20 +33,20 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
             </div>
     <?php }  ?>
     <div id="hd_wrapper" class='row justify-content-between align-items-center m-auto py-2 hjinner '>
-        <div class="logoBox d-flex align-items-center col-3">                    
-            <h1 id="logo" class="col-9">
+        <div class="logoBox d-flex flex-column-reverse flex-lg-row align-items-center col-4 px-0 mx-2 mx-lg-0">                    
+            <h1 id="logo" class="col-9 px-0">
                 <a href="/joy/">
             <?php echo latest('logo', 'logo', 1, 100)?>
                 </a>
             </h1>
-            <div class="snsBox d-flex col-offset-3">
-                <a href="https://www.youtube.com/channel/UCHWMRiygHQuqAsG7kin_Y4Q" target="_blank"><i class="fa-brands fa-youtube"></i></a>
-                <a href="https://www.instagram.com/joy_academy_/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <div class="snsBox d-flex col">
+                <a href="https://www.youtube.com/channel/UCHWMRiygHQuqAsG7kin_Y4Q" target="_blank" class="my-auto"><i class="fa-brands fa-youtube col"></i></a>
+                <a href="https://www.instagram.com/joy_academy_/" target="_blank" class="my-auto"><i class="fa-brands fa-instagram"></i></a>
             </div>
         </div>
-        <nav id="gnb" class="col-9">
+        <nav id="gnb" class="col-6 px-0 d-none d-lg-block">
             <div class="gnb_wrap">
-                <ul id="gnb_1dul" class='d-lg-flex align-items-center justify-content-around'>
+                <ul id="gnb_1dul" class='d-lg-flex align-items-center justify-content-between'>
                 
                     <?php
                     $menu_datas = get_menu_db(0, true);
@@ -91,7 +91,8 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
                     <?php } ?>
                 </ul>
             </div>
-        </nav>       
+        </nav>
+        <button type="button" id="mb_menu" class="d-block d-lg-none mx-2 border-0"> <i class="fa-solid fa-bars bg-white"></i></button>       
     </div>
     
 
