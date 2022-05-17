@@ -1,0 +1,98 @@
+ul, dl, ol, li, dt, dd{ list-style: none;}
+.font2em{
+    font-size: 2em !important;
+}
+.gnb_2da{
+    font-size: 0.8em !important;
+}
+.hjinner{
+    max-width:1440px;    
+}
+body{
+    font-family: 'nexL' !important;
+}
+
+/////////////// 관리자 로그아웃 ///////////////
+
+#tnb{
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    .hd_login{
+        font-family: 'nexM'
+    }
+}
+
+/////////////// 내비게이션 ///////////////
+
+
+
+#hd_wrapper{
+    .logoBox{
+        #logo{
+            max-width: 400px;
+            height: auto;
+        }
+        .snsBox{
+            i{
+                font-size: 40px;
+            }
+        }
+    }    
+}
+
+#hd{
+
+    #hd_wrapper{
+        nav#gnb{
+            position: unset;
+            #gnb_1dul{
+                &:after{
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    top: 100%;
+                    background-color: rgb(255, 255, 255);
+                    height: 0;
+                    transition: 0.5s;
+                }
+                &:hover:after{
+                    height: 150px;
+
+                }
+                &:hover .gnb_1dli .gnb_2dul_box{
+                    height: 150px;
+                }
+                .gnb_1dli{
+                    .gnb_1da{
+                        font-family: 'nexB';
+                        &:hover{
+                            color: #FAC800;
+                        }
+                    }
+                    .gnb_2dul_box{
+                        top: 200%;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        height: 0;
+                        overflow: hidden;
+                        transition: 0.5s;
+                        z-index: 1111;
+                        .gnb_2da{
+                            font-family: 'nexM';
+                            &:hover{
+                                color: #FAC800;
+                            }
+                        }
+                    }
+    
+                }
+            }
+        }
+    }    
+}
+
+
