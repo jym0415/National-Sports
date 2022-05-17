@@ -1,0 +1,17 @@
+.swiper-container.mainSlider .swiper-wrapper .swiper-slide {
+  width: 100%;
+  padding: 0;
+  margin-bottom: 0;
+}
+
+.swiper-container.mainSlider .swiper-wrapper .swiper-slide .sw_img {
+  width: 100%;
+  margin-top: 0;
+  height: 0;
+  padding-bottom: 42%;
+  margin-bottom: 0;
+  border-radius: 4px;
+  margin-left: 0;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+}
