@@ -9,7 +9,7 @@ include_once(G5_THEME_PATH.'/head.php');
 
 <div id="mainSlider" class='overflow-hidden'>
     <div class="sliderBox ">
-        <?php echo latest('swiper_card2','mainSlider',3,10000)?>
+        <?php echo latest('swiper_card2','mainSlider',1,10000)?>
     </div>
 </div>
 <!--네서녈소식  bo_table : NEWS-->
@@ -20,7 +20,9 @@ include_once(G5_THEME_PATH.'/head.php');
 </div>
 
 <!--네셔널일상 bo_table : daily -->
-
+<div id="daily">
+    <?php echo latest('daily','daily',4,500)?>
+</div>
 
 <!--유튜브연동 bo_table : yuoutube-->
 

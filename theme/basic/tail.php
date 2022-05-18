@@ -16,33 +16,30 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 <hr>
 
 <!-- 하단 시작 { -->
-<div id="ft" >
+<div id="ft">
+    <div class="hjinner m-auto">
+        <div class="ft_wr d-block d-md-flex justify-content-between align-items-center">
+            <div class="leftWrap">
+                <div id="ft_link" class="ft_cnt text-center text-md-left d-block d-md-flex pt-3 pb-5">
+                    <a href="<?php echo get_pretty_url('content', 'privacy'); ?>" class="mr-md-4">개인정보취급방침</a>
+                    <a href="<?php echo get_pretty_url('content', 'provision'); ?>" class="mr-md-4">서비스이용약관</a>
+                    <a href="<?php echo get_pretty_url('content', 'company'); ?>" class="mr-md-4">회사소개</a>
+                </div>
+                <div class="ft_company pb-5">
+                    <?php echo latest ('company','companyInfo',1,100)?>
+                </div>
+                <div class="snsWrap d-flex justify-content-center justify-content-md-start">
+                    <a href="https://www.youtube.com/channel/UCHWMRiygHQuqAsG7kin_Y4Q" target="_blank" class="my-auto"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://www.instagram.com/joy_academy_/" target="_blank" class="my-auto"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
 
-    <div id="ft_wr">
-        <div id="ft_link" class="ft_cnt">
-            <a href="<?php echo get_pretty_url('content', 'company'); ?>">회사소개</a>
-            <a href="<?php echo get_pretty_url('content', 'privacy'); ?>">개인정보처리방침</a>
-            <a href="<?php echo get_pretty_url('content', 'provision'); ?>">서비스이용약관</a>
-            <a href="<?php echo get_device_change_url(); ?>">모바일버전</a>
+            <div id="logoWrap" class="">
+                <?php echo latest('logo', 'logo', 1, 100)?>
+            </div>
         </div>
-        <div id="ft_company" class="ft_cnt">
-        	<h2>사이트 정보</h2>
-	        <p class="ft_info">
-	        	회사명 : 회사명 / 대표 : 대표자명<br>
-				주소  : OO도 OO시 OO구 OO동 123-45<br>
-				사업자 등록번호  : 123-45-67890<br>
-				전화 :  02-123-4567  팩스  : 02-123-4568<br>
-				통신판매업신고번호 :  제 OO구 - 123호<br>
-				개인정보관리책임자 :  정보책임자명<br>
-			</p>
-	    </div>
-       
+    </div>
         
-		
-	</div>      
-        <!-- <div id="ft_catch"><img src="<?php echo G5_IMG_URL; ?>/ft_logo.png" alt="<?php echo G5_VERSION ?>"></div> -->
-        <div id="ft_copy">Copyright &copy; <b>소유하신 도메인.</b> All rights reserved.</div>
-    
     
     <button type="button" id="top_btn">
     	<i class="fa fa-arrow-up" aria-hidden="true"></i><span class="sound_only">상단으로</span>
@@ -69,6 +66,8 @@ if ($config['cf_analytics']) {
 
 <!-- } 하단 끝 -->
 <script src="<?php echo G5_THEME_URL?>/custom/js/customSwiper8.1.4.js?ver=<?php echo time(); ?>"></script>
+
+
 <script>
 $(function() {
     // 폰트 리사이즈 쿠키있으면 실행

@@ -6,10 +6,12 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 add_stylesheet('<link rel="stylesheet" href="'.$latest_skin_url.'/style.css">', 0);
 $thumb_width = 350;
 $thumb_height = 120;
+$list_count = (is_array($list) && $list) ? count($list) : 0;
+
 ?>
 <!--  -->
-<div class="swiper-container swiper <?php echo $bo_table; ?>">
-    <div class="swiper-wrapper">
+
+   
 
         <?php
         for ($i=0; $i<count($list); $i++) {
@@ -23,22 +25,26 @@ $thumb_height = 120;
         }
         //$img_content = '<img src="'.$img.'" alt="'.$thumb['alt'].'" >';
         $img_content = $img;
-        ?>
-
-        <div class="swiper-slide" onclick="location.href='<?php echo $list[$i]['href'] ?>';" style="cursor: pointer;">            
-            <div class="sw_img" style="background-image: url('<?php echo $img_content; ?>');">
-                <?php echo $list[$i]['wr_subject'] ;?> 
-                <?php echo $list[$i]['wr_content'] ;?>     
-            </div>             
-        </div>
-
-        
-
+        ?>  
+        <div class="swiperBox  ">
+                <div class="position-relative swiper-container swiper <?php echo $bo_table; ?>">
+                    <div class="swiper-wrapper" style="cursor: pointer;">            
+                        <img  src="<?php echo $list[$i][file][0][path].'/'.$list[$i][file][0][file]; ?>" class="swiper-slide img-fluid">
+                        <img src="<?php echo $list[$i][file][1][path].'/'.$list[$i][file][1][file]; ?>" class="swiper-slide img-fluid">
+                        <img src="<?php echo $list[$i][file][2][path].'/'.$list[$i][file][2][file]; ?>" class="swiper-slide img-fluid">
+                    </div>
+                    <div class="sw_text position-absolute">
+                        <div class="sw_sub"><?php echo $list[$i]['wr_subject'] ;?></div>     
+                        <div class="sw_con"><?php echo $list[$i]['wr_content'] ;?></div>     
+                    </div>
+                    <!-- 페이징 -->
+                    <div class="swiper-pagination swiper-pagination1 main-pagination"></div>
+                </div>
+            </div>
         <?php }  ?>
 
-    </div>
-    <!-- 페이징 -->
-    <div class="swiper-pagination swiper-pagination1"></div>
+    
+
     
     <!-- 좌우버튼 활성화-->
     <!-- {
@@ -46,4 +52,4 @@ $thumb_height = 120;
     <div class="swiper-button-prev"></div>
     } -->
     
-</div>
+
