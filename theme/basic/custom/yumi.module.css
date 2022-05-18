@@ -1,1 +1,1 @@
-.sw_text{top:0;left:0;bottom:0;right:0;z-index:99;color:#000;font-family:nexL;-webkit-transform:translate(4%, 8%);transform:translate(4%, 8%)}.sw_text .sw_sub{font-size:1rem;font-family:'nexM'}@media (min-width: 768px){.sw_text{-webkit-transform:translate(22%, 25%);transform:translate(22%, 25%);font-size:1rem}.sw_text .sw_sub{font-size:2rem}}
+.sw_text{top:10%;left:1rem;bottom:0;right:0;z-index:99;color:#000;font-family:nexL}.sw_text .sw_sub{font-size:1rem;font-family:'nexM'}@media (min-width: 768px){.sw_text{top:25%;left:25%;font-size:1rem}.sw_text .sw_sub{font-size:2rem}}

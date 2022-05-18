@@ -19,20 +19,21 @@
 }
 .sw_text{
   
-    top: 0;
-    left: 0;
+    top: 10%;
+    left: 1rem;
     bottom: 0;
     right: 0;
     z-index: 99;
     color: #000;
     font-family: nexL;
-    transform: translate(4%, 8%);
+
     .sw_sub{
         font-size: 1rem;
         font-family: 'nexM';
     }
     @media(min-width:768px){
-        transform: translate(22%, 25%);
+        top: 25%;
+        left: 25%;
         font-size: 1rem;
         .sw_sub{
             font-size: 2rem;}

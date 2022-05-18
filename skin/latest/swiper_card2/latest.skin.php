@@ -33,7 +33,7 @@ $list_count = (is_array($list) && $list) ? count($list) : 0;
                         <img src="<?php echo $list[$i][file][1][path].'/'.$list[$i][file][1][file]; ?>" class="swiper-slide img-fluid">
                         <img src="<?php echo $list[$i][file][2][path].'/'.$list[$i][file][2][file]; ?>" class="swiper-slide img-fluid">
                     </div>
-                    <div class="sw_text position-absolute">
+                    <div class="sw_text position-absolute" data-aos="fade-up">
                         <div class="sw_sub"><?php echo $list[$i]['wr_subject'] ;?></div>     
                         <div class="sw_con"><?php echo $list[$i]['wr_content'] ;?></div>     
                     </div>
