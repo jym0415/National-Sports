@@ -39,3 +39,38 @@
         }
     }
 }
+#news{
+    .hjinner{
+        .textWrap{
+            .subject{
+                font-size: 2rem;
+                font-family: 'nexB';
+            }
+            .table{
+                margin-bottom: 0;
+                top: 0;
+                right: 0;
+                font-size: 6rem;
+                width: fit-content;
+                font-family: 'nexB';
+                color: #c9c9c9c9;
+                transform: translate(0%, 10%);
+            }
+        }
+        .newsWrap{
+            .box{
+                border-right: 1px solid #c9c9c9c9;
+                .name{
+                    font-size: 1.2rem;
+                    font-family: 'nexM';
+                }
+                .date{
+
+                }
+                .nsbtn{
+
+                }
+            }
+        }
+    }
+}

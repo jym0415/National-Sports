@@ -17,8 +17,12 @@ include_once(G5_THEME_PATH.'/head.php');
         </div>
     </div>
 </div>
+
 <div id="news">
-    
+    <div class="hjinner m-auto mt-5 pt-5">
+        <?php echo latest('news','NEWS',4,500)?>
+    </div>
 </div>
+
 <?php
 include_once(G5_THEME_PATH.'/tail.php');

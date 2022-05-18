@@ -25,15 +25,10 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
                     <a href="<?php echo get_pretty_url('content', 'provision'); ?>" class="mr-md-4">서비스이용약관</a>
                     <a href="<?php echo get_pretty_url('content', 'company'); ?>" class="mr-md-4">회사소개</a>
                 </div>
-                <div class="ft_company pb-5">
+                <div class="ft_company pb-3">
                     <?php echo latest ('company','companyInfo',1,100)?>
                 </div>
-                <div class="snsWrap d-flex justify-content-center justify-content-md-start">
-                    <a href="https://www.youtube.com/channel/UCHWMRiygHQuqAsG7kin_Y4Q" target="_blank" class="my-auto"><i class="fa-brands fa-youtube"></i></a>
-                    <a href="https://www.instagram.com/joy_academy_/" target="_blank" class="my-auto"><i class="fa-brands fa-instagram"></i></a>
-                </div>
             </div>
-
             <div id="logoWrap" class="">
                 <?php echo latest('logo', 'logo', 1, 100)?>
             </div>
