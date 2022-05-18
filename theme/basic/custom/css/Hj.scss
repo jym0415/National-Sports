@@ -21,6 +21,7 @@ a:hover{
     left: 0;
     right: 3%;
     top: 6%;
+    z-index: 1000;
     .hd_login{
         font-family: 'nexM'
     }
@@ -49,8 +50,9 @@ a:hover{
                 position: absolute;
                 right: 0;
                 top: 0;
+                left: 0;
                 bottom: 0;
-                transform: translateX(-2rem);
+                transform: translateX(-12%);
                 justify-content: flex-end;
                 align-items: center;
             }
@@ -74,26 +76,40 @@ a:hover{
     #hd_wrapper{
         nav#gnb{
             position: unset;
+            #navbarNavDropdown{
+                left: 0;
+                right: 0;
+                top: 100%;                
+            @media (min-width: 992px){
+                    position: unset !important;
+                    &:after{
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        right: 0;
+                        top: 100%;
+                        background-color: rgb(255, 255, 255);
+                        height: 0;
+                        transition: 0.5s;
+                        border-bottom: 1px solid #dee2e6;
+                    }
+                    &:hover:after,             
+                    &:hover #gnb_1dul .gnb_1dli .gnb_2dul_box{
+                        height: 150px;
+                    }
+                }
+            }
             #gnb_1dul{
-                &:after{
-                    content: "";
-                    position: absolute;
-                    left: 0;
-                    right: 0;
-                    top: 100%;
-                    background-color: rgb(255, 255, 255);
-                    height: 0;
-                    transition: 0.5s;
-                    border-bottom: 1px solid #dee2e6;
-                }
-                &:hover:after{
-                    height: 150px;
-
-                }
-                &:hover .gnb_1dli .gnb_2dul_box{
-                    height: 150px;
-                }
+                @media(max-width:991px){
+                    position: relative;
+                    background-color: white;
+                }                
                 .gnb_1dli{
+                    @media(max-width:991px){
+                        &.show .gnb_2dul_box{
+                            height: 120px;
+                        }
+                    }
                     .gnb_1da{
                         font-family: 'nexB';
                         &:hover{
@@ -101,7 +117,7 @@ a:hover{
                         }
                     }
                     .gnb_2dul_box{
-                        top: 200%;
+                        top: 100%;
                         left: 0;
                         right: 0;
                         bottom: 0;
@@ -110,6 +126,10 @@ a:hover{
                         transition: 0.5s;
                         z-index: 1111;
                         text-align: center;
+                        @media(max-width : 991px){
+                            position: relative !important;
+                            text-align: left;
+                        }
                         .gnb_2da{
                             font-family: 'nexM';
                             &:hover{
@@ -120,13 +140,16 @@ a:hover{
     
                 }
             }
-        }
-        button#mb_menu{
-            i{
-                font-size: 23px;
+            button.navbar-toggler{
+                outline: unset;
+                i{
+                    font-size: 23px;
+                }
             }
-        }
+        }        
     }    
 }
+
+
 
 

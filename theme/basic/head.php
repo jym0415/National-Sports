@@ -9,7 +9,7 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
 ?>
 
 <!-- 상단 시작 { -->
-<div id="hd" class='border-bottom position-relative py-lg-3 py-1'>
+<div id="hd" class='position-relative py-lg-0 py-3 container-fluid'>
     <h1 id="hd_h1">
 
     </h1>
@@ -32,7 +32,7 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
                 </div>
             </div>
     <?php }  ?>
-    <div id="hd_wrapper" class='row justify-content-between align-items-center m-auto py-2 hjinner '>
+    <div id="hd_wrapper" class='row justify-content-between align-items-center m-auto '>
         <div class="logoBox d-flex flex-column-reverse flex-lg-row align-items-center col-4 px-0 mx-2 mx-lg-0">                    
             <h1 id="logo" class="col-9 px-0">
                 <a href="/joy/">
@@ -44,22 +44,23 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
                 <a href="https://www.instagram.com/joy_academy_/" target="_blank" class="my-auto"><i class="fa-brands fa-instagram"></i></a>
             </div>
         </div>
-        <nav id="gnb" class="col-6 px-0 d-none d-lg-block">
-            <div class="gnb_wrap">
-                <ul id="gnb_1dul" class='d-lg-flex align-items-center justify-content-between'>
+        <nav id="gnb" class="col-lg-6 col-1 p-0 navbar navbar-expand-lg">
+            <button type="button" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"><i class="fa-solid fa-bars"></i></button>                       
+            <div class="gnb_wrap collapse navbar-collapse row position-absolute" id="navbarNavDropdown">
                 
+                <ul id="gnb_1dul" class='d-lg-flex align-items-center justify-content-between col-lg-12'>
                     <?php
                     $menu_datas = get_menu_db(0, true);
-                    $gnb_zindex = 999; // gnb_1dli z-index 값 설정용
+                    // $gnb_zindex = 999; // gnb_1dli z-index 값 설정용
                     $i = 0;
                     foreach( $menu_datas as $row ){
                         if( empty($row) ) continue;
                         $add_class = (isset($row['sub']) && $row['sub']) ? 'gnb_al_li_plus' : '';
                     ?>
 
-                    <li class="gnb_1dli <?php echo $add_class; ?> font2em position-relative" style="z-index:<?php echo $gnb_zindex--; ?>">
+                    <li class="gnb_1dli <?php echo $add_class; ?> font2em position-relative nav-item py-lg-4" style="z-index:<?php echo $gnb_zindex--; ?>">
                         <a href="<?php echo $row['me_link']; ?>" target="_<?php echo $row['me_target']; ?>" 
-                        class="gnb_1da ">
+                        class="gnb_1da nav-link">
                         <?php echo $row['me_name'] ?></a>
                         <?php
                         $k = 0;
@@ -89,25 +90,10 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
                     if ($i == 0) {  ?>
                         <li class="gnb_empty">메뉴 준비 중입니다.<?php if ($is_admin) { ?> <a href="<?php echo G5_ADMIN_URL; ?>/menu_list.php">관리자모드 &gt; 환경설정 &gt; 메뉴설정</a>에서 설정하실 수 있습니다.<?php } ?></li>
                     <?php } ?>
-                </ul>
+                </ul>                
             </div>
-        </nav>
-        <button type="button" id="mb_menu" class="d-block d-lg-none mx-2 border-0"> <i class="fa-solid fa-bars bg-white"></i></button>       
+        </nav>       
     </div>
-    
-
-    <script>
-    
-    $(function(){
-        $(".gnb_menu_btn").click(function(){
-            $("#gnb_all, #gnb_all_bg").show();
-        });
-        $(".gnb_close_btn, #gnb_all_bg").click(function(){
-            $("#gnb_all, #gnb_all_bg").hide();
-        });
-    });
-
-    </script>
 </div>
 <!-- } 상단 끝 -->
 

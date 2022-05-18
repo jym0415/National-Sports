@@ -63,7 +63,7 @@ if($config['cf_add_meta'])
 <!--  Custom -->
 <link href="<?php echo G5_THEME_URL?>/custom/css/Hj.min.css?ver=<?php echo time(); ?>" rel="stylesheet">
 <link href="<?php echo G5_THEME_URL?>/custom/css/Min.min.css?ver=<?php echo time(); ?>" rel="stylesheet">
-<link href="<?php echo G5_THEME_URL?>/custom/css/yumi.min.css?ver=<?php echo time(); ?>" rel="stylesheet">
+<link href="<?php echo G5_THEME_URL?>/custom/css/Yumi.min.css?ver=<?php echo time(); ?>" rel="stylesheet">
 
 
 <!--[if lte IE 8]>
@@ -94,10 +94,16 @@ var g5_admin_url = "<?php echo G5_ADMIN_URL; ?>";
   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
   crossorigin="anonymous"></script>
   <script src="<?php echo G5_JS_URL; ?>/jquery-migrate-1.4.1.min.js"></script>
-  <script src="<?php echo G5_JS_URL; ?>/jquery.menu.js?ver='.G5_JS_VER.'"></script>
-  <!-- custom -->
+  <!-- <script src="<?php //echo G5_JS_URL; ?>/jquery.menu.js?ver='.G5_JS_VER.'"></script> -->
+
+  <!-- bootstrap 플러그인 --> 
+ <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+
+  <!-- swiper 플러그인 -->
   <script src="<?php echo G5_THEME_URL?>/custom/js/swiper8.1.4.js?ver=<?php echo time(); ?>"></script>
- 
+
+   <!-- custom -->
   <script src="<?php echo G5_THEME_URL?>/custom/js/Hj.js?ver=<?php echo time(); ?>"></script>
   <script src="<?php echo G5_THEME_URL?>/custom/js/Min.js?ver=<?php echo time(); ?>"></script>
   <script src="<?php echo G5_THEME_URL?>/custom/js/Yumi.js?ver=<?php echo time(); ?>"></script>
@@ -117,7 +123,6 @@ if(G5_IS_MOBILE) {
 if(!defined('G5_IS_ADMIN'))
     echo $config['cf_add_script'];
 ?>
-
 
 </head>
 <body  >
