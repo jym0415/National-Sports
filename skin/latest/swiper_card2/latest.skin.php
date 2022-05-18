@@ -25,11 +25,17 @@ $thumb_height = 120;
         $img_content = $img;
         ?>
 
-        <div class="swiper-slide" onclick="location.href='<?php echo $list[$i]['href'] ?>';" style="cursor: pointer;">
-            <div class="sw_img" style="background-image: url('<?php echo $img_content; ?>');"></div>
-                       
+        <div class="swiper-slide" onclick="location.href='<?php echo $list[$i]['href'] ?>';" style="cursor: pointer;">            
+            <div class="sw_img" style="background-image: url('<?php echo $img_content; ?>');">
+                <?php echo $list[$i]['wr_subject'] ;?> 
+                <?php echo $list[$i]['wr_content'] ;?>     
+            </div>             
         </div>
+
+        
+
         <?php }  ?>
+
     </div>
     <!-- 페이징 -->
     <div class="swiper-pagination swiper-pagination1"></div>

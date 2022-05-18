@@ -95,9 +95,15 @@ var g5_admin_url = "<?php echo G5_ADMIN_URL; ?>";
   crossorigin="anonymous"></script>
   <script src="<?php echo G5_JS_URL; ?>/jquery-migrate-1.4.1.min.js"></script>
   <script src="<?php echo G5_JS_URL; ?>/jquery.menu.js?ver='.G5_JS_VER.'"></script>
-  <!-- custom -->
+
+  <!-- bootstrap bundle 플러그인 -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+  
+  <!-- swiper 플러그인 -->
   <script src="<?php echo G5_THEME_URL?>/custom/js/swiper8.1.4.js?ver=<?php echo time(); ?>"></script>
- 
+
+   <!-- custom -->
   <script src="<?php echo G5_THEME_URL?>/custom/js/Hj.js?ver=<?php echo time(); ?>"></script>
   <script src="<?php echo G5_THEME_URL?>/custom/js/Min.js?ver=<?php echo time(); ?>"></script>
   <script src="<?php echo G5_THEME_URL?>/custom/js/Yumi.js?ver=<?php echo time(); ?>"></script>
