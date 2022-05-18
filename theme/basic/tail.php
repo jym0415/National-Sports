@@ -61,6 +61,8 @@ if ($config['cf_analytics']) {
 
 <!-- } 하단 끝 -->
 <script src="<?php echo G5_THEME_URL?>/custom/js/customSwiper8.1.4.js?ver=<?php echo time(); ?>"></script>
+
+
 <script>
 $(function() {
     // 폰트 리사이즈 쿠키있으면 실행

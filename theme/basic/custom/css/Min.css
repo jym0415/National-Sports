@@ -86,3 +86,12 @@
 #daily {
   background-color: #FFF9CC;
 }
+
+#daily .hjinner .dailySub p {
+  font-size: 2rem;
+  font-family: 'nexB';
+}
+
+#daily .hjinner .dailyBWrap {
+  padding-top: 144px;
+}

@@ -98,4 +98,27 @@
 }
 #daily{
     background-color: #FFF9CC;
+    .hjinner{
+        .dailySub{
+            p{
+                font-size: 2rem;
+                font-family: 'nexB';
+            }
+        }
+        .dailyBWrap{
+            padding-top: 144px;
+            // .swiper-container{
+            //     .swiper-wrapper{
+            //         .swiper-slide{
+            //             .dailyImg{
+            //                 img{
+            //                     width: 100%;
+            //                 }
+            //             }
+            //         }
+            //     }
+            // }
+        }
+        
+    }
 }

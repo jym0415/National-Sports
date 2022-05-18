@@ -10,36 +10,41 @@ $thumb_height = 120;
 ?>
 <!--  -->
 <div class="hjinner m-auto">
-    <div class="swiper-container swiper <?php echo $bo_table; ?>">
-        <div class="swiper-wrapper">
-
-            <?php
-            for ($i=0; $i<count($list); $i++) {
-            $thumb = get_list_thumbnail($bo_table, $list[$i]['wr_id'], $thumb_width, $thumb_height, false, true);
-
-            if($thumb['src']) {
-                $img = $thumb['ori'];
-            } else {
-                $img = $latest_skin_url.'/img/noimg.png';
-                $thumb['alt'] = '등록된 이미지가 없습니다.';
-            }
-            //$img_content = '<img src="'.$img.'" alt="'.$thumb['alt'].'" >';
-            $img_content = $img;
-            ?>
-
-            <div class="swiper-slide position-relative" onclick="location.href='<?php echo $list[$i]['href'] ?>';" style="cursor: pointer;">            
-                <div class="sw_img" style="background-image: url('<?php echo $img_content; ?>');"></div>             
-                <div class="sw_sub position-absolute"><?php echo $list[$i]['wr_subject'] ;?></div>     
-                <div class="sw_con  position-absolute"><?php echo $list[$i]['wr_content'] ;?></div>     
-            </div>
-
-            <?php }  ?>
-
+    <div class="pt-5 pb-5">
+        <div class="dailySub pt-5">
+            <p><?php echo $bo_subject?></p>
         </div>
-        <!-- 좌우버튼 활성화-->
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
+        <div class="dailyBWrap">
+            <div class="swiper-container swiper <?php echo $bo_table; ?>">
+                <div class="swiper-wrapper">
 
+                    <?php
+                    for ($i=0; $i<count($list); $i++) {
+                    $thumb = get_list_thumbnail($bo_table, $list[$i]['wr_id'], $thumb_width, $thumb_height, false, true);
+
+                    if($thumb['src']) {
+                        $img = $thumb['ori'];
+                    } else {
+                        $img = $latest_skin_url.'/img/noimg.png';
+                        $thumb['alt'] = '등록된 이미지가 없습니다.';
+                    }
+                    $img_content = '<img src="'.$img.'" alt="'.$thumb['alt'].'" class="w-100">';
+                    
+                    ?>
+
+                    <div class="swiper-slide">            
+                        <?php echo $img_content; ?>        
+                    </div>
+
+                    <?php }  ?>
+
+                </div>
+                <!-- 좌우버튼 활성화-->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+
+            </div>
+        </div>
     </div>
 </div>
 
