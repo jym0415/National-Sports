@@ -53,8 +53,8 @@
                 font-size: 6rem;
                 width: fit-content;
                 font-family: 'nexB';
-                color: #c9c9c9c9;
-                transform: translate(0%, 10%);
+                color: #c9c9c966;
+                transform: translate(-60%, 10%);
             }
         }
         .newsWrap{
@@ -63,14 +63,39 @@
                 .name{
                     font-size: 1.2rem;
                     font-family: 'nexM';
-                }
-                .date{
-
+                    &:hover{
+                        a{
+                            color: #34C1B5;
+                            transition: 0.3s;
+                        }
+                    }
                 }
                 .nsbtn{
+                    svg{
+                        width: 80px;
+                        height: 80px;
+                    }
+                    a{
+                        svg{
+                            .st0{
+                                fill: #c9c9c9;
+                            }
+                        }
+                        &:hover{
+                            svg{
+                                .st0{
+                                    fill: #34C1B5;
+                                    transition: 0.3s;
+                                }
+                            }
+                        }
+                    }
 
                 }
             }
         }
     }
+}
+#daily{
+    background-color: #FFF9CC;
 }

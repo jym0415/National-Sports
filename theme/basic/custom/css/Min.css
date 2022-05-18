@@ -48,9 +48,9 @@
   width: -moz-fit-content;
   width: fit-content;
   font-family: 'nexB';
-  color: #c9c9c9c9;
-  -webkit-transform: translate(0%, 10%);
-          transform: translate(0%, 10%);
+  color: #c9c9c966;
+  -webkit-transform: translate(-60%, 10%);
+          transform: translate(-60%, 10%);
 }
 
 #news .hjinner .newsWrap .box {
@@ -60,4 +60,29 @@
 #news .hjinner .newsWrap .box .name {
   font-size: 1.2rem;
   font-family: 'nexM';
+}
+
+#news .hjinner .newsWrap .box .name:hover a {
+  color: #34C1B5;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+#news .hjinner .newsWrap .box .nsbtn svg {
+  width: 80px;
+  height: 80px;
+}
+
+#news .hjinner .newsWrap .box .nsbtn a svg .st0 {
+  fill: #c9c9c9;
+}
+
+#news .hjinner .newsWrap .box .nsbtn a:hover svg .st0 {
+  fill: #34C1B5;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+#daily {
+  background-color: #FFF9CC;
 }
