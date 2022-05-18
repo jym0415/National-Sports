@@ -119,10 +119,6 @@ if(!defined('G5_IS_ADMIN'))
 ?>
 
 
-
-
-
-
 </head>
 <body  >
 <?php
