@@ -26,19 +26,20 @@ $list_count = (is_array($list) && $list) ? count($list) : 0;
         //$img_content = '<img src="'.$img.'" alt="'.$thumb['alt'].'" >';
         $img_content = $img;
         ?>  
-        <div class="swiperBox  ">
+        <div class="swiperBox">
                 <div class="position-relative swiper-container swiper <?php echo $bo_table; ?>">
+                    <div class="position-absolute bg"></div>
                     <div class="swiper-wrapper" style="cursor: pointer;">            
                         <img  src="<?php echo $list[$i][file][0][path].'/'.$list[$i][file][0][file]; ?>" class="swiper-slide img-fluid">
                         <img src="<?php echo $list[$i][file][1][path].'/'.$list[$i][file][1][file]; ?>" class="swiper-slide img-fluid">
                         <img src="<?php echo $list[$i][file][2][path].'/'.$list[$i][file][2][file]; ?>" class="swiper-slide img-fluid">
                     </div>
-                    <div class="sw_text position-absolute" data-aos="fade-up">
+                    <div class="sw_text position-absolute" data-aos="fade-up"  data-aos-once="true" data-aos-easing="easeOutElastic"  data-aos-duration="1000">
                         <div class="sw_sub"><?php echo $list[$i]['wr_subject'] ;?></div>     
-                        <div class="sw_con"><?php echo $list[$i]['wr_content'] ;?></div>     
+                        <div class="sw_con pt-lg-5"><?php echo $list[$i]['wr_content'] ;?></div>     
                     </div>
                     <!-- 페이징 -->
-                    <div class="swiper-pagination swiper-pagination1 main-pagination"></div>
+                    <div class="swiper-pagination main-pagination"></div>
                 </div>
             </div>
         <?php }  ?>
