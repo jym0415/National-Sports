@@ -15,64 +15,9 @@ $thumb_height = 120;
             <p><?php echo $bo_subject?></p>
             <p class="gallery position-absolute">GALLERY</p>
         </div>
-        <div class="dailyBWrap">
-            <div class="swiper-container swiper <?php echo $bo_table; ?>">
-                <div class="swiper-wrapper">
-                    <?php
-                    for ($i=0; $i<count($list); $i++) {
-                    $thumb = get_list_thumbnail($bo_table, $list[$i]['wr_id'], $thumb_width, $thumb_height, false, true);
-                    if($thumb['src']) {
-                        $img = $thumb['ori'];
-                    } else {
-                        $img = $latest_skin_url.'/img/noimg.png';
-                        $thumb['alt'] = '등록된 이미지가 없습니다.';
-                    }
-                    $img_content = '<img src="'.$img.'" alt="'.$thumb['alt'].'" class="img-fluid">';
-                    ?>
-
-                    <div class="swiper-slide minjislide">            
-                        <?php echo $img_content; ?>        
-                    </div>
-
-                    <?php }  ?>
-
-                </div>
-                <!-- <img src="/joy/theme/basic/img/btn_NS.png" alt="" class="swiper-button-next">
-                <img src="/joy/theme/basic/img/btn_NS.png" alt="" class="swiper-button-prev"> -->
-                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                    viewBox="0 0 81.3 83.3" style="enable-background:new 0 0 81.3 83.3;" xml:space="preserve" class="swiper-button-next">
-                <style type="text/css">
-                    .st0{fill:#F1F1F1;}
-                    .st1{fill:#CCCCCC;}
-                </style>
-                <g>
-                    <g>
-                        <g>
-                            <g>
-                                <g>
-                                    <path class="st0" d="M61.9,83.3H19.4L0,62.9V20.4L19.4,0h42.5l19.4,20.4v42.5L61.9,83.3z M21.5,78.3h38.4l16.5-17.5V22.5
-                                        L59.8,5H21.5L5,22.5v38.4L21.5,78.3z"/>
-                                </g>
-                            </g>
-                        </g>
-                    </g>
-                </g>
-                <g>
-                    <g>
-                        <rect y="40.3" class="st1" width="49.2" height="5"/>
-                    </g>
-                    <g>
-                        
-                        <rect x="41.6" y="20.9" transform="matrix(0.7487 -0.6629 0.6629 0.7487 -11.3374 37.7206)" class="st1" width="5" height="25.8"/>
-                    </g>
-                    <g>
-                        <rect x="31.2" y="47" transform="matrix(0.6629 -0.7487 0.7487 0.6629 -22.1896 49.6852)" class="st1" width="25.8" height="5"/>
-                    </g>
-                </g>
-                </svg>
-
-                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                    viewBox="0 0 81.3 83.3" style="enable-background:new 0 0 81.3 83.3;" xml:space="preserve" class="swiper-button-prev">
+        <div class="dailyBWrap d-flex align-items-center pb-5">
+        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                    viewBox="0 0 81.3 83.3" style="enable-background:new 0 0 81.3 83.3;" xml:space="preserve" class="minjiBT-prev">
                 <style type="text/css">
                     .st0{fill:#F1F1F1;}
                     .st1{fill:#CCCCCC;}
@@ -102,9 +47,64 @@ $thumb_height = 120;
                             <rect x="34.7" y="36.6" transform="matrix(0.7487 -0.6629 0.6629 0.7487 -23.4527 37.1082)" class="st1" width="5" height="25.8"/>
                     </g>
                 </g>
-                </svg>
+            </svg>
 
+            <div class="swiper-container swiper <?php echo $bo_table; ?>">
+                <div class="swiper-wrapper">
+                    <?php
+                    for ($i=0; $i<count($list); $i++) {
+                    $thumb = get_list_thumbnail($bo_table, $list[$i]['wr_id'], $thumb_width, $thumb_height, false, true);
+                    if($thumb['src']) {
+                        $img = $thumb['ori'];
+                    } else {
+                        $img = $latest_skin_url.'/img/noimg.png';
+                        $thumb['alt'] = '등록된 이미지가 없습니다.';
+                    }
+                    $img_content = '<img src="'.$img.'" alt="'.$thumb['alt'].'" class="img-fluid">';
+                    ?>
+
+                    <div class="swiper-slide minjislide">            
+                        <?php echo $img_content; ?>        
+                    </div>
+
+                    <?php }  ?>
+                </div>
+                <!-- <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div> -->
             </div>
+
+
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                viewBox="0 0 81.3 83.3" style="enable-background:new 0 0 81.3 83.3;" xml:space="preserve" class="minjiBT-next">
+            <style type="text/css">
+                .st0{fill:#F1F1F1;}
+                .st1{fill:#CCCCCC;}
+            </style>
+            <g>
+                <g>
+                    <g>
+                        <g>
+                            <g>
+                                <path class="st0" d="M61.9,83.3H19.4L0,62.9V20.4L19.4,0h42.5l19.4,20.4v42.5L61.9,83.3z M21.5,78.3h38.4l16.5-17.5V22.5
+                                    L59.8,5H21.5L5,22.5v38.4L21.5,78.3z"/>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+            <g>
+                <g>
+                    <rect y="40.3" class="st1" width="49.2" height="5"/>
+                </g>
+                <g>
+                    
+                    <rect x="41.6" y="20.9" transform="matrix(0.7487 -0.6629 0.6629 0.7487 -11.3374 37.7206)" class="st1" width="5" height="25.8"/>
+                </g>
+                <g>
+                    <rect x="31.2" y="47" transform="matrix(0.6629 -0.7487 0.7487 0.6629 -22.1896 49.6852)" class="st1" width="25.8" height="5"/>
+                </g>
+            </g>
+            </svg>
         </div>
     </div>
 </div>

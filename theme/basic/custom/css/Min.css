@@ -55,7 +55,10 @@
 
 @media (max-width: 767px) {
   #news .hjinner .textWrap .table {
-    display: none;
+    left: 0;
+    font-size: 4rem;
+    -webkit-transform: translate(1rem, 2rem);
+            transform: translate(1rem, 2rem);
   }
 }
 
@@ -130,7 +133,10 @@
 
 @media (max-width: 767px) {
   #daily .hjinner .dailySub .gallery {
-    display: none;
+    left: 0;
+    font-size: 4rem;
+    -webkit-transform: translate(1rem, 5rem);
+            transform: translate(1rem, 5rem);
   }
 }
 
@@ -138,19 +144,28 @@
   padding-top: 144px;
 }
 
+#daily .hjinner .dailyBWrap .minjiBT-prev,
+#daily .hjinner .dailyBWrap .minjiBT-next {
+  position: relative;
+  width: 95px;
+  height: 40px;
+  margin: 0 5px;
+}
+
+@media (max-width: 767px) {
+  #daily .hjinner .dailyBWrap .minjiBT-prev,
+  #daily .hjinner .dailyBWrap .minjiBT-next {
+    width: 200px;
+  }
+}
+
+#daily .hjinner .dailyBWrap .minjiBT-prev .st0,
+#daily .hjinner .dailyBWrap .minjiBT-prev .st1,
+#daily .hjinner .dailyBWrap .minjiBT-next .st0,
+#daily .hjinner .dailyBWrap .minjiBT-next .st1 {
+  fill: black;
+}
+
 #daily .hjinner .dailyBWrap .swiper-container .swiper-wrapper .swiper-slide.minjislide img {
   height: 100%;
-}
-
-#daily .hjinner .dailyBWrap .swiper-container .swiper-button-next,
-#daily .hjinner .dailyBWrap .swiper-container .swiper-button-prev {
-  width: 40px;
-  height: 40px;
-}
-
-#daily .hjinner .dailyBWrap .swiper-container .swiper-button-next .st0,
-#daily .hjinner .dailyBWrap .swiper-container .swiper-button-next .st1,
-#daily .hjinner .dailyBWrap .swiper-container .swiper-button-prev .st0,
-#daily .hjinner .dailyBWrap .swiper-container .swiper-button-prev .st1 {
-  fill: black;
 }

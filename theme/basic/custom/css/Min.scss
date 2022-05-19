@@ -56,7 +56,9 @@
                 color: #c9c9c966;
                 transform: translate(-60%, 10%);
                 @media(max-width:767px){
-                    display: none;
+                    left: 0;
+                    font-size: 4rem;
+                    transform: translate(1rem, 2rem);
                 }
             }
         }
@@ -131,12 +133,29 @@
                 color: #c9c9c966;
                 transform: translate(-40%, 10%);
                 @media(max-width:767px){
-                    display: none;
+                    left: 0;
+                    font-size: 4rem;
+                    transform: translate(1rem, 5rem);
                 }
             }
         }
         .dailyBWrap{
             padding-top: 144px;
+            .minjiBT-prev,
+            .minjiBT-next{
+                position: relative;
+                width: 95px;
+                height: 40px;
+                margin: 0 5px;
+                // cursor: pointer;
+                @media(max-width:767px){
+                    width: 200px;
+                }
+                .st0,
+                .st1{
+                    fill: black;
+                }
+            }
             .swiper-container{
                 .swiper-wrapper{
                     .swiper-slide.minjislide{
@@ -145,15 +164,7 @@
                         }
                     }
                 }
-                .swiper-button-next,
-                .swiper-button-prev{
-                    width: 40px;
-                    height: 40px;
-                    .st0,
-                    .st1{
-                        fill: black;
-                    }
-                }
+               
             }
         }
         
