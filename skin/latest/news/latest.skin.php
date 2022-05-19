@@ -11,43 +11,56 @@ $list_count = (is_array($list) && $list) ? count($list) : 0;
         <p class="table position-absolute"><?php echo $bo_table ?></p>
     </div>
 
-    <div class="row newsWrap d-flex mt-5 mb-5 pb-5">
+    <div class="row newsWrap mt-5 mb-5 pb-5 mx-0">
         <?php for ($i=0; $i<$list_count; $i++) {  ?>
-            <div class="box mt-5 col-6 col-md-3 text-center text-md-left position-relative">
-                <div class="name mt-md-5 mt-0">
-                    <a href="<?php echo get_pretty_url($bo_table, $list[$i]['wr_id']); ?>">
-                        <?php echo $list[$i]['wr_subject']?>
-                    </a>
+            <div class="box mt-5 col-md-6 col-lg-3 text-left text-md-center text-lg-left position-relative d-flex d-md-block align-items-center justify-content-between px-4 px-md-3">
+
+                <div class="d-flex flex-column">
+                    <div class="name mt-md-5 mt-0">
+                        <a href="<?php echo get_pretty_url($bo_table, $list[$i]['wr_id']); ?>">
+                            <?php echo $list[$i]['wr_subject']?>
+                        </a>
+                    </div>
+                    <div class="date mt-md-5 mt-0">
+                        <span class="lt_date"><?php echo $list[$i]['datetime'] ?></span>
+                    </div>
                 </div>
-                <div class="date mt-5">
-                    <span class="lt_date"><?php echo $list[$i]['datetime'] ?></span>
-                </div>
-                    
-                <div class="nsbtn mt-5">
+
+                <div class="nsbtn mt-md-5 mt-0">
                     <span class="sound_only"><?php echo $bo_subject ?></span>
                     <a href="<?php echo get_pretty_url($bo_table, $list[$i]['wr_id']); ?>">
+                        <!-- <img src="/joy/theme/basic/img/btn_link.png" alt=""> -->
                         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                            viewBox="0 0 83.3 83.3" style="enable-background:new 0 0 83.3 83.3;" xml:space="preserve">
+                        viewBox="0 0 81.3 83.3" style="enable-background:new 0 0 81.3 83.3;" xml:space="preserve">
                         <style type="text/css">
-                            .st0{fill:#9E9E9E;}
+                            .st0{fill:#F1F1F1;}
+                            .st1{fill:#CCCCCC;}
                         </style>
                         <g>
                             <g>
                                 <g>
-                                    <polygon class="st0" points="54.6,50.2 54.2,33.1 65.9,41.3 			"/>
+                                    <g>
+                                        <g>
+                                            <path class="st0" d="M61.9,83.3H19.4L0,62.9V20.4L19.4,0h42.5l19.4,20.4v42.5L61.9,83.3z M21.5,78.3h38.4l16.5-17.5V22.5
+                                                L59.8,5H21.5L5,22.5v38.4L21.5,78.3z"/>
+                                        </g>
+                                    </g>
                                 </g>
-                            </g>
-                            <g>
-                                <g>
-                                    <rect x="2.5" y="39.2" class="st0" width="57.5" height="5"/>
-                                </g>
-                            </g>
-                            <g>
-                                <path class="st0" d="M58.9,83.3H24.4L0,58.9V24.4L24.4,0h34.5l24.4,24.4v34.5L58.9,83.3z M26.5,78.3h30.4l21.5-21.5V26.5L56.8,5
-                                    H26.5L5,26.5v30.4L26.5,78.3z"/>
                             </g>
                         </g>
-                        </svg>
+                        <g>
+                            <g>
+                                <rect y="40.3" class="st1" width="49.2" height="5"/>
+                            </g>
+                            <g>
+                                
+                                <rect x="41.6" y="20.9" transform="matrix(0.7487 -0.6629 0.6629 0.7487 -11.3374 37.7206)" class="st1" width="5" height="25.8"/>
+                            </g>
+                            <g>
+                                <rect x="31.2" y="47" transform="matrix(0.6629 -0.7487 0.7487 0.6629 -22.1896 49.6852)" class="st1" width="25.8" height="5"/>
+                            </g>
+                        </g>
+                    </svg>
                     </a>
                 </div>
             </div>

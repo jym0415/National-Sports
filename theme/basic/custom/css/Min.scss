@@ -55,11 +55,27 @@
                 font-family: 'nexB';
                 color: #c9c9c966;
                 transform: translate(-60%, 10%);
+                @media(max-width:767px){
+                    display: none;
+                }
             }
         }
         .newsWrap{
             .box{
                 border-right: 1px solid #c9c9c9c9;
+                @media(max-width:767px){
+                    border-right: none;
+                    &:after{
+                        content: "";
+                        position: absolute;
+                        width: 93%;
+                        height: 100%;
+                        border-bottom: 1px solid #c9c9c9c9;
+                        bottom: 0;
+                        margin-bottom: -1rem;
+                    }
+                }
+                
                 .name{
                     font-size: 1.2rem;
                     font-family: 'nexM';
@@ -72,18 +88,19 @@
                 }
                 .nsbtn{
                     svg{
-                        width: 80px;
-                        height: 80px;
+                        width: 50px;
+                        height: 50px;
                     }
                     a{
                         svg{
                             .st0{
-                                fill: #c9c9c9;
+                                fill: #F1F1F1;;
                             }
                         }
                         &:hover{
                             svg{
-                                .st0{
+                                .st0,
+                                .st1{
                                     fill: #34C1B5;
                                     transition: 0.3s;
                                 }
@@ -104,20 +121,40 @@
                 font-size: 2rem;
                 font-family: 'nexB';
             }
+            .gallery{
+                margin-bottom: 0;
+                top: 0;
+                right: 0;
+                font-size: 6rem;
+                width: fit-content;
+                font-family: 'nexB';
+                color: #c9c9c966;
+                transform: translate(-40%, 10%);
+                @media(max-width:767px){
+                    display: none;
+                }
+            }
         }
         .dailyBWrap{
             padding-top: 144px;
-            // .swiper-container{
-            //     .swiper-wrapper{
-            //         .swiper-slide{
-            //             .dailyImg{
-            //                 img{
-            //                     width: 100%;
-            //                 }
-            //             }
-            //         }
-            //     }
-            // }
+            .swiper-container{
+                .swiper-wrapper{
+                    .swiper-slide.minjislide{
+                        img{
+                            height: 100%;
+                        }
+                    }
+                }
+                .swiper-button-next,
+                .swiper-button-prev{
+                    width: 40px;
+                    height: 40px;
+                    .st0,
+                    .st1{
+                        fill: black;
+                    }
+                }
+            }
         }
         
     }

@@ -53,8 +53,29 @@
           transform: translate(-60%, 10%);
 }
 
+@media (max-width: 767px) {
+  #news .hjinner .textWrap .table {
+    display: none;
+  }
+}
+
 #news .hjinner .newsWrap .box {
   border-right: 1px solid #c9c9c9c9;
+}
+
+@media (max-width: 767px) {
+  #news .hjinner .newsWrap .box {
+    border-right: none;
+  }
+  #news .hjinner .newsWrap .box:after {
+    content: "";
+    position: absolute;
+    width: 93%;
+    height: 100%;
+    border-bottom: 1px solid #c9c9c9c9;
+    bottom: 0;
+    margin-bottom: -1rem;
+  }
 }
 
 #news .hjinner .newsWrap .box .name {
@@ -69,15 +90,16 @@
 }
 
 #news .hjinner .newsWrap .box .nsbtn svg {
-  width: 80px;
-  height: 80px;
+  width: 50px;
+  height: 50px;
 }
 
 #news .hjinner .newsWrap .box .nsbtn a svg .st0 {
-  fill: #c9c9c9;
+  fill: #F1F1F1;
 }
 
-#news .hjinner .newsWrap .box .nsbtn a:hover svg .st0 {
+#news .hjinner .newsWrap .box .nsbtn a:hover svg .st0,
+#news .hjinner .newsWrap .box .nsbtn a:hover svg .st1 {
   fill: #34C1B5;
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -92,6 +114,43 @@
   font-family: 'nexB';
 }
 
+#daily .hjinner .dailySub .gallery {
+  margin-bottom: 0;
+  top: 0;
+  right: 0;
+  font-size: 6rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-family: 'nexB';
+  color: #c9c9c966;
+  -webkit-transform: translate(-40%, 10%);
+          transform: translate(-40%, 10%);
+}
+
+@media (max-width: 767px) {
+  #daily .hjinner .dailySub .gallery {
+    display: none;
+  }
+}
+
 #daily .hjinner .dailyBWrap {
   padding-top: 144px;
+}
+
+#daily .hjinner .dailyBWrap .swiper-container .swiper-wrapper .swiper-slide.minjislide img {
+  height: 100%;
+}
+
+#daily .hjinner .dailyBWrap .swiper-container .swiper-button-next,
+#daily .hjinner .dailyBWrap .swiper-container .swiper-button-prev {
+  width: 40px;
+  height: 40px;
+}
+
+#daily .hjinner .dailyBWrap .swiper-container .swiper-button-next .st0,
+#daily .hjinner .dailyBWrap .swiper-container .swiper-button-next .st1,
+#daily .hjinner .dailyBWrap .swiper-container .swiper-button-prev .st0,
+#daily .hjinner .dailyBWrap .swiper-container .swiper-button-prev .st1 {
+  fill: black;
 }
