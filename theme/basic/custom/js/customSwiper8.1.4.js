@@ -18,7 +18,7 @@ var swiper1 = new Swiper('.swiper.mainSlider', {
     // spaceBetween: 0,
 });
 
-var swiper2 = new Swiper('.swiper.daily', {
+var swiper2 = new Swiper('.swiper.gallery', {
     slidesPerView: '1',
     pagination: {
       clickable: true,

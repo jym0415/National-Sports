@@ -34,6 +34,20 @@
   fill: white;
 }
 
+#news {
+  background-image: url(/joy/theme/basic/img/kids.png);
+  background-repeat: no-repeat;
+  background-size: 19%;
+  background-position: bottom;
+  background-position-x: right;
+}
+
+@media (max-width: 767px) {
+  #news {
+    background-position-x: center;
+  }
+}
+
 #news .hjinner .textWrap .subject {
   font-size: 2rem;
   font-family: 'nexB';
@@ -64,6 +78,10 @@
 
 #news .hjinner .newsWrap .box {
   border-right: 1px solid #c9c9c9c9;
+}
+
+#news .hjinner .newsWrap .box:last-child {
+  border-right: none;
 }
 
 @media (max-width: 767px) {
@@ -108,16 +126,16 @@
   transition: 0.3s;
 }
 
-#daily {
+#yellowbox {
   background-color: #FFF9CC;
 }
 
-#daily .hjinner .dailySub p {
+#yellowbox #daily .hjinner .dailySub p {
   font-size: 2rem;
   font-family: 'nexB';
 }
 
-#daily .hjinner .dailySub .gallery {
+#yellowbox #daily .hjinner .dailySub .gallery {
   margin-bottom: 0;
   top: 0;
   right: 0;
@@ -132,7 +150,7 @@
 }
 
 @media (max-width: 767px) {
-  #daily .hjinner .dailySub .gallery {
+  #yellowbox #daily .hjinner .dailySub .gallery {
     left: 0;
     font-size: 4rem;
     -webkit-transform: translate(1rem, 5rem);
@@ -140,12 +158,21 @@
   }
 }
 
-#daily .hjinner .dailyBWrap {
-  padding-top: 144px;
+#yellowbox #daily .snsWrap .profile img {
+  width: 80px;
+  border-radius: 50%;
+  border: 2px solid;
+  -o-border-image: linear-gradient(to right, #fbfcb9be, #ffcdf3aa, #65d3ffaa);
+     border-image: -webkit-gradient(linear, left top, right top, from(#fbfcb9be), color-stop(#ffcdf3aa), to(#65d3ffaa));
+     border-image: linear-gradient(to right, #fbfcb9be, #ffcdf3aa, #65d3ffaa);
 }
 
-#daily .hjinner .dailyBWrap .minjiBT-prev,
-#daily .hjinner .dailyBWrap .minjiBT-next {
+#yellowbox #daily .snsWrap .id {
+  font-size: 1.2rem;
+}
+
+#yellowbox #gallery .hjinner .dailyBWrap .minjiBT-prev,
+#yellowbox #gallery .hjinner .dailyBWrap .minjiBT-next {
   position: relative;
   width: 95px;
   height: 40px;
@@ -153,19 +180,19 @@
 }
 
 @media (max-width: 767px) {
-  #daily .hjinner .dailyBWrap .minjiBT-prev,
-  #daily .hjinner .dailyBWrap .minjiBT-next {
+  #yellowbox #gallery .hjinner .dailyBWrap .minjiBT-prev,
+  #yellowbox #gallery .hjinner .dailyBWrap .minjiBT-next {
     width: 200px;
   }
 }
 
-#daily .hjinner .dailyBWrap .minjiBT-prev .st0,
-#daily .hjinner .dailyBWrap .minjiBT-prev .st1,
-#daily .hjinner .dailyBWrap .minjiBT-next .st0,
-#daily .hjinner .dailyBWrap .minjiBT-next .st1 {
+#yellowbox #gallery .hjinner .dailyBWrap .minjiBT-prev .st0,
+#yellowbox #gallery .hjinner .dailyBWrap .minjiBT-prev .st1,
+#yellowbox #gallery .hjinner .dailyBWrap .minjiBT-next .st0,
+#yellowbox #gallery .hjinner .dailyBWrap .minjiBT-next .st1 {
   fill: black;
 }
 
-#daily .hjinner .dailyBWrap .swiper-container .swiper-wrapper .swiper-slide.minjislide img {
+#yellowbox #gallery .hjinner .dailyBWrap .swiper-container .swiper-wrapper .swiper-slide.minjislide img {
   height: 100%;
 }
