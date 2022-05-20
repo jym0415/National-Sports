@@ -27,31 +27,28 @@
     color: rgb(255, 255, 255);
     font-family: nexL;
     .sw_sub{
-        font-size: 2rem;
+        font-size: 1rem;
         font-family: 'nexM';
         .place{
             br{
-                @media(min-width:770px){
+                @media(min-width:1200px){
                     display: none;
                 }
             }
             
         }
     }   /*반응형 폰트사이즈 조절*/
-        @media(min-width:992px){
+        @media(min-width:767px){
             top: 25%;
             left: 25%;
             font-size: 2rem;
         .sw_sub{
             font-size: 4rem;}
     }
-        @media(min-width:992px){
-            top: 25%;
-            left: 25%;
-            font-size: 2rem;
-        .sw_sub{
-            font-size: 4rem;}
+     @media(min-width:768px) and (max-width:1050px){
+                
     }
+ 
 }
     .bg{
         top: 0;
@@ -64,10 +61,16 @@
 }
 .swiper-wrapper{
     img{
-        @media(max-width :767px ){
+        height: 80vh;
+        @media(min-width :767px ){
             height: 1000px;
+            max-height: 100vh;
         }
-    }
+        /*반응형 이미지사이즈 */
+        @media(min-width:768px) and (max-width:1050px){
+                
+        }
+    }   
 }
 // 페이지네이션
 .main-pagination{

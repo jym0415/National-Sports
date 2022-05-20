@@ -43,6 +43,10 @@ $list_count = (is_array($list) && $list) ? count($list) : 0;
                 </div>
             </div>
         <?php }  ?>
+        <div class="button">
+
+            <?php echo $bo_1 ?>
+        </div>
 
     
 
