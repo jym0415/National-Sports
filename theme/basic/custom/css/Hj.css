@@ -25,7 +25,7 @@ a:hover {
 #tnb {
   left: 0;
   right: 3%;
-  top: 6%;
+  top: 0.5rem;
   z-index: 1000;
 }
 
@@ -33,30 +33,59 @@ a:hover {
   font-family: 'nexM';
 }
 
+#hd #hd_wrapper {
+  transition: 0.5s;
+  transition-delay: 0.15s;
+}
+
+#hd #hd_wrapper.bgcolor {
+  background-color: white;
+  transition-delay: unset;
+}
+
+#hd #hd_wrapper.bgcolor .logoBox #logo svg,
+#hd #hd_wrapper.bgcolor .snsBox i,
+#hd #hd_wrapper.bgcolor #gnb .gnb_1da {
+  color: black !important;
+  fill: black;
+}
+
+#hd #hd_wrapper.bgcolor .logoBox #logo svg #gnb button.navbar-toggler .fa-bars,
+#hd #hd_wrapper.bgcolor .snsBox i #gnb button.navbar-toggler .fa-bars,
+#hd #hd_wrapper.bgcolor #gnb .gnb_1da #gnb button.navbar-toggler .fa-bars {
+  color: black !important;
+}
+
 @media (max-width: 991px) {
-  #hd_wrapper {
+  #hd #hd_wrapper {
     position: relative;
+    transition-delay: 0.2s;
   }
 }
 
-#hd_wrapper .logoBox {
+#hd #hd_wrapper .logoBox {
   min-width: 150px;
 }
 
 @media (max-width: 991px) {
-  #hd_wrapper .logoBox {
+  #hd #hd_wrapper .logoBox {
     position: unset;
   }
 }
 
-#hd_wrapper .logoBox #logo {
+#hd #hd_wrapper .logoBox #logo {
   max-width: 400px;
   min-width: 144px;
   height: auto;
+  z-index: 111111;
+}
+
+#hd #hd_wrapper .logoBox #logo svg {
+  fill: #fff;
 }
 
 @media (max-width: 991px) {
-  #hd_wrapper .logoBox .snsBox {
+  #hd #hd_wrapper .logoBox .snsBox {
     position: absolute;
     right: 0;
     top: 0;
@@ -64,27 +93,30 @@ a:hover {
     bottom: 0;
     transform: translateX(-12%);
     justify-content: flex-end;
-    align-items: center;
+    align-items: flex-start;
+    line-height: 0;
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
   }
 }
 
-#hd_wrapper .logoBox .snsBox i.fa-youtube {
+#hd #hd_wrapper .logoBox .snsBox i.fa-youtube {
   font-size: 30px;
 }
 
 @media (max-width: 991px) {
-  #hd_wrapper .logoBox .snsBox i.fa-youtube {
-    font-size: 20px;
+  #hd #hd_wrapper .logoBox .snsBox i.fa-youtube {
+    font-size: 23px;
   }
 }
 
-#hd_wrapper .logoBox .snsBox i.fa-instagram {
+#hd #hd_wrapper .logoBox .snsBox i.fa-instagram {
   font-size: 27px;
 }
 
 @media (max-width: 991px) {
-  #hd_wrapper .logoBox .snsBox i.fa-instagram {
-    font-size: 20px;
+  #hd #hd_wrapper .logoBox .snsBox i.fa-instagram {
+    font-size: 22px;
   }
 }
 
@@ -92,17 +124,18 @@ a:hover {
   position: unset;
 }
 
-#hd #hd_wrapper nav#gnb #navbarNavDropdown {
+#hd #hd_wrapper nav#gnb #gnb_1dul {
   left: 0;
   right: 0;
-  top: 100%;
+  top: 98%;
+  transition-delay: 0.1s;
 }
 
 @media (min-width: 992px) {
-  #hd #hd_wrapper nav#gnb #navbarNavDropdown {
+  #hd #hd_wrapper nav#gnb #gnb_1dul {
     position: unset !important;
   }
-  #hd #hd_wrapper nav#gnb #navbarNavDropdown:after {
+  #hd #hd_wrapper nav#gnb #gnb_1dul:after {
     content: "";
     position: absolute;
     left: 0;
@@ -111,10 +144,11 @@ a:hover {
     background-color: white;
     height: 0;
     transition: 0.5s;
-    border-bottom: 1px solid #dee2e6;
   }
-  #hd #hd_wrapper nav#gnb #navbarNavDropdown:hover:after,
-  #hd #hd_wrapper nav#gnb #navbarNavDropdown:hover #gnb_1dul .gnb_1dli .gnb_2dul_box {
+  #hd #hd_wrapper nav#gnb #gnb_1dul:hover:after {
+    height: 150px;
+  }
+  #hd #hd_wrapper nav#gnb #gnb_1dul:hover .gnb_1dli .gnb_2dul_box {
     height: 150px;
   }
 }
@@ -127,8 +161,15 @@ a:hover {
 }
 
 @media (max-width: 991px) {
+  #hd #hd_wrapper nav#gnb #gnb_1dul .gnb_1dli {
+    font-size: 1rem !important;
+  }
+  #hd #hd_wrapper nav#gnb #gnb_1dul .gnb_1dli .gnb_1da {
+    color: black !important;
+  }
   #hd #hd_wrapper nav#gnb #gnb_1dul .gnb_1dli.show .gnb_2dul_box {
-    height: 120px;
+    height: 75px;
+    padding: 0 1rem;
   }
 }
 
@@ -137,7 +178,7 @@ a:hover {
 }
 
 #hd #hd_wrapper nav#gnb #gnb_1dul .gnb_1dli .gnb_1da:hover {
-  color: #FAC800;
+  color: #34c1b5 !important;
 }
 
 #hd #hd_wrapper nav#gnb #gnb_1dul .gnb_1dli .gnb_2dul_box {
@@ -164,13 +205,30 @@ a:hover {
 }
 
 #hd #hd_wrapper nav#gnb #gnb_1dul .gnb_1dli .gnb_2dul_box .gnb_2da:hover {
-  color: #FAC800;
+  color: #34c1b5;
 }
 
 #hd #hd_wrapper nav#gnb button.navbar-toggler {
   outline: unset;
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
 }
 
 #hd #hd_wrapper nav#gnb button.navbar-toggler i {
   font-size: 23px;
+}
+
+#hd_wrapper.bgcolor #gnb button.navbar-toggler .fa-bars {
+  color: black !important;
+}
+
+#gnb_1dul .gnb_2dul_box:first-child {
+  display: none;
+}
+
+.collapsing {
+  position: unset;
+  height: unset;
+  overflow: unset;
+  transition: 0.5s;
 }

@@ -9,7 +9,7 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
 ?>
 
 <!-- 상단 시작 { -->
-<div id="hd" class='position-relative py-lg-0 py-3 container-fluid'>
+<div id="hd" class='position-relative'>
     <h1 id="hd_h1">
 
     </h1>
@@ -32,23 +32,23 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
                 </div>
             </div>
     <?php }  ?>
-    <div id="hd_wrapper" class='row justify-content-between align-items-center m-auto '>
+    <div id="hd_wrapper" class='row justify-content-between align-items-start m-auto container-fluid w-100 position-absolute'>
         <div class="logoBox d-flex flex-column-reverse flex-lg-row align-items-center col-4 px-0 mx-2 mx-lg-0">                    
-            <h1 id="logo" class="col-9 px-0">
+            <h1 id="logo" class="col-9 px-0 py-lg-4">
                 <a href="/joy/">
             <?php echo latest('logo', 'logo', 1, 100)?>
                 </a>
             </h1>
             <div class="snsBox d-flex col">
-                <a href="https://www.youtube.com/channel/UCHWMRiygHQuqAsG7kin_Y4Q" target="_blank" class="my-auto"><i class="fa-brands fa-youtube col"></i></a>
-                <a href="https://www.instagram.com/joy_academy_/" target="_blank" class="my-auto"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.youtube.com/channel/UCHWMRiygHQuqAsG7kin_Y4Q" target="_blank" class="my-lg-auto"><i class="fa-brands fa-youtube col text-white"></i></a>
+                <a href="https://www.instagram.com/joy_academy_/" target="_blank" class="my-lg-auto"><i class="fa-brands fa-instagram text-white"></i></a>
             </div>
         </div>
-        <nav id="gnb" class="col-lg-6 col-1 p-0 navbar navbar-expand-lg">
-            <button type="button" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"><i class="fa-solid fa-bars"></i></button>                       
-            <div class="gnb_wrap collapse navbar-collapse row position-absolute" id="navbarNavDropdown">
+        <nav id="gnb" class="col-lg-6 col-1 p-0 my-auto navbar navbar-expand-lg">
+            <button type="button" class="navbar-toggler m-auto px-0" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"><i class="fa-solid fa-bars text-white"></i></button>                       
+            <div class="gnb_wrap collapse navbar-collapse row mx-0 " id="navbarNavDropdown">
                 
-                <ul id="gnb_1dul" class='d-lg-flex align-items-center justify-content-between col-lg-12'>
+                <ul id="gnb_1dul" class='d-lg-flex justify-content-between col-lg-12 position-absolute'>
                     <?php
                     $menu_datas = get_menu_db(0, true);
                     // $gnb_zindex = 999; // gnb_1dli z-index 값 설정용
@@ -60,7 +60,7 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
 
                     <li class="gnb_1dli <?php echo $add_class; ?> font2em position-relative nav-item py-lg-4" style="z-index:<?php echo $gnb_zindex--; ?>">
                         <a href="<?php echo $row['me_link']; ?>" target="_<?php echo $row['me_target']; ?>" 
-                        class="gnb_1da nav-link">
+                        class="gnb_1da nav-link text-white">
                         <?php echo $row['me_name'] ?></a>
                         <?php
                         $k = 0;
