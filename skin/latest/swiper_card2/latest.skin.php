@@ -29,7 +29,7 @@ $list_count = (is_array($list) && $list) ? count($list) : 0;
         <div class="swiperBox">
                 <div class="position-relative swiper-container swiper <?php echo $bo_table; ?>">
                     <div class="position-absolute bg"></div>
-                    <div class="swiper-wrapper" style="cursor: pointer;">            
+                    <div class="swiper-wrapper" >            
                         <img  src="<?php echo $list[$i][file][0][path].'/'.$list[$i][file][0][file]; ?>" class="swiper-slide img-fluid">
                         <img src="<?php echo $list[$i][file][1][path].'/'.$list[$i][file][1][file]; ?>" class="swiper-slide img-fluid">
                         <img src="<?php echo $list[$i][file][2][path].'/'.$list[$i][file][2][file]; ?>" class="swiper-slide img-fluid">
@@ -44,8 +44,8 @@ $list_count = (is_array($list) && $list) ? count($list) : 0;
             </div>
         <?php }  ?>
         <div class="button">
-
-            <?php echo $bo_1 ?>
+            <a href="<?php echo $bo_1 ?>"><?php echo $bo_1_subj ?></a>
+            <a href="<?php echo $bo_2 ?>"><?php echo $bo_2_subj ?></a>
         </div>
 
     

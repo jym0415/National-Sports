@@ -54,7 +54,9 @@ function latest($skin_dir='', $bo_table, $rows=10, $subject_len=40, $cache_time=
 
         $bo_subject = get_text($board['bo_subject']);
         $bo_1 = get_text($board['bo_1']);
+        $bo_1_subj = get_text($board['bo_1_subj']);
         $bo_2 = get_text($board['bo_2']);
+        $bo_2_subj = get_text($board['bo_2_subj']);
 
         $tmp_write_table = $g5['write_prefix'] . $bo_table; // 게시판 테이블 전체이름
         $sql = " select * from {$tmp_write_table} where wr_is_comment = 0 order by wr_num limit 0, {$rows} ";
@@ -99,7 +101,9 @@ function latest($skin_dir='', $bo_table, $rows=10, $subject_len=40, $cache_time=
                 'list' => $list,
                 'bo_subject' => sql_escape_string($bo_subject),
                 'bo_1' => sql_escape_string($bo_1),
+                'bo_1_subj' => sql_escape_string($bo_1_subj),
                 'bo_2' => sql_escape_string($bo_2),
+                'bo_2_subj' => sql_escape_string($bo_2_subj),
             );
 
             g5_set_cache($cache_file_name, $caches, (int) $time_unit * (int) $cache_time);
@@ -108,8 +112,9 @@ function latest($skin_dir='', $bo_table, $rows=10, $subject_len=40, $cache_time=
         $list = $cache_list;
         $bo_subject = (is_array($caches) && isset($caches['bo_subject'])) ? $caches['bo_subject'] : '';
         $bo_1 = (is_array($caches) && isset($caches['bo_1'])) ? $caches['bo_1'] : '';
+        $bo_1_subj = (is_array($caches) && isset($caches['bo_1_subj'])) ? $caches['bo_1_subj'] : '';
         $bo_2 = (is_array($caches) && isset($caches['bo_2'])) ? $caches['bo_2'] : '';
-
+        $bo_2_subj = (is_array($caches) && isset($caches['bo_2_subj'])) ? $caches['bo_2_subj'] : '';
 
 
 
