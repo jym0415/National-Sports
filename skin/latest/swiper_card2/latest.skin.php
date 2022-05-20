@@ -34,19 +34,24 @@ $list_count = (is_array($list) && $list) ? count($list) : 0;
                         <img src="<?php echo $list[$i][file][1][path].'/'.$list[$i][file][1][file]; ?>" class="swiper-slide img-fluid">
                         <img src="<?php echo $list[$i][file][2][path].'/'.$list[$i][file][2][file]; ?>" class="swiper-slide img-fluid">
                     </div>
-                    <div class="sw_text position-absolute" data-aos="fade-up"  data-aos-once="true" data-aos-easing="easeOutElastic"  data-aos-duration="1000">
-                        <div class="sw_sub"><?php echo $list[$i]['wr_subject'] ;?></div>     
-                        <div class="sw_con pt-lg-5"><?php echo $list[$i]['wr_content'] ;?></div>     
+                    <div class="sw_text position-absolute d-flex flex-column align-items-center justify-content-center text-center">
+                        <div class="sw_sub"  data-aos="fade-up"  data-aos-once="true" data-aos-easing="easeOutElastic"  data-aos-duration="1000"><?php echo $list[$i]['wr_subject'] ;?></div>     
+                        <div class="sw_con pt-lg-5"  data-aos="fade-up"  data-aos-once="true" data-aos-easing="easeOutElastic"  data-aos-duration="1000"><?php echo $list[$i]['wr_content'] ;?></div>
+                        <div class="mainBtn d-flex pt-5">
+                            <div class="pb-2 pb-md-0">
+                                <a href="<?php echo $bo_1 ?>"><?php echo $bo_1_subj ?></a>
+                            </div>          
+                            <div class="">
+                                <a href="<?php echo $bo_2 ?>"><?php echo $bo_2_subj ?></a>
+                            </div>
+                        </div>     
                     </div>
                     <!-- 페이징 -->
                     <div class="swiper-pagination main-pagination"></div>
                 </div>
             </div>
         <?php }  ?>
-        <div class="button">
-            <a href="<?php echo $bo_1 ?>"><?php echo $bo_1_subj ?></a>
-            <a href="<?php echo $bo_2 ?>"><?php echo $bo_2_subj ?></a>
-        </div>
+       
 
     
 

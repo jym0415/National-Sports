@@ -8,7 +8,7 @@ include_once(G5_THEME_PATH.'/head.php');
 <h2 class="sound_only">최신글</h2>
 
 <div id="mainSlider" class='overflow-hidden'>
-    <div class="sliderBox ">
+    <div class="sliderBox positon-relative">
         <?php echo latest('swiper_card2','mainSlider',1,10000)?>
     </div>
 </div>
@@ -25,7 +25,41 @@ include_once(G5_THEME_PATH.'/head.php');
 </div>
 
 <!--유튜브연동 bo_table : yuoutube-->
+<div id="youtube">
+    <?php echo latest('youtube','yuoutube',2,500)?>
+</div>
 
+<!-- 오시는길 -->
+<div id="way">
+    <div class="hjinner m-auto">
+        <div id="map" style="width:500px;height:350px;"></div>
+        <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=76dc363e0cd56e52668246ea9bf5bbcc"></script>
+        <!-- appkey=카카오에서 받은 key값 -->
+        <script>
+        var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+            mapOption = { 
+                center: new kakao.maps.LatLng(37.8078663, 127.079215), // 지도의 중심좌표(위도,경도)
+                level: 3 // 지도의 확대 레벨
+            };
+        var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+        var imageSrc = '/joy/theme/basic/img/maker.png', // 마커이미지의 주소입니다    
+            imageSize = new kakao.maps.Size(64, 69), // 마커이미지의 크기입니다
+            imageOption = {offset: new kakao.maps.Point(27, 69)}; // 마커이미지의 옵션입니다. 마커의 좌표와 일치시킬 이미지 안에서의 좌표를 설정합니다.
+
+        // 마커의 이미지정보를 가지고 있는 마커이미지를 생성합니다
+        var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize, imageOption),
+            markerPosition = new kakao.maps.LatLng(37.8078663, 127.079215); // 마커가 표시될 위치입니다(위도,경도)
+
+        // 마커를 생성합니다
+        var marker = new kakao.maps.Marker({
+            position: markerPosition, 
+            image: markerImage // 마커이미지 설정 
+        });
+        // 마커가 지도 위에 표시되도록 설정합니다
+        marker.setMap(map);  
+        </script>
+    </div>
+</div>
 
 
 <?php

@@ -18,6 +18,7 @@
     // }
 }
 .swiperBox{
+    cursor: pointer;
     .sw_text{ 
     top: 25%;
     left: 1rem;
@@ -73,21 +74,39 @@
     }   
 }
 // 페이지네이션
-.main-pagination{
-    z-index: 1000;
+.swiperBox{
+    .main-pagination{
+        z-index: 1000;
+        bottom: 5vh;
+    }
 }
 .swiper-pagination-bullet {
-     width: 12px; 
-     height: 12px; 
+     width: 15px; 
+     height: 3px ; 
      background: transparent; 
-     border: 1px solid #34C1B5; 
+    //  border: 1px solid #34C1B5; 
      opacity: 1; }
 .swiper-pagination-bullet-active {
-     width: 40px; 
+     width: 6rem; 
      transition: width .5s; 
-     border-radius: 5px; 
+    //  border-radius: 10px; 
      background: #34C1B5; 
-     border: 1px solid transparent; }
+    //  border: 1px solid transparent; 
+}
 
+//버튼
+.mainBtn{
+    z-index: 999;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
 
+    a{
+        color: white;
+        display: block;
+        border: 1px solid white;
+        padding: 1rem;
+    }
+}
 

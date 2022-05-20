@@ -13,6 +13,7 @@ else {
     $g5_head_title = implode(' | ', array_filter(array($g5['title'], $config['cf_title'])));
 }
 
+
 $g5['title'] = strip_tags($g5['title']);
 $g5_head_title = strip_tags($g5_head_title);
 
@@ -41,6 +42,8 @@ header("Pragma: no-cache"); // HTTP/1.0
 <meta name="format-detection" content="telephone=no">
 <meta http-equiv="imagetoolbar" content="no">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<link rel="icon" type="image/png" href="<?php echo G5_THEME_URL ?>/custom/img/favicon.ico" sizes="64x64" />
 <title><?php echo $g5_head_title; ?></title>
 
 <?php
