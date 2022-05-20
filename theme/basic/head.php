@@ -32,7 +32,14 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
                 </div>
             </div>
     <?php }  ?>
-    <div id="hd_wrapper" class='row justify-content-between align-items-start m-auto container-fluid w-100 position-absolute'>
+    <?php if(defined('_INDEX_')) {
+        $hyjiHD = ' position-absolute hyjiHD_w1 ';
+
+     } else { 
+        $hyjiHD = ' bg-black text-white hyjiHD_w2 ';
+      } ?>
+    <div id="hd_wrapper" class='row justify-content-between align-items-start m-auto container-fluid w-100 <?php echo $hyjiHD; ?>'>
+
         <div class="logoBox d-flex flex-column-reverse flex-lg-row align-items-center col-4 px-0 mx-2 mx-lg-0">                    
             <h1 id="logo" class="col-9 px-0 py-lg-4">
                 <a href="/joy/">
@@ -48,7 +55,7 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
             <button type="button" class="navbar-toggler m-auto px-0" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"><i class="fa-solid fa-bars text-white"></i></button>                       
             <div class="gnb_wrap collapse navbar-collapse row mx-0 " id="navbarNavDropdown">
                 
-                <ul id="gnb_1dul" class='d-lg-flex justify-content-between col-lg-12 position-absolute'>
+                <ul id="gnb_1dul" class='d-lg-flex justify-content-between col-lg-12 position-absolute text-nowrap border-bottom'>
                     <?php
                     $menu_datas = get_menu_db(0, true);
                     // $gnb_zindex = 999; // gnb_1dli z-index 값 설정용

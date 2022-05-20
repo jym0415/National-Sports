@@ -5,10 +5,10 @@ $(document).ready(function(){
       });
 
     $('.gnb_1dli').click(function(){
-        if($(this).hasClass('show')){
-            $(this).removeClass('show');
+        if($(this).hasClass('li_view')){
+            $(this).removeClass('li_view');
         } else{
-            $(this).addClass('show');
+            $(this).addClass('li_view');
         }
     })
 
@@ -35,6 +35,8 @@ function deskmdiff(){
         $('html').addClass('pc');
     }else{
     $('html').removeClass('pc');
+    $('#navbarNavDropdown').removeClass('show');
+
     }
 }
 

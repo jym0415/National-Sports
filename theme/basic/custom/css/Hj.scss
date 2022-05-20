@@ -8,6 +8,9 @@ ul, dl, ol, li, dt, dd{ list-style: none;}
 .hjinner{
     max-width:1440px;    
 }
+.bg-black{
+    background-color: #212020;
+}
 body{
     font-family: 'nexL' !important;
 }
@@ -25,30 +28,31 @@ a:hover{
     .hd_login{
         font-family: 'nexM'
     }
+    @media(max-width:991px){
+        top: 3.5rem;
+    }
 }
 
 /////////////// 내비게이션 ///////////////
-
 #hd{
     #hd_wrapper{
-        transition: 0.5s;
-        transition-delay: 0.15s;
+        transition: 0.7s;
+        transition-delay: 0.1s;
+    @media(max-width : 991px){
+        position: relative;
+        transition: unset;
         &.bgcolor{
             background-color: white;  
-            transition-delay: unset;
             .logoBox  #logo svg,
             .snsBox i,
             #gnb .gnb_1da{
             color: black !important;   
-            fill: black;   
+            fill: black !important;   
             #gnb button.navbar-toggler .fa-bars{
                     color: black !important;      
                 }
             }
         }
-    @media(max-width : 991px){
-        position: relative;
-        transition-delay: 0.2s;
     }
         .logoBox{
             min-width: 150px;
@@ -93,46 +97,57 @@ a:hover{
             }
         }    
         nav#gnb{
-            position: unset;            
+            position: unset;
+            .gnb_wrap{
+            &.collapsing{
+                position: unset;
+                height: unset;
+                overflow: unset;
+                transition: unset;    
+                }            
+            }
             #gnb_1dul{
                 left: 0;
                 right: 0;
                 top: 98%;
+                transition: 0.5s;
                 transition-delay: 0.1s;
             @media (min-width: 992px){
                     position: unset !important;
+                    border-bottom: unset !important;
                     &:after{
                         content: "";
                         position: absolute;
                         left: 0;
                         right: 0;
                         top: 100%;
-                        background-color: rgb(255, 255, 255);
                         height: 0;
-                        transition: 0.5s;                    
+                        transition: 0.5s;
+                        transition-delay: 0.1s;                                          
                     }
                     &:hover:after {
                         height: 150px;
+                        transition-delay: 0.1s;                        
                     }       
                     &:hover .gnb_1dli .gnb_2dul_box{
                         height: 150px;
+                        transition-delay: 0.2s;
                     }
                 }
             }
             #gnb_1dul{
                 @media(max-width:991px){
-                    position: relative;
                     background-color: white;
                 }                
                 .gnb_1dli{
                     @media(max-width:991px){
                         font-size: 1rem !important;
-                        .gnb_1da{
-                            color: black !important;
-                        }
-                        &.show .gnb_2dul_box{
+                        &.li_view .gnb_2dul_box{
                             height: 75px;
                             padding: 0 1rem;
+                        }
+                        .gnb_1da{
+                            color: black !important;
                         }
                     }
                     .gnb_1da{
@@ -161,6 +176,9 @@ a:hover{
                                 color: #34c1b5;
                             }
                         }
+                        &:hover{
+                            transition: 0.5s;
+                        }
                     }
     
                 }
@@ -177,7 +195,7 @@ a:hover{
     }    
 }
 
-////// 메뉴바(햄버거 버튼) 색상 변경 //////
+//////////// 메뉴바(햄버거 버튼) 색상 변경 ////////////
 #hd_wrapper.bgcolor{
     #gnb{
         button.navbar-toggler .fa-bars{
@@ -187,17 +205,65 @@ a:hover{
     
 }
 
+//////////// 인덱스 여부에 따른 navi 색상 변경 ////////////
 
-
-
-#gnb_1dul .gnb_2dul_box:first-child{
-    display: none;    
+.pc #hd_wrapper.hyjiHD_w1{
+    &.bgcolor{
+        background-color: white;  
+        .logoBox  #logo svg,
+        .snsBox i,
+        #gnb .gnb_1da{
+        color: black !important;   
+        fill: black !important;   
+        }
+        #gnb .gnb_wrap #gnb_1dul{
+            &:after{
+                background-color: white !important;
+            }
+            .gnb_2dli .gnb_2da{
+                color: black;
+            }
+        }
+    }
 }
 
-.collapsing{
-    position: unset;
-    height: unset;
-    overflow: unset;
-    transition: 0.5s;
-    
+.pc #hd #hd_wrapper.hyjiHD_w2{
+    &.bgcolor{
+        background-color: rgb(0, 0, 0);  
+        .logoBox  #logo svg,
+        .snsBox i,
+        #gnb .gnb_1da{
+        color: white !important;   
+        fill: white !important;   
+        }
+        #gnb .gnb_wrap #gnb_1dul{
+            &:after{
+                background-color: black !important;
+            }
+            .gnb_2dul_box{
+                transition: unset !important;
+                .gnb_2dli .gnb_2da{
+                color: white;
+                }
+            }     
+        }
+    }
+}
+
+//////////// 모바일에서는 첫번째 2dul 안보이게 설정 ////////////
+
+#gnb_1dul .gnb_1dli:first-child .gnb_2dul_box{
+    @media(max-width : 991px){
+        display: none;    
+    }
+}
+
+
+
+//////////// 메인배너 글씨 가운데 맞추기 ////////////
+.sw_text{
+    left: 0 !important;
+    right: 0 !important;
+    top: 0 !important;
+    bottom: 0 !important;
 }

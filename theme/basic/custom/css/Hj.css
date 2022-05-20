@@ -14,6 +14,10 @@ ul, dl, ol, li, dt, dd {
   max-width: 1440px;
 }
 
+.bg-black {
+  background-color: #212020;
+}
+
 body {
   font-family: 'nexL' !important;
 }
@@ -33,33 +37,35 @@ a:hover {
   font-family: 'nexM';
 }
 
+@media (max-width: 991px) {
+  #tnb {
+    top: 3.5rem;
+  }
+}
+
 #hd #hd_wrapper {
-  transition: 0.5s;
-  transition-delay: 0.15s;
-}
-
-#hd #hd_wrapper.bgcolor {
-  background-color: white;
-  transition-delay: unset;
-}
-
-#hd #hd_wrapper.bgcolor .logoBox #logo svg,
-#hd #hd_wrapper.bgcolor .snsBox i,
-#hd #hd_wrapper.bgcolor #gnb .gnb_1da {
-  color: black !important;
-  fill: black;
-}
-
-#hd #hd_wrapper.bgcolor .logoBox #logo svg #gnb button.navbar-toggler .fa-bars,
-#hd #hd_wrapper.bgcolor .snsBox i #gnb button.navbar-toggler .fa-bars,
-#hd #hd_wrapper.bgcolor #gnb .gnb_1da #gnb button.navbar-toggler .fa-bars {
-  color: black !important;
+  transition: 0.7s;
+  transition-delay: 0.1s;
 }
 
 @media (max-width: 991px) {
   #hd #hd_wrapper {
     position: relative;
-    transition-delay: 0.2s;
+    transition: unset;
+  }
+  #hd #hd_wrapper.bgcolor {
+    background-color: white;
+  }
+  #hd #hd_wrapper.bgcolor .logoBox #logo svg,
+  #hd #hd_wrapper.bgcolor .snsBox i,
+  #hd #hd_wrapper.bgcolor #gnb .gnb_1da {
+    color: black !important;
+    fill: black !important;
+  }
+  #hd #hd_wrapper.bgcolor .logoBox #logo svg #gnb button.navbar-toggler .fa-bars,
+  #hd #hd_wrapper.bgcolor .snsBox i #gnb button.navbar-toggler .fa-bars,
+  #hd #hd_wrapper.bgcolor #gnb .gnb_1da #gnb button.navbar-toggler .fa-bars {
+    color: black !important;
   }
 }
 
@@ -124,16 +130,25 @@ a:hover {
   position: unset;
 }
 
+#hd #hd_wrapper nav#gnb .gnb_wrap.collapsing {
+  position: unset;
+  height: unset;
+  overflow: unset;
+  transition: unset;
+}
+
 #hd #hd_wrapper nav#gnb #gnb_1dul {
   left: 0;
   right: 0;
   top: 98%;
+  transition: 0.5s;
   transition-delay: 0.1s;
 }
 
 @media (min-width: 992px) {
   #hd #hd_wrapper nav#gnb #gnb_1dul {
     position: unset !important;
+    border-bottom: unset !important;
   }
   #hd #hd_wrapper nav#gnb #gnb_1dul:after {
     content: "";
@@ -141,21 +156,22 @@ a:hover {
     left: 0;
     right: 0;
     top: 100%;
-    background-color: white;
     height: 0;
     transition: 0.5s;
+    transition-delay: 0.1s;
   }
   #hd #hd_wrapper nav#gnb #gnb_1dul:hover:after {
     height: 150px;
+    transition-delay: 0.1s;
   }
   #hd #hd_wrapper nav#gnb #gnb_1dul:hover .gnb_1dli .gnb_2dul_box {
     height: 150px;
+    transition-delay: 0.2s;
   }
 }
 
 @media (max-width: 991px) {
   #hd #hd_wrapper nav#gnb #gnb_1dul {
-    position: relative;
     background-color: white;
   }
 }
@@ -164,12 +180,12 @@ a:hover {
   #hd #hd_wrapper nav#gnb #gnb_1dul .gnb_1dli {
     font-size: 1rem !important;
   }
-  #hd #hd_wrapper nav#gnb #gnb_1dul .gnb_1dli .gnb_1da {
-    color: black !important;
-  }
-  #hd #hd_wrapper nav#gnb #gnb_1dul .gnb_1dli.show .gnb_2dul_box {
+  #hd #hd_wrapper nav#gnb #gnb_1dul .gnb_1dli.li_view .gnb_2dul_box {
     height: 75px;
     padding: 0 1rem;
+  }
+  #hd #hd_wrapper nav#gnb #gnb_1dul .gnb_1dli .gnb_1da {
+    color: black !important;
   }
 }
 
@@ -208,6 +224,10 @@ a:hover {
   color: #34c1b5;
 }
 
+#hd #hd_wrapper nav#gnb #gnb_1dul .gnb_1dli .gnb_2dul_box:hover {
+  transition: 0.5s;
+}
+
 #hd #hd_wrapper nav#gnb button.navbar-toggler {
   outline: unset;
   padding-top: 0.8rem;
@@ -222,13 +242,57 @@ a:hover {
   color: black !important;
 }
 
-#gnb_1dul .gnb_2dul_box:first-child {
-  display: none;
+.pc #hd_wrapper.hyjiHD_w1.bgcolor {
+  background-color: white;
 }
 
-.collapsing {
-  position: unset;
-  height: unset;
-  overflow: unset;
-  transition: 0.5s;
+.pc #hd_wrapper.hyjiHD_w1.bgcolor .logoBox #logo svg,
+.pc #hd_wrapper.hyjiHD_w1.bgcolor .snsBox i,
+.pc #hd_wrapper.hyjiHD_w1.bgcolor #gnb .gnb_1da {
+  color: black !important;
+  fill: black !important;
+}
+
+.pc #hd_wrapper.hyjiHD_w1.bgcolor #gnb .gnb_wrap #gnb_1dul:after {
+  background-color: white !important;
+}
+
+.pc #hd_wrapper.hyjiHD_w1.bgcolor #gnb .gnb_wrap #gnb_1dul .gnb_2dli .gnb_2da {
+  color: black;
+}
+
+.pc #hd #hd_wrapper.hyjiHD_w2.bgcolor {
+  background-color: black;
+}
+
+.pc #hd #hd_wrapper.hyjiHD_w2.bgcolor .logoBox #logo svg,
+.pc #hd #hd_wrapper.hyjiHD_w2.bgcolor .snsBox i,
+.pc #hd #hd_wrapper.hyjiHD_w2.bgcolor #gnb .gnb_1da {
+  color: white !important;
+  fill: white !important;
+}
+
+.pc #hd #hd_wrapper.hyjiHD_w2.bgcolor #gnb .gnb_wrap #gnb_1dul:after {
+  background-color: black !important;
+}
+
+.pc #hd #hd_wrapper.hyjiHD_w2.bgcolor #gnb .gnb_wrap #gnb_1dul .gnb_2dul_box {
+  transition: unset !important;
+}
+
+.pc #hd #hd_wrapper.hyjiHD_w2.bgcolor #gnb .gnb_wrap #gnb_1dul .gnb_2dul_box .gnb_2dli .gnb_2da {
+  color: white;
+}
+
+@media (max-width: 991px) {
+  #gnb_1dul .gnb_1dli:first-child .gnb_2dul_box {
+    display: none;
+  }
+}
+
+.sw_text {
+  left: 0 !important;
+  right: 0 !important;
+  top: 0 !important;
+  bottom: 0 !important;
 }
