@@ -13,7 +13,9 @@ else {
     $g5_head_title = implode(' | ', array_filter(array($g5['title'], $config['cf_title'])));
 }
 
-$g5['title'] = strip_tags($g5['title']);
+// 상단에 board > bo_subject 노출되도록 설정
+// $g5['title'] = strip_tags( $g5['title'] );
+$g5['title'] = strip_tags( $board['bo_subject'] );
 $g5_head_title = strip_tags($g5_head_title);
 
 // 현재 접속자
@@ -41,6 +43,8 @@ header("Pragma: no-cache"); // HTTP/1.0
 <meta name="format-detection" content="telephone=no">
 <meta http-equiv="imagetoolbar" content="no">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<link rel="icon" type="image/png" href="<?php echo G5_THEME_URL ?>/custom/img/favicon.ico" sizes="64x64" />
 <title><?php echo $g5_head_title; ?></title>
 
 <?php
@@ -56,7 +60,8 @@ if($config['cf_add_meta'])
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
 <link rel="stylesheet" href="/joy/theme/basic/css/default.css?ver=<?php echo time(); ?>">
-
+<!--aos 2.3.1-->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <!-- 스와이퍼 8.1.4 -->
 <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
 
@@ -100,6 +105,8 @@ var g5_admin_url = "<?php echo G5_ADMIN_URL; ?>";
  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
 
+  <!--aos 플러그인-->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <!-- swiper 플러그인 -->
   <script src="<?php echo G5_THEME_URL?>/custom/js/swiper8.1.4.js?ver=<?php echo time(); ?>"></script>
 

@@ -26,9 +26,13 @@ $(document).ready(function(){
             $('#hd_wrapper').addClass('bgcolor');
         }
     })
-   
-    
-})
+    if($("div").hasClass("tnb") === true) {
+        tnbLinkno();
+    }else{
+        $("#gnb_1dul .gnb_1dli:last-child .gnb_2dul_box").addClass('d-none');
+    }
+})   
+
 
 function deskmdiff(){
     if($(window).width() > 991 ){
@@ -36,12 +40,16 @@ function deskmdiff(){
     }else{
     $('html').removeClass('pc');
     $('#navbarNavDropdown').removeClass('show');
-
     }
 }
 
+function tnbLinkno(){
+    if($(window).width() > 991 ){
 
-
-
-
+    }else{
+        $('.gnb_1da').click(function(a){
+	        a.preventDefault();
+        })
+    }
+}
 

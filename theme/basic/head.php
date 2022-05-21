@@ -21,12 +21,12 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
     }
     ?>
      <?php if ($is_member) {  ?>
-            <div id="tnb" class="position-absolute text-right">
+            <div id="tnb" class="tnb position-absolute text-right">
                 <div class="inner">
                     <ul class="hd_login d-flex justify-content-end">       
                         <?php if ($is_admin) {  ?>
-                            <li class="tnb_admin col"><a href="<?php echo correct_goto_url(G5_ADMIN_URL); ?>">관리자</a></li>
-                            <li><a href="<?php echo G5_BBS_URL ?>/logout.php">로그아웃</a></li>
+                            <li class="tnb_admin col"><a href="<?php echo correct_goto_url(G5_ADMIN_URL); ?>" class="bg-white">관리자</a></li>
+                            <li><a href="<?php echo G5_BBS_URL ?>/logout.php" class="bg-white">로그아웃</a></li>
                         <?php }  ?>                            
                     </ul>                    
                 </div>
@@ -118,4 +118,4 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
     <div id="container_wr">
    
     <div id="container">
-        <?php if (!defined("_INDEX_")) { ?><h2 id="container_title"><span title="<?php echo get_text($g5['title']); ?>"><?php echo get_head_title($g5['title']); ?></span></h2><?php }
+        <?php if (!defined("_INDEX_")) { ?><h1 id="container_title" class="py-5 my-5 text-center"><?php echo ($g5['title']); ?></h1><?php }
