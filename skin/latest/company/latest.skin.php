@@ -8,9 +8,9 @@ $list_count = (is_array($list) && $list) ? count($list) : 0;
 
     <?php for ($i=0; $i<$list_count; $i++) {  ?>
         
-        <p class="text-center text-md-left"><?php echo $list[$i]['wr_content'] ?></p>
-
-
+        <p class="text-center" data-aos="fade-right" data-aos-duration="1500">
+            <?php echo $list[$i]['wr_content'] ?>
+        </p>
 
     <?php }  ?>
     

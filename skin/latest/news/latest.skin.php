@@ -5,16 +5,15 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 add_stylesheet('<link rel="stylesheet" href="'.$latest_skin_url.'/style.css">', 0);
 $list_count = (is_array($list) && $list) ? count($list) : 0;
 ?>
-<div class="mt-5 pt-5">
+<div class="mt-5 pt-5 pb-5">
     <div class="textWrap position-relative">
         <a href="<?php echo get_pretty_url($bo_table); ?>"><p class="subject"><?php echo $bo_subject ?></p></a>
         <p class="table position-absolute"><?php echo $bo_table ?></p>
     </div>
 
-    <div class="row newsWrap mt-5 mb-5 pb-5 mx-0">
+    <div class="row newsWrap mt-5 pb-5 mx-0">
         <?php for ($i=0; $i<$list_count; $i++) {  ?>
             <div class="box mt-5 col-md-6 col-lg-3 text-left text-md-center text-lg-left position-relative d-flex d-md-block align-items-center justify-content-between px-4 px-md-3">
-
                 <div class="d-flex flex-column">
                     <div class="name mt-md-5 mt-0">
                         <a href="<?php echo get_pretty_url($bo_table, $list[$i]['wr_id']); ?>">
@@ -22,6 +21,7 @@ $list_count = (is_array($list) && $list) ? count($list) : 0;
                         </a>
                     </div>
                     <div class="date mt-md-5 mt-0">
+                        <p class="content text-truncate mb-5"><?php echo $list[$i]['wr_content']?></p>
                         <span class="lt_date"><?php echo $list[$i]['datetime'] ?></span>
                     </div>
                 </div>
@@ -67,4 +67,5 @@ $list_count = (is_array($list) && $list) ? count($list) : 0;
         <?php }  ?>
     </div>
 </div>
+
 

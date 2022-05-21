@@ -5,9 +5,16 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 $list_count = (is_array($list) && $list) ? count($list) : 0;
 ?>
 
-<div class="hjinner m-auto">
+<div class="hjinner m-auto mx-0">
     <a href="<?php echo $list[$i]['wr_link1']; ?>">
-        <div id="map" style="width:500px;height:350px;"></div>
+        <div class="mapWrap row">
+            <div id="map" style="width:100%;height:400px;"class="mapleft col-12 col-md-6"></div>
+            <div class="mapText col-12 col-md-6">
+                <div class="ft_company pb-3">
+                    <?php echo latest ('company','companyInfo',1,100)?>
+                </div>
+            </div>
+        </div>
     </a>
 
     <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=76dc363e0cd56e52668246ea9bf5bbcc"></script>

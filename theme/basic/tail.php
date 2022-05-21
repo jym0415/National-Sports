@@ -18,18 +18,15 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 <!-- 하단 시작 { -->
 <div id="ft">
     <div class="hjinner m-auto">
-        <div class="ft_wr d-block d-md-flex justify-content-between align-items-center">
+        <div class="ft_wr d-md-flex justify-content-between align-items-center">
             <div class="leftWrap">
-                <div id="ft_link" class="ft_cnt text-center text-md-left d-block d-md-flex pt-3 pb-5">
-                    <a href="<?php echo get_pretty_url('content', 'privacy'); ?>" class="mr-md-4">개인정보취급방침</a>
-                    <a href="<?php echo get_pretty_url('content', 'provision'); ?>" class="mr-md-4">서비스이용약관</a>
-                    <a href="<?php echo get_pretty_url('content', 'company'); ?>" class="mr-md-4">회사소개</a>
-                </div>
-                <div class="ft_company pb-3">
-                    <?php echo latest ('company','companyInfo',1,100)?>
+                <div id="ft_link" class="ft_cnt text-center text-md-left d-block d-md-flex pt-5 pb-5">
+                    <a href="<?php echo get_pretty_url('content', 'privacy'); ?>" class="px-2 border-right border-white">개인정보취급방침</a>
+                    <a href="<?php echo get_pretty_url('content', 'provision'); ?>" class="px-2 border-right border-white">서비스이용약관</a>
+                    <a href="<?php echo get_pretty_url('content', 'company'); ?>" class="px-2 border-right border-white">회사소개</a>
                 </div>
             </div>
-            <div id="logoWrap" class="">
+            <div id="logoWrap" class="pt-5 pt-md-0 ">
                 <?php echo latest('logo', 'logo', 1, 100)?>
             </div>
         </div>
