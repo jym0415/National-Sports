@@ -13,15 +13,19 @@ $uid = isset($_POST['uid']) ? preg_replace('/[^0-9]/', '', $_POST['uid']) : 0;
 
 if($board['bo_use_category']) {
     $ca_name = isset($_POST['ca_name']) ? trim($_POST['ca_name']) : '';
+
     if(!$ca_name) {
-        $msg[] = '<strong>분류</strong>를 선택하세요.';
+        // $msg[] = '<strong>분류</strong>를 선택하세요.';
+
     } else {
         $categories = array_map('trim', explode("|", $board['bo_category_list'].($is_admin ? '|공지' : '')));
-        if(!empty($categories) && !in_array($ca_name, $categories))
-            $msg[] = '분류를 올바르게 입력하세요.';
 
-        if(empty($categories))
-            $ca_name = '';
+    if(!empty($categories) && !in_array($ca_name, $categories))
+        $msg[] = '분류를 올바르게 입력하세요.';
+
+    if(empty($categories))
+        $ca_name = '';
+
     }
 } else {
     $ca_name = '';
@@ -41,8 +45,10 @@ if (isset($_POST['wr_content'])) {
     $wr_content = substr(trim($_POST['wr_content']),0,65536);
     $wr_content = preg_replace("#[\\\]+$#", "", $wr_content);
 }
-if ($wr_content == '') {
-    $msg[] = '<strong>내용</strong>을 입력하세요.';
+if ($bo_table != 'form') {
+    if ($wr_content == '') {
+        $msg[] = '<strong>내용</strong>을 입력하세요.';
+    }
 }
 
 $wr_link1 = '';

@@ -1,5 +1,10 @@
 <?php
 if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
+// 내용 필수 입력 해제
+    if ($bo_table == 'form') {
+        $editor_js = '';
+        $editor_js .= get_editor_js('wr_content', $is_dhtml_editor);
+    }
 ?>
 
 <section id="bo_w">
@@ -18,14 +23,16 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
     <input type="hidden" name="sst" value="<?php echo $sst ?>">
     <input type="hidden" name="sod" value="<?php echo $sod ?>">
     <input type="hidden" name="page" value="<?php echo $page ?>">
+    <input type="hidden" name="wr_subject" value="상담 문의가 접수되었습니다.<?php echo date( 'Y-m-d H:i:s' ); ?>">
+
 
 
     <?php if ($is_category) { ?>
-    <div class="bo_w_select write_div text-center py-2">
+    <div class="bo_w_select write_div text-center pb-2">
 
         <!-- 여분필드출력 교육과정-->
         <?php echo $board['bo_1_subj'] ?> 
-	    <select name="wr_1" id="wr_1" class="mr-5">
+	    <select name="wr_1" id="wr_1" class="mx-1 form_field">
         <label for="wr_name" class="sound_only">이름<strong>필수</strong></label>
             <?php
             $item_list = explode(',', $board['bo_1']);
@@ -38,7 +45,7 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 
         <!-- 여분필드출력 나이-->
         <?php echo $board['bo_2_subj'] ?> 
-	    <select name="wr_2" id="wr_2" class="mr-5">
+	    <select name="wr_2" id="wr_2" class="mx-1 form_field">
         <label for="wr_name" class="sound_only">이름<strong>필수</strong></label>
             <?php
             $item_list = explode(',', $board['bo_2']);
@@ -50,7 +57,7 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
         </select>        
         <!-- 여분필드출력 유입경로-->
         <?php echo $board['bo_3_subj'] ?> 
-	    <select name="wr_3" id="wr_3" class="mr-5">
+	    <select name="wr_3" id="wr_3" class="mx-1 form_field">
         <label for="wr_name" class="sound_only">이름<strong>필수</strong></label>
             <?php
             $item_list = explode(',', $board['bo_3']);
@@ -65,57 +72,45 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
     <?php } ?>
 
     <div class="bo_w_info write_div row flex-column align-items-center">
+        
 	    <?php if ($is_name) { ?>
 	        <label for="wr_name" class="sound_only">이름<strong>필수</strong></label>
-	        <input type="text" name="wr_name" value="<?php echo $name ?>" id="wr_name" required class="frm_input pt-3 half_input required col-lg-3" placeholder="이름">
+	        <input type="text" name="wr_name" value="<?php echo $name ?>" id="wr_name" required class="frm_input my-3 half_input required col-lg-6" placeholder="이름">
 	    <?php } ?>
 	
 	    <?php if ($is_password) { ?>
 	        <label for="wr_password" class="sound_only">비밀번호<strong>필수</strong></label>
-	        <input type="password" name="wr_password" id="wr_password" <?php echo $password_required ?> class="frm_input pt-3 half_input col-lg-3 <?php echo $password_required ?>" placeholder="비밀번호">
+	        <input type="password" name="wr_password" id="wr_password" <?php echo $password_required ?> class="frm_input my-3 half_input col-lg-6 <?php echo $password_required ?>" placeholder="비밀번호">
 	    <?php } ?>	
 
         <?php if ($is_email) { ?>
 			<label for="wr_email" class="sound_only">이메일</label>
-			<input type="text" name="wr_email" value="<?php echo $email ?>" id="wr_email" class="frm_input half_input pt-3 email col-lg-3" placeholder="이메일">
+			<input type="text" name="wr_email" value="<?php echo $email ?>" id="wr_email" class="frm_input half_input my-3 email col-lg-6" placeholder="이메일">
 	    <?php } ?>
 	</div>
-	
 
 
 
     <h5 class="text-center mt-5 mb-2">문의사항<sub class="text-danger">*문의사항이 있을 경우에만 작성해 주시면 됩니다.</sub></h5>
     <div class="write_div w-50 m-auto">
-        <label for="wr_content" class="sound_only">내용<strong>필수</strong></label>
-        <div class="wr_content <?php echo $is_dhtml_editor ? $config['cf_editor'] : ''; ?>">
-            <?php if($write_min || $write_max) { ?>
-            <!-- 최소/최대 글자 수 사용 시 -->
-            <p id="char_count_desc">이 게시판은 최소 <strong><?php echo $write_min; ?></strong>글자 이상, 최대 <strong><?php echo $write_max; ?></strong>글자 이하까지 글을 쓰실 수 있습니다.</p>
-            <?php } ?>
-            <?php echo $editor_html; // 에디터 사용시는 에디터로, 아니면 textarea 로 노출 ?>
-            <?php if($write_min || $write_max) { ?>
-            <!-- 최소/최대 글자 수 사용 시 -->
-            <div id="char_count_wrap"><span id="char_count"></span>글자</div>
-            <?php } ?>
+            <?php echo $editor_html; // 에디터 사용시는 에디터로, 아니면 textarea 로 노출 ?>        
+    </div>
+
+
+
+
+    <div class="write_div w-50 d-flex justify-content-between align-items-start  my-5 mx-auto">
+        <div>
+        <?php if ($is_use_captcha) { //자동등록방지  ?>        
+            <?php echo $captcha_html ?>
+        <?php } ?>
         </div>
-        
-    </div>
 
-
-
-
-
-    <!-- <?php if ($is_use_captcha) { //자동등록방지  ?>
-    <div class="write_div">
-        <?php echo $captcha_html ?>
-    </div>
-    -->
-    <?php } ?>
-
-    <div class="btn_confirm write_div">
-        <a href="<?php echo get_pretty_url($bo_table); ?>" class="btn_cancel btn">취소</a>
-        <button type="submit" id="btn_submit" accesskey="s" class="btn_submit btn">작성완료</button>
-    </div>
+        <div class="btn_confirm">
+            <a href="<?php echo get_pretty_url($bo_table); ?>" class="btn_cancel btn">취소</a>
+            <button type="submit" id="btn_submit" accesskey="s" class="btn_submit btn">작성완료</button>
+        </div>
+    </div>   
     </form> 
 
     <script>
