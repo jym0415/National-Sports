@@ -83,33 +83,49 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 	        <input type="password" name="wr_password" id="wr_password" <?php echo $password_required ?> class="frm_input my-3 half_input col-lg-6 <?php echo $password_required ?>" placeholder="비밀번호">
 	    <?php } ?>	
 
+            <label for="wr_4" class="sound_only">전화번호<strong>필수</strong></label>
+            <input type="text" name="wr_4" value="<?php echo $wr_4 ?>" id="wr_4" required class="frm_input half_input col-lg-6 required my-3" size="15" maxlength="20" placeholder="전화번호">
+
         <?php if ($is_email) { ?>
 			<label for="wr_email" class="sound_only">이메일</label>
 			<input type="text" name="wr_email" value="<?php echo $email ?>" id="wr_email" class="frm_input half_input my-3 email col-lg-6" placeholder="이메일">
 	    <?php } ?>
+           
+
 	</div>
-
-
-
-    <h5 class="text-center mt-5 mb-2">문의사항<sub class="text-danger">*문의사항이 있을 경우에만 작성해 주시면 됩니다.</sub></h5>
-    <div class="write_div w-50 m-auto">
-            <?php echo $editor_html; // 에디터 사용시는 에디터로, 아니면 textarea 로 노출 ?>        
+    <div class="mt-2 row flex-column">
+        <h5 class="text-center mb-2">문의사항<span class="text-danger gnb_2da"><br/>*문의사항이 있을 경우에만 작성해 주시면 됩니다.</span></h5>
+        <div class="write_div col-lg-6 col-10 m-auto">
+                <?php echo $editor_html; // 에디터 사용시는 에디터로, 아니면 textarea 로 노출 ?>        
+        </div>
     </div>
 
 
 
+    <!-- 개인정보처리방침 -->
+    <div class="info mt-5 row">
+        <div class="col-lg-6 mx-auto">
+            <textarea readonly style="width:100%;height:100px"><?php echo get_text($config['cf_privacy']) ?></textarea>
+            <div class="text-right">
+                <label class="m-0" for="wr_5">개인정보수집이용에 동의합니다.</label>
+                <input type="checkbox" name="wr_5" value="1"<?php echo ($write['wr_5'] == "1") ? " checked" : "";?>>
+            </div>
+        </div>
+    </div>
 
-    <div class="write_div w-50 d-flex justify-content-between align-items-start  my-5 mx-auto">
-        <div>
+
+
+    <div class="row justify-content-center align-items-start  my-5 mx-auto write_btn">
+        <div class="col-lg-3 text-left">
         <?php if ($is_use_captcha) { //자동등록방지  ?>        
             <?php echo $captcha_html ?>
         <?php } ?>
         </div>
 
-        <div class="btn_confirm">
+        <div class="btn_confirm col-lg-3 text-right">
             <a href="<?php echo get_pretty_url($bo_table); ?>" class="btn_cancel btn">취소</a>
             <button type="submit" id="btn_submit" accesskey="s" class="btn_submit btn">작성완료</button>
-        </div>
+        </div>    
     </div>   
     </form> 
 
@@ -142,6 +158,11 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 
     function fwrite_submit(f)
     {
+        if (!f.wr_5.checked) {
+        alert("개인정보수집이용에 동의하셔야 작성할 수 있습니다.");
+        f.wr_5.focus();
+        return false;
+    }
         <?php echo $editor_js; // 에디터 사용시 자바스크립트에서 내용을 폼필드로 넣어주며 내용이 입력되었는지 검사함   ?>
 
         var subject = "";

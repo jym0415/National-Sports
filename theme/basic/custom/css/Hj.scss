@@ -274,6 +274,11 @@ a:hover{
                 right: 0 !important;
                 top: 0 !important;
                 bottom: 0 !important;
+                .mainBtn{
+                    a:hover{
+                        background-color: #c1c1c1a3;
+                    }
+                }
             }
         }
     }
@@ -313,6 +318,27 @@ a:hover{
         }
     }
     #wr_content{
-        height: 20vh !important;
+        height: 8vh !important;
     }    
+    .write_btn{
+        .btn_confirm{
+            .btn{
+                background: #fff0;
+                color: #000000;
+                text-decoration: none;
+                border: 1px solid black;
+                border-radius: unset;
+                box-shadow: unset;
+                outline: unset;
+                &.btn_cancel:hover{
+                    background: #aaa;
+                    color: white;
+                }
+                &.btn_submit:hover{
+                    background: #33c1b5;
+                    color: white;
+                }
+            }
+        }
+    }
 }
