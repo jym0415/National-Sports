@@ -319,6 +319,12 @@ a:hover {
   font-size: 1.2rem;
 }
 
+@media (max-width: 991px) {
+  #bo_w .bo_w_select .write_Text {
+    width: 75%;
+  }
+}
+
 #bo_w .bo_w_select .form_field {
   font-size: 1.3rem;
   padding: 0.3rem;

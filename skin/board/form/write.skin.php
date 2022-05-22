@@ -28,45 +28,52 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 
 
     <?php if ($is_category) { ?>
-    <div class="bo_w_select write_div text-center pb-2">
+    <div class="bo_w_select write_div pb-2 d-flex justify-content-md-center flex-column flex-md-row align-items-center">
 
         <!-- 여분필드출력 교육과정-->
-        <?php echo $board['bo_1_subj'] ?> 
-	    <select name="wr_1" id="wr_1" class="mx-1 form_field">
-        <label for="wr_name" class="sound_only">이름<strong>필수</strong></label>
-            <?php
-            $item_list = explode(',', $board['bo_1']);
-            for ($i=0; $i<count($item_list); $i++) {
-                $option_item = trim($item_list[$i]);
-            ?>
-            <option value="<?php echo $option_item ?>"<?php echo ($write['wr_1'] == $option_item) ? " selected" : "";?>><?php echo $option_item ?></option>
-            <?php } ?>
-        </select>
+        <div class="write_Text row align-items-center justify-content-center col p-0">
+            <div class="col-4 col-lg-2 p-0"><?php echo $board['bo_1_subj'] ?></div>
+            <select name="wr_1" id="wr_1" class="mx-1 form_field col-6">
+            <label for="wr_name" class="sound_only">이름<strong>필수</strong></label>
+                <?php
+                $item_list = explode(',', $board['bo_1']);
+                for ($i=0; $i<count($item_list); $i++) {
+                    $option_item = trim($item_list[$i]);
+                ?>
+                <option value="<?php echo $option_item ?>"<?php echo ($write['wr_1'] == $option_item) ? " selected" : "";?>><?php echo $option_item ?></option>
+                <?php } ?>
+            </select>
+        </div>
 
         <!-- 여분필드출력 나이-->
-        <?php echo $board['bo_2_subj'] ?> 
-	    <select name="wr_2" id="wr_2" class="mx-1 form_field">
-        <label for="wr_name" class="sound_only">이름<strong>필수</strong></label>
-            <?php
-            $item_list = explode(',', $board['bo_2']);
-            for ($i=0; $i<count($item_list); $i++) {
-                $option_item = trim($item_list[$i]);
-            ?>
-            <option value="<?php echo $option_item ?>"<?php echo ($write['wr_2'] == $option_item) ? " selected" : "";?>><?php echo $option_item ?></option>
-            <?php } ?>
-        </select>        
+        <div class="write_Text row align-items-center justify-content-center col p-0">
+            <div class="col-4 col-lg-2 p-0"><?php echo $board['bo_2_subj'] ?></div>
+            <select name="wr_2" id="wr_2" class="mx-1 form_field col-6">
+            <label for="wr_name" class="sound_only">이름<strong>필수</strong></label>
+                <?php
+                $item_list = explode(',', $board['bo_2']);
+                for ($i=0; $i<count($item_list); $i++) {
+                    $option_item = trim($item_list[$i]);
+                ?>
+                <option value="<?php echo $option_item ?>"<?php echo ($write['wr_2'] == $option_item) ? " selected" : "";?>><?php echo $option_item ?></option>
+                <?php } ?>
+            </select>   
+        </div>     
+
         <!-- 여분필드출력 유입경로-->
-        <?php echo $board['bo_3_subj'] ?> 
-	    <select name="wr_3" id="wr_3" class="mx-1 form_field">
-        <label for="wr_name" class="sound_only">이름<strong>필수</strong></label>
-            <?php
-            $item_list = explode(',', $board['bo_3']);
-            for ($i=0; $i<count($item_list); $i++) {
-                $option_item = trim($item_list[$i]);
-            ?>
-            <option value="<?php echo $option_item ?>"<?php echo ($write['wr_3'] == $option_item) ? " selected" : "";?>><?php echo $option_item ?></option>
-            <?php } ?>
-        </select>    
+        <div class="write_Text row align-items-center justify-content-center col p-0">
+            <div class="col-4 col-lg-2 p-0"><?php echo $board['bo_3_subj'] ?></div>
+            <select name="wr_3" id="wr_3" class="mx-1 form_field col-6">
+            <label for="wr_name" class="sound_only">이름<strong>필수</strong></label>
+                <?php
+                $item_list = explode(',', $board['bo_3']);
+                for ($i=0; $i<count($item_list); $i++) {
+                    $option_item = trim($item_list[$i]);
+                ?>
+                <option value="<?php echo $option_item ?>"<?php echo ($write['wr_3'] == $option_item) ? " selected" : "";?>><?php echo $option_item ?></option>
+                <?php } ?>
+            </select>
+        </div>      
     </div>
 
     <?php } ?>
