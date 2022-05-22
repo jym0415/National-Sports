@@ -67,17 +67,17 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
     <div class="bo_w_info write_div row flex-column align-items-center">
 	    <?php if ($is_name) { ?>
 	        <label for="wr_name" class="sound_only">이름<strong>필수</strong></label>
-	        <input type="text" name="wr_name" value="<?php echo $name ?>" id="wr_name" required class="frm_input pt-3 half_input required col-lg-4" placeholder="이름">
+	        <input type="text" name="wr_name" value="<?php echo $name ?>" id="wr_name" required class="frm_input pt-3 half_input required col-lg-3" placeholder="이름">
 	    <?php } ?>
 	
 	    <?php if ($is_password) { ?>
 	        <label for="wr_password" class="sound_only">비밀번호<strong>필수</strong></label>
-	        <input type="password" name="wr_password" id="wr_password" <?php echo $password_required ?> class="frm_input pt-3 half_input col-lg-4 <?php echo $password_required ?>" placeholder="비밀번호">
+	        <input type="password" name="wr_password" id="wr_password" <?php echo $password_required ?> class="frm_input pt-3 half_input col-lg-3 <?php echo $password_required ?>" placeholder="비밀번호">
 	    <?php } ?>	
 
         <?php if ($is_email) { ?>
-			<label for="wr_email" class="sound_only col-lg-4">이메일</label>
-			<input type="text" name="wr_email" value="<?php echo $email ?>" id="wr_email" class="frm_input half_input pt-3 email col-lg-4" placeholder="이메일">
+			<label for="wr_email" class="sound_only">이메일</label>
+			<input type="text" name="wr_email" value="<?php echo $email ?>" id="wr_email" class="frm_input half_input pt-3 email col-lg-3" placeholder="이메일">
 	    <?php } ?>
 	</div>
 	
