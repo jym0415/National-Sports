@@ -65,7 +65,9 @@
 .swiper-pagination-bullet {
   width: 15px;
   height: 3px;
-  background: transparent;
+  background: #34C1B5;
+  border-radius: unset;
+  border: 1px solid #34C1B5;
   opacity: 1;
 }
 
@@ -73,7 +75,9 @@
   width: 6rem;
   -webkit-transition: width .5s;
   transition: width .5s;
+  border-radius: unset;
   background: #34C1B5;
+  border: 1px solid #34C1B5;
 }
 
 .mainBtn {
@@ -82,11 +86,50 @@
   right: 0;
   top: 0;
   bottom: 0;
+  width: 30vw;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.mainBtn > div {
+  min-width: 40%;
 }
 
 .mainBtn a {
   color: white;
   display: block;
   border: 1px solid white;
-  padding: 1rem;
+}
+
+@media (min-width: 767px) {
+  .mainBtn a {
+    font-size: 1rem;
+  }
+}
+
+#calendar {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.sccont p {
+  font-size: 2rem;
+}
+
+.btncustom {
+  display: inline-block;
+  text-decoration: none;
+  vertical-align: middle;
+  border: 0;
+  background: transparent;
+  color: #34C1B5;
+}
+
+body {
+  cursor: url("/joy/theme/basic/custom/img/cursor.cur"), auto;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  text-align: center;
 }
