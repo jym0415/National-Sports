@@ -27,20 +27,11 @@ a {color:#000;text-decoration:none}
   box-sizing:border-box;
 }
 
-input[type=text],input[type=password], textarea {
--webkit-transition:all 0.30s ease-in-out;
--moz-transition:all 0.30s ease-in-out;
--ms-transition:all 0.30s ease-in-out;
--o-transition:all 0.30s ease-in-out;
-outline:none;
-}
+input[type=text],input[type=password], textarea, select {
+  border: 1px solid #ccc !important;
+  outline: none;
+  }
 
-input[type=text]:focus,input[type=password]:focus, textarea:focus,select:focus {
--webkit-box-shadow:0 0 5px #9ed4ff;
--moz-box-shadow:0 0 5px #9ed4ff;
-box-shadow:0 0 5px #9ed4ff;
-border:1px solid #558ab7 !important;
-}
 
 .placeholdersjs {color:#aaa !important}
 
@@ -109,7 +100,6 @@ box-shadow:0 2px 5px rgba(0,0,0,0.2)}
 #ft_company h2 {font-size:1.2em;margin-bottom:20px}
 #ft_company {color:#ffffff;}
 #ft_catch {margin:20px 0 10px}
-
 
 
 /* 게시물 선택복사 선택이동 */
@@ -242,7 +232,6 @@ box-shadow:inset 0 1px 1px rgba(0, 0, 0, .075);
 .frm_input {height:40px}
 
 .full_input {width:100%}
-.half_input {width:49.5%}
 .twopart_input {width:385px;margin-right:10px}
 .tbl_frm01 textarea, .write_div textarea {width:100%;height:100px}
 .tbl_frm01 a {text-decoration:none}

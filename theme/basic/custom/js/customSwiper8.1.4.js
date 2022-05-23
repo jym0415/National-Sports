@@ -35,7 +35,6 @@ var swiper2 = new Swiper('.swiper.gallery', {
       },
     autoplayDisableOnInteraction: false,
     spaceBetween: 10,
-    centeredSlides: true,
     breakpoints: {
         768: {
           slidesPerView: 2,  //브라우저가 768보다 클 때

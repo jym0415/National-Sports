@@ -17,7 +17,7 @@ include_once(G5_THEME_PATH.'/head.php');
     <div class="kids position-absolute">
         <img src="/joy/theme/basic/img/kids.png" alt=""
             data-aos="fade-left"
-            data-aos-duration="800">
+            data-aos-duration="1500">
     </div>
     <div class="hjinner m-auto">
         <?php echo latest('news','NEWS',4,500)?>

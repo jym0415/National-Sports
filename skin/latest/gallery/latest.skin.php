@@ -12,13 +12,12 @@ $thumb_height = 250;
 <div class="hjinner m-auto">
     <div class="pt-5 pb-5">
         <div class="dailySub pt-5 position-relative">
-            <p><?php echo $bo_subject?></p>
+            <p class="text-left"><?php echo $bo_subject?></p>
             <p class="gallery position-absolute">GALLERY</p>
-            <img src="/joy/theme/basic/img/red.png" alt="" class="red position-absolute">
         </div>
     
         <div class="dailyBWrap d-flex align-items-center pb-5">
-            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            <!-- <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                     viewBox="0 0 81.3 83.3" style="enable-background:new 0 0 81.3 83.3;" xml:space="preserve" class="minjiBT-prev">
                 <style type="text/css">
                     .st0{fill:#F1F1F1;}
@@ -49,7 +48,7 @@ $thumb_height = 250;
                             <rect x="34.7" y="36.6" transform="matrix(0.7487 -0.6629 0.6629 0.7487 -23.4527 37.1082)" class="st1" width="5" height="25.8"/>
                     </g>
                 </g>
-            </svg>
+            </svg> -->
 
             <div class="swiper-container swiper <?php echo $bo_table; ?>">
                 <div class="swiper-wrapper">
@@ -72,7 +71,7 @@ $thumb_height = 250;
                     <?php }  ?>
                 </div>
             </div>
-            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            <!-- <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                 viewBox="0 0 81.3 83.3" style="enable-background:new 0 0 81.3 83.3;" xml:space="preserve" class="minjiBT-next">
                 <style type="text/css">
                     .st0{fill:#F1F1F1;}
@@ -102,7 +101,7 @@ $thumb_height = 250;
                         <rect x="31.2" y="47" transform="matrix(0.6629 -0.7487 0.7487 0.6629 -22.1896 49.6852)" class="st1" width="25.8" height="5"/>
                     </g>
                 </g>
-            </svg>
+            </svg> -->
         </div>
     </div>
 </div>

@@ -21,9 +21,9 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
         <div class="ft_wr d-md-flex justify-content-between align-items-center">
             <div class="leftWrap">
                 <div id="ft_link" class="ft_cnt text-center text-md-left d-block d-md-flex pt-5 pb-5">
-                    <a href="<?php echo get_pretty_url('content', 'privacy'); ?>" class="px-2 border-right border-white">개인정보취급방침</a>
-                    <a href="<?php echo get_pretty_url('content', 'provision'); ?>" class="px-2 border-right border-white">서비스이용약관</a>
-                    <a href="<?php echo get_pretty_url('content', 'company'); ?>" class="px-2 border-right border-white">회사소개</a>
+                    <a href="<?php echo get_pretty_url('content', 'privacy'); ?>" class="px-2">개인정보취급방침</a>
+                    <a href="<?php echo get_pretty_url('content', 'provision'); ?>" class="px-2">서비스이용약관</a>
+                    <a href="<?php echo get_pretty_url('content', 'company'); ?>" class="px-2">회사소개</a>
                 </div>
             </div>
             <div id="logoWrap" class="pt-5 pt-md-0 ">
@@ -37,27 +37,27 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
             <ul id ="btnWrap" class="position-absolute">
                 <li class="apply mt-2">
                     <a href="https://jmu0760.cafe24.com/joy/bbs/write.php?bo_table=form" class="sm_btn">
-                        <i class="far fa-file-alt" aria-hidden="true"></i><span class="sound_only">수강신청</span>
+                        <img src="/joy/theme/basic/custom/img/form.png" alt=""><span class="sound_only">수강신청</span>
                     </a>
                 </li>
                 <li class="kakao mt-2">
                     <a href="#none" class="sm_btn">
-                        <i class="far fa-comment" aria-hidden="true"></i><span class="sound_only">카카오톡</span>
+                        <img src="/joy/theme/basic/custom/img/talk.png" alt=""><span class="sound_only">카카오톡</span>
                     </a>
                 </li>
                 <li class="insta mt-2">
                     <a href="https://www.instagram.com/joy_academy_/" class="sm_btn">
-                        <i class="fab fa-instagram" aria-hidden="true"></i><span class="sound_only">인스타그램</span>
+                        <img src="/joy/theme/basic/custom/img/insta.png" alt=""><span class="sound_only">인스타그램</span>
                     </a>
                 </li>
             </ul>
             <a href="#none" id="more_btn" class="d-block position-relative mt-2">
-                <i class="fas fa-plus" aria-hidden="true"></i><span class="sound_only">더보기</span>
+                <img src="/joy/theme/basic/custom/img/more.png" alt=""><span class="sound_only">더보기</span>
             </a>
         </div>
         
         <button type="button" id="top_btn">
-            <i class="fa fa-arrow-up" aria-hidden="true"></i><span class="sound_only">상단으로</span>
+            <img src="/joy/theme/basic/custom/img/arrow.png" alt=""><span class="sound_only">상단으로</span>
         </button>
     </div>
     
