@@ -17,6 +17,11 @@ body{
 a:hover{
     text-decoration: none !important;
 }
+textarea:focus{    
+    outline: unset;
+    box-shadow: unset;
+    border: 1px solid #767676 !important;
+}
 
 /////////////// 관리자 로그아웃 ///////////////
 
@@ -30,6 +35,17 @@ a:hover{
     }
     @media(max-width:991px){
         top: 3.5rem;
+    }
+}
+
+//////////// 전체 게시판 타이틀 수정 ////////////
+
+#wrapper{
+    #container_title{
+        font-family: 'nexL';
+        font-size: 3rem;
+        letter-spacing: 1.2rem;
+        text-indent: 1.2rem
     }
 }
 
@@ -285,29 +301,25 @@ a:hover{
 }
 
 
-//////////// 전체 게시판 타이틀 수정 ////////////
-
-#wrapper{
-    #container_title{
-        font-family: 'nexL';
-        font-size: 3rem;
-        letter-spacing: 25px;
-    }
-}
-
 //////////// 수강신청 ////////////
 
 #bo_w{
     .bo_w_select{
         font-size: 1.2rem;
+        @media(max-width:991px){
+            width: 100% !important;
+        }
         .write_Text{
-            @media(max-width:991px){
-                width: 75%;
-            }
+
         }
         .form_field{
             font-size: 1.3rem;
             padding: 0.3rem;
+            border: unset !important;
+            background-image: url(/joy/theme/basic/custom/img/form/cloud1.png) !important;
+            background-repeat: no-repeat;
+            background-size: 98%;
+            height: 3.1rem;
         }
     }
     .bo_w_info{
@@ -316,34 +328,68 @@ a:hover{
             background: #fff;
             color: #000;
             padding: 5px;
-            border-bottom: 2px solid black !important;
+            border-bottom: 1px solid #34c1b5 !important;
             border-radius: unset !important;
             box-shadow: none;
             font-size: 1.3rem;
         }
+        .required, textarea.required {
+            background-image: url(/joy/theme/basic/custom/img/form/required.svg) !important;
+            background-repeat: no-repeat !important;
+            background-position: right !important;
+        }
     }
     #wr_content{
-        height: 8vh !important;
+        height: 8vw !important;
+        min-height: 80px;
+        border: 1px solid #34c1b5 !important;
     }    
     .write_btn{
+        .btn_speak{
+            @media(max-width:991px){
+                #captcha_img{
+                    margin: 5px auto;
+                }
+                #captcha_key{
+                    margin: 0.25rem!important;
+                }
+            }
+        }
+
         .btn_confirm{
             .btn{
                 background: #fff0;
                 color: #000000;
-                text-decoration: none;
-                border: 1px solid black;
+                text-decoration: none;                
                 border-radius: unset;
                 box-shadow: unset;
                 outline: unset;
-                &.btn_cancel:hover{
+                color: white;
+                height: unset;
+                font-size: 1.5rem;
+                &.btn_cancel{
                     background: #aaa;
-                    color: white;
                 }
-                &.btn_submit:hover{
-                    background: #33c1b5;
-                    color: white;
+                &.btn_submit{
+                    background: #34c1b5;
+                }
+                @media(max-width:991px){
+                    font-size: 1.2rem;
                 }
             }
         }
     }
+    .gnb_2da{
+        @media (max-width: 991px){
+            font-size: 0.8rem !important;
+        }
+    }
+    .info{
+        textarea{
+            border: 1px solid #34c1b5 !important;
+        }
+    }
 }
+
+
+

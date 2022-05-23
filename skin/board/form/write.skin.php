@@ -28,12 +28,12 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 
 
     <?php if ($is_category) { ?>
-    <div class="bo_w_select write_div pb-2 d-flex justify-content-md-center flex-column flex-md-row align-items-center">
+    <div class="bo_w_select write_div pb-2 d-flex justify-content-lg-center flex-column flex-lg-row align-items-center w-75 mx-auto">
 
         <!-- 여분필드출력 교육과정-->
-        <div class="write_Text row align-items-center justify-content-center col p-0">
-            <div class="col-4 col-lg-2 p-0"><?php echo $board['bo_1_subj'] ?></div>
-            <select name="wr_1" id="wr_1" class="mx-1 form_field col-6">
+        <div class="write_Text row align-items-center justify-content-center justify-content-lg-end px-5 px-lg-0 my-3 my-lg-0">
+            <div class="col-4 col-lg-2 p-0 mr-3"><img src="<?php echo G5_THEME_URL ?>/custom/img/form/baby.png" class="img-fluid"></div>
+            <select name="wr_1" id="wr_1" class="mx-1 mx-lg-0 form_field col-6 col-lg-5 text-right">
             <label for="wr_name" class="sound_only">이름<strong>필수</strong></label>
                 <?php
                 $item_list = explode(',', $board['bo_1']);
@@ -46,9 +46,9 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
         </div>
 
         <!-- 여분필드출력 나이-->
-        <div class="write_Text row align-items-center justify-content-center col p-0">
-            <div class="col-4 col-lg-2 p-0"><?php echo $board['bo_2_subj'] ?></div>
-            <select name="wr_2" id="wr_2" class="mx-1 form_field col-6">
+        <div class="write_Text row align-items-center justify-content-center px-5 px-lg-0 my-3 my-lg-0">
+            <div class="col-4 col-lg-2 p-0 mr-3"><img src="<?php echo G5_THEME_URL ?>/custom/img/form/woman.png" class="img-fluid"></div>
+            <select name="wr_2" id="wr_2" class="mx-1 mx-lg-0 form_field col-6 col-lg-5 text-right">
             <label for="wr_name" class="sound_only">이름<strong>필수</strong></label>
                 <?php
                 $item_list = explode(',', $board['bo_2']);
@@ -61,9 +61,9 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
         </div>     
 
         <!-- 여분필드출력 유입경로-->
-        <div class="write_Text row align-items-center justify-content-center col p-0">
-            <div class="col-4 col-lg-2 p-0"><?php echo $board['bo_3_subj'] ?></div>
-            <select name="wr_3" id="wr_3" class="mx-1 form_field col-6">
+        <div class="write_Text row align-items-center justify-content-center justify-content-lg-start px-5 px-lg-0 my-3 my-lg-0">
+            <div class="col-4 col-lg-2 p-0 mr-3"><img src="<?php echo G5_THEME_URL ?>/custom/img/form/man.png" class="img-fluid"></div>
+            <select name="wr_3" id="wr_3" class="mx-1 mx-lg-0 form_field col-6 col-lg-5 text-right">
             <label for="wr_name" class="sound_only">이름<strong>필수</strong></label>
                 <?php
                 $item_list = explode(',', $board['bo_3']);
@@ -78,31 +78,31 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 
     <?php } ?>
 
-    <div class="bo_w_info write_div row flex-column align-items-center">
+    <div class="bo_w_info write_div row mx-0 flex-column align-items-center">
         
 	    <?php if ($is_name) { ?>
 	        <label for="wr_name" class="sound_only">이름<strong>필수</strong></label>
-	        <input type="text" name="wr_name" value="<?php echo $name ?>" id="wr_name" required class="frm_input my-3 half_input required col-lg-6" placeholder="이름">
+	        <input type="text" name="wr_name" value="<?php echo $name ?>" id="wr_name" required class="frm_input my-3 half_input required col-lg-6 col-10" placeholder="이름">
 	    <?php } ?>
 	
 	    <?php if ($is_password) { ?>
 	        <label for="wr_password" class="sound_only">비밀번호<strong>필수</strong></label>
-	        <input type="password" name="wr_password" id="wr_password" <?php echo $password_required ?> class="frm_input my-3 half_input col-lg-6 <?php echo $password_required ?>" placeholder="비밀번호">
+	        <input type="password" name="wr_password" id="wr_password" <?php echo $password_required ?> class="frm_input my-3 half_input col-lg-6 col-10 <?php echo $password_required ?>" placeholder="비밀번호">
 	    <?php } ?>	
 
             <label for="wr_4" class="sound_only">전화번호<strong>필수</strong></label>
-            <input type="text" name="wr_4" value="<?php echo $wr_4 ?>" id="wr_4" required class="frm_input half_input col-lg-6 required my-3" size="15" maxlength="20" placeholder="전화번호">
+            <input type="text" name="wr_4" value="<?php echo $wr_4 ?>" id="wr_4" required class="frm_input half_input col-lg-6 col-10 required my-3" size="15" maxlength="20" placeholder="전화번호">
 
         <?php if ($is_email) { ?>
 			<label for="wr_email" class="sound_only">이메일</label>
-			<input type="text" name="wr_email" value="<?php echo $email ?>" id="wr_email" class="frm_input half_input my-3 email col-lg-6" placeholder="이메일">
+			<input type="text" name="wr_email" value="<?php echo $email ?>" id="wr_email" class="frm_input half_input my-3 email col-lg-6 col-10" placeholder="이메일">
 	    <?php } ?>
            
 
 	</div>
-    <div class="mt-2 row flex-column">
-        <h5 class="text-center mb-2">문의사항<span class="text-danger gnb_2da"><br/>*문의사항이 있을 경우에만 작성해 주시면 됩니다.</span></h5>
-        <div class="write_div col-lg-6 col-10 m-auto">
+    <div class="my-3 row mx-0 flex-column">
+        <h3 class="text-center mb-2">문의사항<span class="text-danger gnb_2da"><br/>*문의사항이 있을 경우에만 작성해 주시면 됩니다.</span></h3>
+        <div class="write_div col-lg-6 col-10 m-auto p-0">
                 <?php echo $editor_html; // 에디터 사용시는 에디터로, 아니면 textarea 로 노출 ?>        
         </div>
     </div>
@@ -110,8 +110,8 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 
 
     <!-- 개인정보처리방침 -->
-    <div class="info mt-5 row">
-        <div class="col-lg-6 mx-auto">
+    <div class="info mt-5 row mx-0">
+        <div class="col-lg-6 col-10 mx-auto p-0">
             <textarea readonly style="width:100%;height:100px"><?php echo get_text($config['cf_privacy']) ?></textarea>
             <div class="text-right">
                 <label class="m-0" for="wr_5">개인정보수집이용에 동의합니다.</label>
@@ -122,16 +122,16 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 
 
 
-    <div class="row justify-content-center align-items-start  my-5 mx-auto write_btn">
-        <div class="col-lg-3 text-left">
+    <div class="row mx-0 flex-column flex-lg-row justify-content-center align-items-lg-start align-items-center my-5 write_btn">
+        <div class="col-lg-3 col-10 text-lg-left text-center p-0 btn_speak d-flex justify-content-center justify-content-lg-start">
         <?php if ($is_use_captcha) { //자동등록방지  ?>        
             <?php echo $captcha_html ?>
         <?php } ?>
         </div>
 
-        <div class="btn_confirm col-lg-3 text-right">
-            <a href="<?php echo get_pretty_url($bo_table); ?>" class="btn_cancel btn">취소</a>
-            <button type="submit" id="btn_submit" accesskey="s" class="btn_submit btn">작성완료</button>
+        <div class="btn_confirm col-lg-3 col-10 text-center text-lg-right p-0 my-3 my-lg-0">
+            <a href="<?php echo get_pretty_url($bo_table); ?>" class="btn_cancel btn px-lg-5 py-lg-2">취소</a>
+            <button type="submit" id="btn_submit" accesskey="s" class="btn_submit btn px-lg-5 py-lg-2">작성완료</button>
         </div>    
     </div>   
     </form> 

@@ -118,4 +118,4 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
     <div id="container_wr">
    
     <div id="container">
-        <?php if (!defined("_INDEX_")) { ?><h1 id="container_title" class="py-5 my-5 text-center"><?php echo ($g5['title']); ?></h1><?php }
+        <?php if (!defined("_INDEX_")) { ?><h1 id="container_title" class="py-lg-5 my-lg-5 mt-5 py-5 text-center"><?php echo ($g5['title']); ?></h1><?php }

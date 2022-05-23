@@ -26,6 +26,12 @@ a:hover {
   text-decoration: none !important;
 }
 
+textarea:focus {
+  outline: unset;
+  box-shadow: unset;
+  border: 1px solid #767676 !important;
+}
+
 #tnb {
   left: 0;
   right: 3%;
@@ -41,6 +47,13 @@ a:hover {
   #tnb {
     top: 3.5rem;
   }
+}
+
+#wrapper #container_title {
+  font-family: 'nexL';
+  font-size: 3rem;
+  letter-spacing: 1.2rem;
+  text-indent: 1.2rem;
 }
 
 #hd #hd_wrapper {
@@ -309,25 +322,24 @@ a:hover {
   background-color: #c1c1c1a3;
 }
 
-#wrapper #container_title {
-  font-family: 'nexL';
-  font-size: 3rem;
-  letter-spacing: 25px;
-}
-
 #bo_w .bo_w_select {
   font-size: 1.2rem;
 }
 
 @media (max-width: 991px) {
-  #bo_w .bo_w_select .write_Text {
-    width: 75%;
+  #bo_w .bo_w_select {
+    width: 100% !important;
   }
 }
 
 #bo_w .bo_w_select .form_field {
   font-size: 1.3rem;
   padding: 0.3rem;
+  border: unset !important;
+  background-image: url(/joy/theme/basic/custom/img/form/cloud1.png) !important;
+  background-repeat: no-repeat;
+  background-size: 98%;
+  height: 3.1rem;
 }
 
 #bo_w .bo_w_info .frm_input {
@@ -335,32 +347,65 @@ a:hover {
   background: #fff;
   color: #000;
   padding: 5px;
-  border-bottom: 2px solid black !important;
+  border-bottom: 1px solid #34c1b5 !important;
   border-radius: unset !important;
   box-shadow: none;
   font-size: 1.3rem;
 }
 
+#bo_w .bo_w_info .required, #bo_w .bo_w_info textarea.required {
+  background-image: url(/joy/theme/basic/custom/img/form/required.svg) !important;
+  background-repeat: no-repeat !important;
+  background-position: right !important;
+}
+
 #bo_w #wr_content {
-  height: 8vh !important;
+  height: 8vw !important;
+  min-height: 80px;
+  border: 1px solid #34c1b5 !important;
+}
+
+@media (max-width: 991px) {
+  #bo_w .write_btn .btn_speak #captcha_img {
+    margin: 5px auto;
+  }
+  #bo_w .write_btn .btn_speak #captcha_key {
+    margin: 0.25rem !important;
+  }
 }
 
 #bo_w .write_btn .btn_confirm .btn {
   background: #fff0;
   color: #000000;
   text-decoration: none;
-  border: 1px solid black;
   border-radius: unset;
   box-shadow: unset;
   outline: unset;
+  color: white;
+  height: unset;
+  font-size: 1.5rem;
 }
 
-#bo_w .write_btn .btn_confirm .btn.btn_cancel:hover {
+#bo_w .write_btn .btn_confirm .btn.btn_cancel {
   background: #aaa;
-  color: white;
 }
 
-#bo_w .write_btn .btn_confirm .btn.btn_submit:hover {
-  background: #33c1b5;
-  color: white;
+#bo_w .write_btn .btn_confirm .btn.btn_submit {
+  background: #34c1b5;
+}
+
+@media (max-width: 991px) {
+  #bo_w .write_btn .btn_confirm .btn {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 991px) {
+  #bo_w .gnb_2da {
+    font-size: 0.8rem !important;
+  }
+}
+
+#bo_w .info textarea {
+  border: 1px solid #34c1b5 !important;
 }
