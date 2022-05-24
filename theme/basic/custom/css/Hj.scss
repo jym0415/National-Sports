@@ -294,15 +294,18 @@ textarea:focus{
             .swiper-pagination.main-pagination{
                 bottom: 0 !important;
                 display: flex;
-
                 .swiper-pagination-bullet{
                     width: 0;
                     left: 0 !important;
                     right: 0 !important;
                     bottom: 0 !important;
                     border: unset;
-                    height: 18px;
-                    background-color: #34C1B550;
+                    height: 100px;
+                    background-color: unset;
+                    background-image: url(/joy/theme/basic/custom/img/form/required.svg);
+                    background-position: right;
+                    background-repeat: no-repeat;
+                    background-size: 100px;
                     margin: 0 !important;
                     &.swiper-pagination-bullet-active{
                         width: 100% !important;
