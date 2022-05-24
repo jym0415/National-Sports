@@ -14,10 +14,10 @@ include_once(G5_THEME_PATH.'/head.php');
 </div>
 <!--네서녈소식  bo_table : NEWS-->
 <div id="news" class="position-relative">
-    <div class="kids position-absolute">
-        <img src="/joy/theme/basic/img/kids.png" alt=""
-            data-aos="fade-left"
-            data-aos-duration="1500">
+    <div id="minji" class="kids position-absolute">
+        <div>
+            <img src="/joy/theme/basic/img/kids.png" alt="">
+        </div>
     </div>
     <div class="hjinner m-auto">
         <?php echo latest('news','NEWS',4,500)?>
@@ -25,18 +25,20 @@ include_once(G5_THEME_PATH.'/head.php');
 </div>
 
 <!--네셔널일상 bo_table : daily -->
-<div id="gallery">
-    <?php echo latest('gallery','gallery',4,500)?>
+<div id="gallery" class="position-relative">
+    <div class="wavebg">
+        <?php echo latest('gallery','gallery',4,500)?>
+    </div>
 </div>
 
 
 <!--유튜브연동 bo_table : yuoutube-->
-<div id="youtube">
-    <?php echo latest('youtube','yuoutube',2,500)?>
+<div id="youtube" class="mt-5 pt-5">
+    <?php echo latest('youtube','youtube',2,500)?>
 </div>
 
 <!-- 오시는길 -->
-<div id="way" class="pb-0 pb-md-5">
+<div id="way" class="pb-5">
     <div class="hjinner m-auto pb-3 pb-md-5">
         <div class="mapWrap row mx-0">
             <div id="map" style="width:100%;height:400px;"class="mapleft col-12 col-md-6">
