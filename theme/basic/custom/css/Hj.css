@@ -452,3 +452,28 @@ textarea:focus {
 #bo_w .info textarea {
   border: 1px solid #34c1b5 !important;
 }
+
+#bo_list .bo_sch_wrap .sfl {
+  height: 2rem;
+}
+
+#bo_list .bo_sch_wrap .sch_bar .sch_input {
+  height: 2rem;
+}
+
+#bo_list .bo_sch_wrap .sch_bar .fa-magnifying-glass {
+  font-size: 1rem;
+}
+
+#bo_btn_top .btn_bo_user .btn_more_opt:focus {
+  border: unset;
+  outline: unset;
+  box-shadow: unset;
+}
+
+#bo_btn_top .btn_bo_user .more_opt {
+  left: 0;
+  top: 0;
+  transform: translate(156%, -20%);
+  z-index: 11;
+}

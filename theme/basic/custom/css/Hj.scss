@@ -420,5 +420,38 @@ textarea:focus{
     }
 }
 
+//////////// board List(기본 게시판) 전체 수정 ////////////
 
+#bo_list{
+    .bo_sch_wrap{
+        .sfl{
+            height: 2rem;
+        }
+        .sch_bar{
+            .sch_input{
+                height: 2rem;
+            }
+            .fa-magnifying-glass{
+                font-size: 1rem;
+            }
+        }
+    }
+}
 
+#bo_btn_top{
+    .btn_bo_user{
+        .btn_more_opt{
+            &:focus{
+                border: unset;
+                outline: unset;
+                box-shadow: unset;
+            }
+        }
+        .more_opt{
+            left: 0;
+            top: 0;
+            transform: translate(156%, -20%);
+            z-index: 11;
+        }
+    }
+}
