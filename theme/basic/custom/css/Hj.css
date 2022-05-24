@@ -338,6 +338,20 @@ textarea:focus {
   margin: 0 !important;
 }
 
+@media (max-width: 768px) {
+  #mainSlider .sliderBox .swiperBox .swiper-pagination.main-pagination .swiper-pagination-bullet {
+    height: 50px;
+    background-size: 50px;
+  }
+}
+
+@media (max-width: 375px) {
+  #mainSlider .sliderBox .swiperBox .swiper-pagination.main-pagination .swiper-pagination-bullet {
+    height: 30px;
+    background-size: 30px;
+  }
+}
+
 #mainSlider .sliderBox .swiperBox .swiper-pagination.main-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
   width: 100% !important;
   transition: linear 6s !important;
