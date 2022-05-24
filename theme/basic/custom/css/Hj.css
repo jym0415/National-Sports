@@ -318,8 +318,25 @@ textarea:focus {
   bottom: 0 !important;
 }
 
-#mainSlider .sliderBox .swiperBox .sw_text .mainBtn a:hover {
-  background-color: #c1c1c1a3;
+#mainSlider .sliderBox .swiperBox .swiper-pagination.main-pagination {
+  bottom: 0 !important;
+  display: flex;
+}
+
+#mainSlider .sliderBox .swiperBox .swiper-pagination.main-pagination .swiper-pagination-bullet {
+  width: 0;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  border: unset;
+  height: 18px;
+  background-color: #34C1B550;
+  margin: 0 !important;
+}
+
+#mainSlider .sliderBox .swiperBox .swiper-pagination.main-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  width: 100% !important;
+  transition: linear 6s !important;
 }
 
 #bo_w .bo_w_select {
@@ -338,8 +355,16 @@ textarea:focus {
   border: unset !important;
   background-image: url(/joy/theme/basic/custom/img/form/cloud1.png) !important;
   background-repeat: no-repeat;
-  background-size: 98%;
-  height: 3.1rem;
+  background-size: 100%;
+  background-color: transparent;
+  height: 4.1rem;
+  max-width: 200px;
+}
+
+@media (min-width: 992px) and (max-width: 1126px) {
+  #bo_w .bo_w_select .form_field {
+    height: 3.1rem;
+  }
 }
 
 #bo_w .bo_w_info .frm_input {

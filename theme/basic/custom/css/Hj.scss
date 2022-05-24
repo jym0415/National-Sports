@@ -290,16 +290,29 @@ textarea:focus{
                 right: 0 !important;
                 top: 0 !important;
                 bottom: 0 !important;
-                .mainBtn{
-                    a:hover{
-                        background-color: #c1c1c1a3;
+            }
+            .swiper-pagination.main-pagination{
+                bottom: 0 !important;
+                display: flex;
+
+                .swiper-pagination-bullet{
+                    width: 0;
+                    left: 0 !important;
+                    right: 0 !important;
+                    bottom: 0 !important;
+                    border: unset;
+                    height: 18px;
+                    background-color: #34C1B550;
+                    margin: 0 !important;
+                    &.swiper-pagination-bullet-active{
+                        width: 100% !important;
+                        transition: linear 6s !important;
                     }
                 }
             }
         }
     }
 }
-
 
 //////////// 수강신청 ////////////
 
@@ -318,8 +331,13 @@ textarea:focus{
             border: unset !important;
             background-image: url(/joy/theme/basic/custom/img/form/cloud1.png) !important;
             background-repeat: no-repeat;
-            background-size: 98%;
-            height: 3.1rem;
+            background-size: 100%;
+            background-color: transparent;
+            height: 4.1rem;
+            max-width: 200px;
+            @media (min-width : 992px) and (max-width : 1126px){
+                height: 3.1rem;
+            }
         }
     }
     .bo_w_info{

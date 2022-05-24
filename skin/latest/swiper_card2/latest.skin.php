@@ -12,8 +12,7 @@ $list_count = (is_array($list) && $list) ? count($list) : 0;
 <!--  -->
 
    
-
-        <?php
+<?php
         for ($i=0; $i<count($list); $i++) {
         $thumb = get_list_thumbnail($bo_table, $list[$i]['wr_id'], $thumb_width, $thumb_height, false, true);
 
@@ -26,32 +25,60 @@ $list_count = (is_array($list) && $list) ? count($list) : 0;
         //$img_content = '<img src="'.$img.'" alt="'.$thumb['alt'].'" >';
         $img_content = $img;
         ?>  
+        
         <div class="swiperBox">
                 <div class="position-relative swiper-container swiper <?php echo $bo_table; ?>">
                     <div class="position-absolute bg"></div>
-                    <div class="swiper-wrapper" >            
-                        <img  src="<?php echo $list[$i][file][0][path].'/'.$list[$i][file][0][file]; ?>" class="swiper-slide img-fluid">
-                        <img src="<?php echo $list[$i][file][1][path].'/'.$list[$i][file][1][file]; ?>" class="swiper-slide img-fluid">
-                        <img src="<?php echo $list[$i][file][2][path].'/'.$list[$i][file][2][file]; ?>" class="swiper-slide img-fluid">
+                    <div class="swiper-wrapper" >
+                        
+                   
+           <div class="swiper-slide" style='background-image:url(<?php echo $list[$i][file][0][path].'/'.$list[$i][file][0][file]; ?>)'></div>
+           <div class="swiper-slide" style='background-image:url(<?php echo $list[$i][file][1][path].'/'.$list[$i][file][1][file]; ?>)'></div>
+           <div class="swiper-slide" style='background-image:url(<?php echo $list[$i][file][2][path].'/'.$list[$i][file][2][file]; ?>)'></div>
+                       
                     </div>
                     <div class="sw_text position-absolute d-flex flex-column align-items-center justify-content-center text-center">
                         <div class="sw_sub"  data-aos="fade-up"  data-aos-once="true" data-aos-easing="easeOutElastic"  data-aos-duration="1000"><?php echo $list[$i]['wr_subject'] ;?></div>     
-                        <div class="sw_con pt-lg-5"  data-aos="fade-up"  data-aos-once="true" data-aos-easing="easeOutElastic"  data-aos-duration="1000"><?php echo $list[$i]['wr_content'] ;?></div>     
+                        <div class="sw_con pt-lg-5"  data-aos="fade-up"  data-aos-once="true" data-aos-easing="easeOutElastic"  data-aos-duration="1500"><?php echo $list[$i]['wr_content'] ;?></div>
+                        <div class="mainBtn flex-row-reverse d-md-flex pt-5" data-aos="fade-up"  data-aos-once="true" data-aos-easing="easeOutElastic"  data-aos-duration="2000">
+                            <div class="pb-2 pb-md-0">
+                                <a href="<?php echo $bo_1 ?>" class="py-1 py-lg-3"><?php echo $bo_1_subj ?></a>
+                            </div>          
+                            <div class="">
+                                <a href="<?php echo $bo_2 ?>"class="py-1 py-lg-3"><?php echo $bo_2_subj ?></a>
+                            </div>
+                        </div>     
                     </div>
                     <!-- 페이징 -->
                     <div class="swiper-pagination main-pagination"></div>
                 </div>
             </div>
-        <?php }  ?>
-        <div class="mainBtn row position-absolute pt-5">
-            <div class="col-12 col-md-6 pb-2 pb-md-0">
-                <a href="<?php echo $bo_1 ?>"><?php echo $bo_1_subj ?></a>
-            </div>          
-            <div class="col-12 col-md-6">
-                <a href="<?php echo $bo_2 ?>"><?php echo $bo_2_subj ?></a>
-            </div>
+  <?php } ?>    
+  
+  
+     <style>
+         .swiperBox .swiper-slide{             
+             background-repeat: no-repeat;
+             background-position:center bottom;
+             background-size:100% auto;
+             height:0; 
+             padding-top:75%;
+             opacity: 0;
+         }
+         .swiperBox .swiper-slide.swiper-slide-visible{
+             opacity: 1;
+         }
+         @media( min-width:992px){
+            .swiperBox .swiper-slide{
+                height:100vh  ;
+                max-height:1000px;
+                padding:0;
+                background-size:100% auto;
+               
+            }
             
-        </div>
+         }
+     </style>  
 
     
 

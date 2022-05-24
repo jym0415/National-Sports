@@ -31,9 +31,9 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
     <div class="bo_w_select write_div pb-2 d-flex justify-content-lg-center flex-column flex-lg-row align-items-center w-75 mx-auto">
 
         <!-- 여분필드출력 교육과정-->
-        <div class="write_Text row align-items-center justify-content-center justify-content-lg-end px-5 px-lg-0 my-3 my-lg-0">
-            <div class="col-4 col-lg-2 p-0 mr-3"><img src="<?php echo G5_THEME_URL ?>/custom/img/form/baby.png" class="img-fluid"></div>
-            <select name="wr_1" id="wr_1" class="mx-1 mx-lg-0 form_field col-6 col-lg-5 text-right">
+        <div class="write_Text row align-items-center justify-content-center justify-content-lg-end my-3 my-lg-0 mx-0">
+            <div class="col-3 col-lg-2 p-0 mx-1"><img src="<?php echo G5_THEME_URL ?>/custom/img/form/baby.png" class="img-fluid"></div>
+            <select name="wr_1" id="wr_1" class="mx-1 mx-lg-0 form_field col-7 col-lg-6 text-right px-3 p-lg-0">
             <label for="wr_name" class="sound_only">이름<strong>필수</strong></label>
                 <?php
                 $item_list = explode(',', $board['bo_1']);
@@ -46,9 +46,9 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
         </div>
 
         <!-- 여분필드출력 나이-->
-        <div class="write_Text row align-items-center justify-content-center px-5 px-lg-0 my-3 my-lg-0">
-            <div class="col-4 col-lg-2 p-0 mr-3"><img src="<?php echo G5_THEME_URL ?>/custom/img/form/woman.png" class="img-fluid"></div>
-            <select name="wr_2" id="wr_2" class="mx-1 mx-lg-0 form_field col-6 col-lg-5 text-right">
+        <div class="write_Text row align-items-center justify-content-center my-3 my-lg-0 mx-0">
+            <div class="col-3 col-lg-2 p-0 mx-1"><img src="<?php echo G5_THEME_URL ?>/custom/img/form/woman.png" class="img-fluid"></div>
+            <select name="wr_2" id="wr_2" class="mx-1 mx-lg-0 p-0 form_field col-7 col-lg-6 text-right px-5 p-lg-0">
             <label for="wr_name" class="sound_only">이름<strong>필수</strong></label>
                 <?php
                 $item_list = explode(',', $board['bo_2']);
@@ -61,9 +61,9 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
         </div>     
 
         <!-- 여분필드출력 유입경로-->
-        <div class="write_Text row align-items-center justify-content-center justify-content-lg-start px-5 px-lg-0 my-3 my-lg-0">
-            <div class="col-4 col-lg-2 p-0 mr-3"><img src="<?php echo G5_THEME_URL ?>/custom/img/form/man.png" class="img-fluid"></div>
-            <select name="wr_3" id="wr_3" class="mx-1 mx-lg-0 form_field col-6 col-lg-5 text-right">
+        <div class="write_Text row align-items-center justify-content-center justify-content-lg-start my-3 my-lg-0 mx-0">
+            <div class="col-3 col-lg-2 p-0 mx-1"><img src="<?php echo G5_THEME_URL ?>/custom/img/form/man.png" class="img-fluid"></div>
+            <select name="wr_3" id="wr_3" class="mx-1 mx-lg-0 form_field col-7 col-lg-6 text-right px-3 p-lg-0">
             <label for="wr_name" class="sound_only">이름<strong>필수</strong></label>
                 <?php
                 $item_list = explode(',', $board['bo_3']);
