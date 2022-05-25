@@ -463,9 +463,10 @@ textarea:focus {
 
 #bo_list .bo_sch_wrap .sch_bar .fa-magnifying-glass {
   font-size: 1rem;
+  color: #34c1b5;
 }
 
-#bo_btn_top .btn_bo_user .btn_more_opt:focus {
+#bo_btn_top .btn_bo_user .btn_admin:focus, #bo_btn_top .btn_bo_user .btn_b01:focus, #bo_btn_top .btn_bo_user .btn_more_opt:focus {
   border: unset;
   outline: unset;
   box-shadow: unset;
@@ -476,4 +477,24 @@ textarea:focus {
   top: 0;
   transform: translate(156%, -20%);
   z-index: 11;
+}
+
+.tbl_head01 .table .tr_title {
+  font-size: 1.3rem;
+}
+
+.tbl_head01 .table .tr_title #chkall.selec_chk {
+  vertical-align: middle;
+}
+
+.tbl_head01 .table .tbody {
+  font-size: 1.75rem;
+}
+
+.tbl_head01 .table .tbody td {
+  padding: 20px 5px;
+}
+
+.tbl_head01 .table .tbody td.td_datetime {
+  vertical-align: middle;
 }

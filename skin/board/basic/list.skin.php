@@ -28,12 +28,12 @@ if ($is_nogood) $colspan++;
     <!-- 게시판 검색 시작 { -->
      <div class="bo_sch_wrap">
         <fieldset class="bo_sch">
-            <form name="fsearch" method="get" class="d-flex justify-content-end py-lg-3 w-50 mx-lg-auto">
+            <form name="fsearch" method="get" class="d-flex justify-content-end py-lg-3 w-75 mx-lg-auto px-lg-5">
                     <input type="hidden" name="bo_table" value="<?php echo $bo_table ?>">
                     <input type="hidden" name="sca" value="<?php echo $sca ?>">
                     <input type="hidden" name="sop" value="and">
                     <label for="sfl" class="sound_only">검색대상</label>
-                    <select name="sfl" id="sfl">
+                    <select name="sfl" id="sfl" class="bg-white">
                         <?php echo get_board_sfl_select_options($sfl); ?>
                     </select>
                     <label for="stx" class="sound_only">검색어<strong class="sound_only"> 필수</strong></label>
@@ -98,10 +98,10 @@ if ($is_nogood) $colspan++;
     <!-- } 게시판 페이지 정보 및 버튼 끝 -->
         	
     <div class="tbl_head01 tbl_wrap row">
-        <table class="col-lg-6 m-auto">
+        <table class="col-lg-8 m-auto table">
         <caption><?php echo $board['bo_subject'] ?> 목록</caption>
         <thead>
-        <tr>
+        <tr class="tr_title">
             <?php if ($is_checkbox) { ?>
             <th scope="col" class="all_chk chk_box">
             	<input type="checkbox" id="chkall" onclick="if (this.checked) all_checked(true); else all_checked(false);" class="selec_chk">
@@ -120,7 +120,7 @@ if ($is_nogood) $colspan++;
             <th scope="col"><?php echo subject_sort_link('wr_datetime', $qstr2, 1) ?>날짜  </a></th>
         </tr>
         </thead>
-        <tbody>
+        <tbody class="tbody text-nowrap">
         <?php
         for ($i=0; $i<count($list); $i++) {
         	if ($i%2==0) $lt_class = "even";
@@ -174,7 +174,7 @@ if ($is_nogood) $colspan++;
             <td class="td_name sv_use"><?php echo $list[$i]['name'] ?></td>
             <?php if ($is_good) { ?><td class="td_num"><?php echo $list[$i]['wr_good'] ?></td><?php } ?>
             <?php if ($is_nogood) { ?><td class="td_num"><?php echo $list[$i]['wr_nogood'] ?></td><?php } ?>
-            <td class="td_datetime"><?php echo $list[$i]['datetime2'] ?></td>
+            <td class="td_datetime gnb_2da"><?php echo $list[$i]['datetime2'] ?></td>
 
         </tr>
         <?php } ?>
@@ -186,17 +186,7 @@ if ($is_nogood) $colspan++;
 	<?php echo $write_pages; ?>
 	<!-- 페이지 -->
 	
-    <?php if ($list_href || $is_checkbox || $write_href) { ?>
-    <div class="bo_fx">
-        <?php if ($list_href || $write_href) { ?>
-        <ul class="btn_bo_user">
-        	<?php if ($admin_href) { ?><li><a href="<?php echo $admin_href ?>" class="btn_admin btn" title="관리자"><i class="fa fa-cog fa-spin fa-fw"></i><span class="sound_only">관리자</span></a></li><?php } ?>
-            <?php if ($rss_href) { ?><li><a href="<?php echo $rss_href ?>" class="btn_b01 btn" title="RSS"><i class="fa fa-rss" aria-hidden="true"></i><span class="sound_only">RSS</span></a></li><?php } ?>
-            <?php if ($write_href) { ?><li><a href="<?php echo $write_href ?>" class="btn_b01 btn" title="글쓰기"><i class="fa fa-pencil" aria-hidden="true"></i><span class="sound_only">글쓰기</span></a></li><?php } ?>
-        </ul>	
-        <?php } ?>
-    </div>
-    <?php } ?>   
+ 
     </form>
 
 
@@ -229,7 +219,7 @@ function fboardlist_submit(f) {
 
     if (!chk_count) {
         alert(document.pressed + "할 게시물을 하나 이상 선택하세요.");
-        return false;
+        return true;
     }
 
     if(document.pressed == "선택복사") {

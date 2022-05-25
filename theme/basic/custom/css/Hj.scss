@@ -433,6 +433,7 @@ textarea:focus{
             }
             .fa-magnifying-glass{
                 font-size: 1rem;
+                color: #34c1b5;
             }
         }
     }
@@ -440,7 +441,7 @@ textarea:focus{
 
 #bo_btn_top{
     .btn_bo_user{
-        .btn_more_opt{
+        .btn_admin,.btn_b01,.btn_more_opt{
             &:focus{
                 border: unset;
                 outline: unset;
@@ -452,6 +453,26 @@ textarea:focus{
             top: 0;
             transform: translate(156%, -20%);
             z-index: 11;
+        }
+    }
+}
+
+.tbl_head01{
+    .table{
+        .tr_title{
+            font-size: 1.3rem;
+            #chkall.selec_chk{
+                vertical-align: middle;
+            }
+        }
+        .tbody{
+           font-size: 1.75rem;
+           td{
+            padding: 20px 5px;
+               &.td_datetime{
+                    vertical-align: middle;
+               }
+           }
         }
     }
 }
