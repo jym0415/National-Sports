@@ -10,13 +10,13 @@ $thumb_height = 250;
 ?>
 <!-- 갤러리 스와이퍼 #gallery -->
 <div class="hjinner m-auto py-5">
-    <div class="py-5 my-5">
-        <div class="dailySub py-5 my-5 position-relative">
+    <div class="py-5 my-md-5 mb-5">
+        <div class="dailySub py-5 my-md-5 mb-5 position-relative">
             <p class="text-left py-5"><?php echo $bo_subject?></p>
             <p class="gallery position-absolute my-5">GALLERY</p>
         </div>
     
-        <div class="dailyBWrap d-flex align-items-center my-5 py-5">
+        <div class="dailyBWrap d-flex align-items-center my-md-5 py-5">
             <!-- <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                     viewBox="0 0 81.3 83.3" style="enable-background:new 0 0 81.3 83.3;" xml:space="preserve" class="minjiBT-prev">
                 <style type="text/css">

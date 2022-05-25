@@ -1,6 +1,5 @@
-// $(function() {
-//     $("#top_btn").on("click", function() {
-//         $("html, body").animate({scrollTop:0}, '500');
-//         return false;
-//     });
-// });
+$(document).ready(function(){
+    $('.makercolor').click(function(){
+        $('#map').toggleClass('d-none')
+    })
+})

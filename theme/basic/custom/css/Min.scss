@@ -3,11 +3,22 @@
     background-image: url(/joy/theme/basic/custom/img/plzbgft.svg);
     background-size: 35%;
     background-repeat: repeat-X;
-    background-position-Y: top;
+    background-position-Y: -1px;
     .ft_wr{
         @media(max-width:767px){
             display: flex;
             flex-direction: column-reverse;
+        }
+        .leftWrap{
+            .tel{
+                a{
+                    font-size: 2rem;
+                    line-height: 1.8rem;
+                    letter-spacing: 0.2rem;
+                    text-indent: 0.2rem;
+                    color: white;
+                }
+            }
         }
         #logoWrap{
             svg{
@@ -74,7 +85,6 @@
                         content: "";
                         position: absolute;
                         width: 93%;
-                        height: 100%;
                         border-bottom: 1px solid #c9c9c9c9;
                         bottom: 0;
                         margin-bottom: -1rem;
@@ -133,9 +143,12 @@
     right: 0;
     bottom: 0;
     animation: minji 10s linear;
-    // animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
     transform: translate(37%, 38%);
     z-index: 1;
+    @media(max-width:767px){
+        animation: minjiM 5s linear;
+    }
     img{
         width: 10rem;
     }
@@ -143,46 +156,46 @@
 @keyframes minji {
     0% {
         transform: translate(37%, 38%);
-
     }
     10%{
-        transform: translate(22%, 102%);
-
+        transform: translate(25%, 91%);
     }
     20%{
-        transform: translate(9%, 55%);
-
+        transform: translate(14%, 88%)rotate(19deg);
     }
     30%{
-        transform: translate(-2%, 51%);
-
+        transform: translate(8%, 51%)rotate(8deg);
     }
     40%{
-        transform: translate(-14%, 92%);
+        transform: translate(0%, 56%)rotate(8deg);
     }
     50%{
-        transform: translate(-24%, 68%);
+        transform: translate(-6%, 80%)rotate(351deg);
     }
     60%{
-        transform: translate(-32%, 47%);
+        transform: translate(-19%, 91%)rotate(2deg);
     }
-    // 70%{
-       
-    // }
-    // 80%{
-
-    // }
+    70%{
+        transform: translate(-30%, 52%)rotate(8deg);
+    }
+    80%{
+        transform: translate(-37%, 50%)rotate(3deg);
+    }
     90%{
-        transform: translate(-48%, 94%);
+        transform: translate(-44%, 85%)rotate(1deg);
     }
     100%{
-        transform: translate(-50%, 94%);
+        transform: translate(-49%, 95%)rotate(1deg);
     }
+}
+@keyframes minjiM {
+    0%{transform: translate(37%, 38%);}
+    100%{transform: translate(-48%, 38%);}
 }
 
 #gallery{
     background-color: #34C1B5;
-    background-image: url(/joy/theme/basic/img/whiteSK.png);
+    background-image: url(/joy/theme/basic/custom/img/whiteSK.png);
     background-size: 40%;
     background-repeat: no-repeat;
     background-position: right;
@@ -190,7 +203,7 @@
         background-image: url(/joy/theme/basic/custom/img/plzbgft.svg);
         background-size: 35%;
         background-repeat: repeat-X;
-        background-position-Y: top;
+        background-position-Y: -1px;
     }
     @media(max-width:1440px){
         background-size: 45%;
@@ -220,6 +233,11 @@
                 @media(max-width:767px){
                     left: 0;
                     font-size: 4rem;
+                    transform: translate(1rem, 6rem);
+                }
+                @media(max-width:375px){
+                    left: 0;
+                    font-size: 3rem;
                     transform: translate(1rem, 6rem);
                 }
             }
@@ -255,6 +273,9 @@
                             height: 100%;
                             border-radius: 15px;
                             border: 5px solid #7fd3cc;
+                            @media(max-width:767px){
+                                border: unset;
+                            }
                         }
                     }
                 }
@@ -277,6 +298,9 @@
             line-height: 0;
             iframe{
                 border-radius: 75px;
+                @media(max-width: 767px){
+                    border-radius: unset;
+                }
             }
         }
         .youT{
@@ -286,16 +310,18 @@
             .ycontent{
                 line-height: 2rem;
             }
-            .btnWrap{
-                border: 1px solid black;
-                &:hover{
-                    a{
-                        color: #34C1B5;
-                        font-family: 'nexM';
+            .linkBtn{
+                .btnWrap{
+                    // border: 1px solid black;
+                    background-color: #34C1B5;
+                    &:hover{
+                        background-color: #0e7c73;
                     }
-                }
-                a{
-                    font-size: 1rem;
+                    a{
+                        color: white;
+                        font-size: 1rem;
+                        line-height: 3.5rem;
+                    }
                 }
             }
         }
@@ -322,8 +348,8 @@
     right: 0;
     padding: 25px;
     z-index: 1;
-    @media(max-width:320px){
-        padding: 10px;
+    @media(max-width:425px){
+        padding: 5px;
     }
 }
 #top_btn {
@@ -450,7 +476,30 @@
         bottom: 10px;
     }
 } 
-
+#way{
+    .mapWrap{
+        .makercolor{
+            img{
+                width: 8rem;
+            }
+            p{
+                top: 50%;
+                font-size: 1.2rem;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                text-indent: 8px;
+                color: white;
+                font-family: 'nexM';
+            }
+        }
+    }
+    .adult{
+        width: 12rem;
+        bottom: 0;
+        left: 0;
+        transform: translate(50%, 50%);
+    }
+}
 
 
 

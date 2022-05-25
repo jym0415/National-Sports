@@ -23,12 +23,20 @@ $list_count = (is_array($list) && $list) ? count($list) : 0;
             data-aos="fade-right"
             data-aos-duration="1500"
             >
-                <p class="ycontent pt-5 mt-5"><?php echo $list[$i]['wr_content'];?></p>
-                <div class="btnWrap mt-4 mb-4 mb-md-0">
-                    <a href="<?php echo $list[$i]['wr_link1']?>" class="youBtn px-5">
-                    <span class="sound_only"><?php echo $bo_subject ?></span>
-                        보러가기
-                    </a>
+                <p class="ycontent pt-5 mt-5 pt-md-0"><?php echo $list[$i]['wr_content'];?></p>
+                <div class="linkBtn d-block d-md-flex">
+                    <div class="btnWrap mt-4 mb-4 mb-md-0 mx-2">
+                        <a href="https://jmu0760.cafe24.com/joy/bbs/board.php?bo_table=schedule" class="youBtn px-5">
+                        <span class="sound_only"><?php echo $bo_subject ?></span>
+                        시간표 보러가기
+                        </a>
+                    </div>
+                    <div class="btnWrap mt-4 mb-4 mb-md-0 mx-2">
+                        <a href="<?php echo $list[$i]['wr_link1']?>" class="youBtn px-5">
+                        <span class="sound_only"><?php echo $bo_subject ?></span>
+                        유튜브 보러가기
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>

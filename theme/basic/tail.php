@@ -20,6 +20,9 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
     <div class="hjinner m-auto pt-5">
         <div class="ft_wr d-md-flex justify-content-between align-items-center pt-5">
             <div class="leftWrap">
+                <div class="tel d-md-none text-center pt-5">
+                    <a href="tel:01075632519">010-7563-2519</a>
+                </div>
                 <div id="ft_link" class="ft_cnt text-center text-md-left d-block d-md-flex pt-5 pb-5">
                     <a href="<?php echo get_pretty_url('content', 'privacy'); ?>" class="px-2">개인정보취급방침</a>
                     <a href="<?php echo get_pretty_url('content', 'provision'); ?>" class="px-2">서비스이용약관</a>

@@ -3,7 +3,7 @@
   background-image: url(/joy/theme/basic/custom/img/plzbgft.svg);
   background-size: 35%;
   background-repeat: repeat-X;
-  background-position-Y: top;
+  background-position-Y: -1px;
 }
 
 @media (max-width: 767px) {
@@ -16,6 +16,14 @@
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
   }
+}
+
+#ft .ft_wr .leftWrap .tel a {
+  font-size: 2rem;
+  line-height: 1.8rem;
+  letter-spacing: 0.2rem;
+  text-indent: 0.2rem;
+  color: white;
 }
 
 #ft .ft_wr #logoWrap svg {
@@ -89,7 +97,6 @@
     content: "";
     position: absolute;
     width: 93%;
-    height: 100%;
     border-bottom: 1px solid #c9c9c9c9;
     bottom: 0;
     margin-bottom: -1rem;
@@ -141,9 +148,18 @@
   bottom: 0;
   -webkit-animation: minji 10s linear;
           animation: minji 10s linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
   -webkit-transform: translate(37%, 38%);
           transform: translate(37%, 38%);
   z-index: 1;
+}
+
+@media (max-width: 767px) {
+  #minji {
+    -webkit-animation: minjiM 5s linear;
+            animation: minjiM 5s linear;
+  }
 }
 
 #minji img {
@@ -156,36 +172,44 @@
             transform: translate(37%, 38%);
   }
   10% {
-    -webkit-transform: translate(22%, 102%);
-            transform: translate(22%, 102%);
+    -webkit-transform: translate(25%, 91%);
+            transform: translate(25%, 91%);
   }
   20% {
-    -webkit-transform: translate(9%, 55%);
-            transform: translate(9%, 55%);
+    -webkit-transform: translate(14%, 88%) rotate(19deg);
+            transform: translate(14%, 88%) rotate(19deg);
   }
   30% {
-    -webkit-transform: translate(-2%, 51%);
-            transform: translate(-2%, 51%);
+    -webkit-transform: translate(8%, 51%) rotate(8deg);
+            transform: translate(8%, 51%) rotate(8deg);
   }
   40% {
-    -webkit-transform: translate(-14%, 92%);
-            transform: translate(-14%, 92%);
+    -webkit-transform: translate(0%, 56%) rotate(8deg);
+            transform: translate(0%, 56%) rotate(8deg);
   }
   50% {
-    -webkit-transform: translate(-24%, 68%);
-            transform: translate(-24%, 68%);
+    -webkit-transform: translate(-6%, 80%) rotate(351deg);
+            transform: translate(-6%, 80%) rotate(351deg);
   }
   60% {
-    -webkit-transform: translate(-32%, 47%);
-            transform: translate(-32%, 47%);
+    -webkit-transform: translate(-19%, 91%) rotate(2deg);
+            transform: translate(-19%, 91%) rotate(2deg);
+  }
+  70% {
+    -webkit-transform: translate(-30%, 52%) rotate(8deg);
+            transform: translate(-30%, 52%) rotate(8deg);
+  }
+  80% {
+    -webkit-transform: translate(-37%, 50%) rotate(3deg);
+            transform: translate(-37%, 50%) rotate(3deg);
   }
   90% {
-    -webkit-transform: translate(-48%, 94%);
-            transform: translate(-48%, 94%);
+    -webkit-transform: translate(-44%, 85%) rotate(1deg);
+            transform: translate(-44%, 85%) rotate(1deg);
   }
   100% {
-    -webkit-transform: translate(-50%, 94%);
-            transform: translate(-50%, 94%);
+    -webkit-transform: translate(-49%, 95%) rotate(1deg);
+            transform: translate(-49%, 95%) rotate(1deg);
   }
 }
 
@@ -195,42 +219,72 @@
             transform: translate(37%, 38%);
   }
   10% {
-    -webkit-transform: translate(22%, 102%);
-            transform: translate(22%, 102%);
+    -webkit-transform: translate(25%, 91%);
+            transform: translate(25%, 91%);
   }
   20% {
-    -webkit-transform: translate(9%, 55%);
-            transform: translate(9%, 55%);
+    -webkit-transform: translate(14%, 88%) rotate(19deg);
+            transform: translate(14%, 88%) rotate(19deg);
   }
   30% {
-    -webkit-transform: translate(-2%, 51%);
-            transform: translate(-2%, 51%);
+    -webkit-transform: translate(8%, 51%) rotate(8deg);
+            transform: translate(8%, 51%) rotate(8deg);
   }
   40% {
-    -webkit-transform: translate(-14%, 92%);
-            transform: translate(-14%, 92%);
+    -webkit-transform: translate(0%, 56%) rotate(8deg);
+            transform: translate(0%, 56%) rotate(8deg);
   }
   50% {
-    -webkit-transform: translate(-24%, 68%);
-            transform: translate(-24%, 68%);
+    -webkit-transform: translate(-6%, 80%) rotate(351deg);
+            transform: translate(-6%, 80%) rotate(351deg);
   }
   60% {
-    -webkit-transform: translate(-32%, 47%);
-            transform: translate(-32%, 47%);
+    -webkit-transform: translate(-19%, 91%) rotate(2deg);
+            transform: translate(-19%, 91%) rotate(2deg);
+  }
+  70% {
+    -webkit-transform: translate(-30%, 52%) rotate(8deg);
+            transform: translate(-30%, 52%) rotate(8deg);
+  }
+  80% {
+    -webkit-transform: translate(-37%, 50%) rotate(3deg);
+            transform: translate(-37%, 50%) rotate(3deg);
   }
   90% {
-    -webkit-transform: translate(-48%, 94%);
-            transform: translate(-48%, 94%);
+    -webkit-transform: translate(-44%, 85%) rotate(1deg);
+            transform: translate(-44%, 85%) rotate(1deg);
   }
   100% {
-    -webkit-transform: translate(-50%, 94%);
-            transform: translate(-50%, 94%);
+    -webkit-transform: translate(-49%, 95%) rotate(1deg);
+            transform: translate(-49%, 95%) rotate(1deg);
+  }
+}
+
+@-webkit-keyframes minjiM {
+  0% {
+    -webkit-transform: translate(37%, 38%);
+            transform: translate(37%, 38%);
+  }
+  100% {
+    -webkit-transform: translate(-48%, 38%);
+            transform: translate(-48%, 38%);
+  }
+}
+
+@keyframes minjiM {
+  0% {
+    -webkit-transform: translate(37%, 38%);
+            transform: translate(37%, 38%);
+  }
+  100% {
+    -webkit-transform: translate(-48%, 38%);
+            transform: translate(-48%, 38%);
   }
 }
 
 #gallery {
   background-color: #34C1B5;
-  background-image: url(/joy/theme/basic/img/whiteSK.png);
+  background-image: url(/joy/theme/basic/custom/img/whiteSK.png);
   background-size: 40%;
   background-repeat: no-repeat;
   background-position: right;
@@ -240,7 +294,7 @@
   background-image: url(/joy/theme/basic/custom/img/plzbgft.svg);
   background-size: 35%;
   background-repeat: repeat-X;
-  background-position-Y: top;
+  background-position-Y: -1px;
 }
 
 @media (max-width: 1440px) {
@@ -287,6 +341,15 @@
   }
 }
 
+@media (max-width: 375px) {
+  #gallery .hjinner .dailySub .gallery {
+    left: 0;
+    font-size: 3rem;
+    -webkit-transform: translate(1rem, 6rem);
+            transform: translate(1rem, 6rem);
+  }
+}
+
 #gallery .hjinner .dailySub .red {
   width: 12rem;
   top: 100%;
@@ -327,6 +390,12 @@
   border: 5px solid #7fd3cc;
 }
 
+@media (max-width: 767px) {
+  #gallery .hjinner .dailyBWrap .swiper-container .swiper-wrapper .swiper-slide.minjislide img {
+    border: unset;
+  }
+}
+
 #youtube .youWrap .green {
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -347,6 +416,12 @@
   border-radius: 75px;
 }
 
+@media (max-width: 767px) {
+  #youtube .youWrap .noline iframe {
+    border-radius: unset;
+  }
+}
+
 #youtube .youWrap .youT {
   font-size: 1.2rem;
   letter-spacing: 0.15rem;
@@ -357,17 +432,18 @@
   line-height: 2rem;
 }
 
-#youtube .youWrap .youT .btnWrap {
-  border: 1px solid black;
+#youtube .youWrap .youT .linkBtn .btnWrap {
+  background-color: #34C1B5;
 }
 
-#youtube .youWrap .youT .btnWrap:hover a {
-  color: #34C1B5;
-  font-family: 'nexM';
+#youtube .youWrap .youT .linkBtn .btnWrap:hover {
+  background-color: #0e7c73;
 }
 
-#youtube .youWrap .youT .btnWrap a {
+#youtube .youWrap .youT .linkBtn .btnWrap a {
+  color: white;
   font-size: 1rem;
+  line-height: 3.5rem;
 }
 
 #way .mapWrap .mapText p {
@@ -389,9 +465,9 @@
   z-index: 1;
 }
 
-@media (max-width: 320px) {
+@media (max-width: 425px) {
   .fix {
-    padding: 10px;
+    padding: 5px;
   }
 }
 
@@ -555,4 +631,27 @@
     height: 143px;
     bottom: 10px;
   }
+}
+
+#way .mapWrap .makercolor img {
+  width: 8rem;
+}
+
+#way .mapWrap .makercolor p {
+  top: 50%;
+  font-size: 1.2rem;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-indent: 8px;
+  color: white;
+  font-family: 'nexM';
+}
+
+#way .adult {
+  width: 12rem;
+  bottom: 0;
+  left: 0;
+  -webkit-transform: translate(50%, 50%);
+          transform: translate(50%, 50%);
 }
