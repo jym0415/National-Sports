@@ -1,9 +1,19 @@
 #ft{
     background-color: #858585;
-    background-image: url(/joy/theme/basic/custom/img/plzbgft.svg);
+    background-image: url(/joy/theme/basic/custom/img/wavebg.svg);
     background-size: 35%;
     background-repeat: repeat-X;
-    background-position-Y: -1px;
+    background-position-Y: top;
+    .adult{
+        width: 15rem;
+        bottom: 0;
+        left: 0;
+        transform: translate(35%, -40%);
+        @media(max-width:767px){
+            width: 13rem;
+            transform: translate(15%, -112%);
+        } 
+    }
     .ft_wr{
         @media(max-width:767px){
             display: flex;
@@ -200,10 +210,10 @@
     background-repeat: no-repeat;
     background-position: right;
     .wavebg{
-        background-image: url(/joy/theme/basic/custom/img/plzbgft.svg);
+        background-image: url(/joy/theme/basic/custom/img/wavebg.svg);
         background-size: 35%;
         background-repeat: repeat-X;
-        background-position-Y: -1px;
+        background-position-Y: top;
     }
     @media(max-width:1440px){
         background-size: 45%;
@@ -492,12 +502,6 @@
                 font-family: 'nexM';
             }
         }
-    }
-    .adult{
-        width: 12rem;
-        bottom: 0;
-        left: 0;
-        transform: translate(50%, 50%);
     }
 }
 

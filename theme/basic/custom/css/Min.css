@@ -1,9 +1,25 @@
 #ft {
   background-color: #858585;
-  background-image: url(/joy/theme/basic/custom/img/plzbgft.svg);
+  background-image: url(/joy/theme/basic/custom/img/wavebg.svg);
   background-size: 35%;
   background-repeat: repeat-X;
-  background-position-Y: -1px;
+  background-position-Y: top;
+}
+
+#ft .adult {
+  width: 15rem;
+  bottom: 0;
+  left: 0;
+  -webkit-transform: translate(35%, -40%);
+          transform: translate(35%, -40%);
+}
+
+@media (max-width: 767px) {
+  #ft .adult {
+    width: 13rem;
+    -webkit-transform: translate(15%, -112%);
+            transform: translate(15%, -112%);
+  }
 }
 
 @media (max-width: 767px) {
@@ -291,10 +307,10 @@
 }
 
 #gallery .wavebg {
-  background-image: url(/joy/theme/basic/custom/img/plzbgft.svg);
+  background-image: url(/joy/theme/basic/custom/img/wavebg.svg);
   background-size: 35%;
   background-repeat: repeat-X;
-  background-position-Y: -1px;
+  background-position-Y: top;
 }
 
 @media (max-width: 1440px) {
@@ -646,12 +662,4 @@
   text-indent: 8px;
   color: white;
   font-family: 'nexM';
-}
-
-#way .adult {
-  width: 12rem;
-  bottom: 0;
-  left: 0;
-  -webkit-transform: translate(50%, 50%);
-          transform: translate(50%, 50%);
 }

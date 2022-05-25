@@ -38,7 +38,7 @@ include_once(G5_THEME_PATH.'/head.php');
 </div>
 
 <!-- 오시는길 -->
-<div id="way" class="pb-5 position-relative">
+<div id="way" class="pb-5">
     <div class="hjinner m-auto pb-3 pb-md-5">
         <div class="mapWrap row mx-0">
             <div class="makercolor d-flex justify-content-center w-100 position-relative d-flex d-md-none">
@@ -76,9 +76,6 @@ include_once(G5_THEME_PATH.'/head.php');
                 // 마커가 지도 위에 표시되도록 설정합니다
                 marker.setMap(map);  
             </script>
-    </div>
-    <div class="adult position-absolute">
-        <img src="/joy/theme/basic/custom/img/adult.png" alt="" class="w-100">
     </div>
 </div>
 

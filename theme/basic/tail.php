@@ -16,7 +16,10 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 <hr>
 
 <!-- 하단 시작 { -->
-<div id="ft">
+<div id="ft" class="position-relative">
+    <div class="adult position-absolute">
+        <img src="/joy/theme/basic/custom/img/adult.png" alt="" class="w-100">
+    </div>
     <div class="hjinner m-auto pt-5">
         <div class="ft_wr d-md-flex justify-content-between align-items-center pt-5">
             <div class="leftWrap">
