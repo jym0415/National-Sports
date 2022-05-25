@@ -76,7 +76,7 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
                             if( empty($row2) ) continue; 
 
                             if($k == 0)
-                                echo '<ul class="gnb_2dul_box position-absolute">'.PHP_EOL;
+                                echo '<ul class="gnb_2dul_box position-absolute text-center">'.PHP_EOL;
                         ?>
                             <li class="gnb_2dli">
                                 <a href="<?php echo $row2['me_link']; ?>" target="_<?php echo $row2['me_target']; ?>" class="gnb_2da">
