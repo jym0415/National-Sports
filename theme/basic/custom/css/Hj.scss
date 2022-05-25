@@ -451,8 +451,12 @@ textarea:focus{
         .more_opt{
             left: 0;
             top: 0;
-            transform: translate(156%, -20%);
+            transform: translate(511%, -38%);
             z-index: 11;
+            display: none;
+        }
+        a.btn{
+            height: 0;
         }
     }
 }
@@ -476,3 +480,10 @@ textarea:focus{
         }
     }
 }
+.btn .fa{ display: none !important;}
+.btn .fa + .sound_only{ display: block !important;
+    position: unset;
+    font-size: 1rem;
+    width: auto;
+    height: auto;
+    overflow: visible !important;}

@@ -100,8 +100,7 @@ box-shadow:0 2px 5px rgba(0,0,0,0.2)}
 #ft_company h2 {font-size:1.2em;margin-bottom:20px}
 #ft_company {color:#ffffff;}
 #ft_catch {margin:20px 0 10px}
-#top_btn {position:fixed;bottom:20px;right:20px;width:50px;height:50px;line-height:46px;border:1px solid #333; border-radius: 50%; color:#333;text-align:center;font-size:15px;z-index:90;background:rgba(255,255,255,0.5)}
-#top_btn:hover {border-color:#34C1B5;background:#34C1B5;color:#fff}
+
 
 /* 게시물 선택복사 선택이동 */
 #copymove {}
@@ -156,7 +155,7 @@ box-shadow:0 2px 5px rgba(0,0,0,0.2)}
 #bo_v_con li {display:list-item}
 
 /* 버튼 */
-a.btn,.btn {line-height:35px;height:35px;padding:0 10px;text-align:center;font-weight:bold;border:0;font-size:1.4em;
+a.btn,.btn {line-height:35px;padding:0 10px;text-align:center;font-weight:bold;border:0;font-size:1.4em;
 -webkit-transition:background-color 0.3s ease-out;
 -moz-transition:background-color 0.3s ease-out;
 -o-transition:background-color 0.3s ease-out;

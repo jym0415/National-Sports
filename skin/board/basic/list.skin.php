@@ -74,8 +74,8 @@ if ($is_nogood) $colspan++;
     <!-- 게시판 페이지 정보 및 버튼 시작 { -->
     <div id="bo_btn_top" class="row">
  
-        <ul class="btn_bo_user d-flex position-relative col-lg-6 mx-auto p-lg-0">
-        	<?php if ($admin_href) { ?><li><a href="<?php echo $admin_href ?>" class="btn_admin btn" title="관리자"><i class="fa fa-cog fa-spin fa-fw"></i><span class="sound_only">관리자</span></a></li><?php } ?>
+        <ul class="btn_bo_user d-flex position-relative col-lg-8 mx-auto p-lg-0">
+        	<?php if ($admin_href) { ?><li><a href="<?php echo $admin_href ?>" class="btn_admin btn" title="관리자"><i class="fa fa-cog fa-spin fa-fw"></i><span class="sound_only">관리자페이지</span></a></li><?php } ?>
             <?php if ($rss_href) { ?><li><a href="<?php echo $rss_href ?>" class="btn_b01 btn" title="RSS"><i class="fa fa-rss" aria-hidden="true"></i><span class="sound_only">RSS</span></a></li><?php } ?>
             <li>
             	<!-- <button type="button" class="btn_bo_sch btn_b01 btn" title="게시판 검색"><i class="fa fa-search" aria-hidden="true"></i><span class="sound_only">게시판 검색</span></button> -->
