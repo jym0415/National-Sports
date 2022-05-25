@@ -56,6 +56,12 @@ textarea:focus {
   text-indent: 1.2rem;
 }
 
+@media (max-width: 991px) {
+  #wrapper #container_title {
+    font-size: 2.2rem;
+  }
+}
+
 #hd #hd_wrapper {
   transition: 0.7s;
   transition-delay: 0.1s;
@@ -453,6 +459,12 @@ textarea:focus {
   border: 1px solid #34c1b5 !important;
 }
 
+@media (max-width: 991px) {
+  #bo_list .bo_sch_wrap .fsearch {
+    width: 100% !important;
+  }
+}
+
 #bo_list .bo_sch_wrap .sfl {
   height: 2rem;
 }
@@ -475,9 +487,17 @@ textarea:focus {
 #bo_btn_top .btn_bo_user .more_opt {
   left: 0;
   top: 0;
-  transform: translate(511%, -38%);
+  transform: translate(439%, -38%);
   z-index: 11;
   display: none;
+}
+
+@media (max-width: 575px) {
+  #bo_btn_top .btn_bo_user .more_opt {
+    left: unset;
+    right: 0;
+    transform: translate(-41%, 41%);
+  }
 }
 
 #bo_btn_top .btn_bo_user a.btn {
@@ -496,8 +516,15 @@ textarea:focus {
   font-size: 1.75rem;
 }
 
+@media (max-width: 767px) {
+  .tbl_head01 .table .tbody {
+    font-size: 1rem;
+  }
+}
+
 .tbl_head01 .table .tbody td {
   padding: 20px 5px;
+  vertical-align: middle;
 }
 
 .tbl_head01 .table .tbody td.td_datetime {

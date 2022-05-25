@@ -45,7 +45,10 @@ textarea:focus{
         font-family: 'nexL';
         font-size: 3rem;
         letter-spacing: 1.2rem;
-        text-indent: 1.2rem
+        text-indent: 1.2rem;
+        @media(max-width: 991px){
+            font-size: 2.2rem;
+        }
     }
 }
 
@@ -424,6 +427,11 @@ textarea:focus{
 
 #bo_list{
     .bo_sch_wrap{
+        .fsearch{
+            @media(max-width : 991px){
+                width: 100% !important;
+            }
+        }
         .sfl{
             height: 2rem;
         }
@@ -451,9 +459,14 @@ textarea:focus{
         .more_opt{
             left: 0;
             top: 0;
-            transform: translate(511%, -38%);
+            transform: translate(439%, -38%);
             z-index: 11;
             display: none;
+            @media (max-width : 575px){
+                left: unset;
+                right: 0;
+                transform: translate(-41%, 41%);
+            }
         }
         a.btn{
             height: 0;
@@ -471,8 +484,12 @@ textarea:focus{
         }
         .tbody{
            font-size: 1.75rem;
+           @media(max-width : 767px){
+            font-size: 1rem;
+        }
            td{
             padding: 20px 5px;
+            vertical-align: middle;
                &.td_datetime{
                     vertical-align: middle;
                }

@@ -28,7 +28,7 @@ if ($is_nogood) $colspan++;
     <!-- 게시판 검색 시작 { -->
      <div class="bo_sch_wrap">
         <fieldset class="bo_sch">
-            <form name="fsearch" method="get" class="d-flex justify-content-end py-lg-3 w-75 mx-lg-auto px-lg-5">
+            <form name="fsearch" method="get" class="fsearch d-flex justify-content-sm-end justify-content-center py-3 w-75 mx-auto px-sm-5">
                     <input type="hidden" name="bo_table" value="<?php echo $bo_table ?>">
                     <input type="hidden" name="sca" value="<?php echo $sca ?>">
                     <input type="hidden" name="sop" value="and">
@@ -38,7 +38,7 @@ if ($is_nogood) $colspan++;
                     </select>
                     <label for="stx" class="sound_only">검색어<strong class="sound_only"> 필수</strong></label>
                     <div class="sch_bar">
-                        <input type="text" name="stx" value="<?php echo stripslashes($stx) ?>" required id="stx" class="sch_input" size="25" maxlength="20" placeholder=" 검색어를 입력해주세요">
+                        <input type="text" name="stx" value="<?php echo stripslashes($stx) ?>" required id="stx" class="sch_input" size="18" maxlength="20" placeholder=" 검색어를 입력해주세요">
                         <button type="submit" value="검색" class="sch_btn border-0 bg-white"><i class="fa-solid fa-magnifying-glass"></i><span class="sound_only">검색</span></button>
                     </div>
                     <!-- <button type="button" class="bo_sch_cls" title="닫기"><i class="fa fa-times" aria-hidden="true"></i><span class="sound_only">닫기</span></button> -->
@@ -74,7 +74,7 @@ if ($is_nogood) $colspan++;
     <!-- 게시판 페이지 정보 및 버튼 시작 { -->
     <div id="bo_btn_top" class="row">
  
-        <ul class="btn_bo_user d-flex position-relative col-lg-8 mx-auto p-lg-0">
+        <ul class="btn_bo_user d-flex position-relative col-lg-8 mx-auto justify-content-end justify-content-sm-start p-lg-0">
         	<?php if ($admin_href) { ?><li><a href="<?php echo $admin_href ?>" class="btn_admin btn" title="관리자"><i class="fa fa-cog fa-spin fa-fw"></i><span class="sound_only">관리자페이지</span></a></li><?php } ?>
             <?php if ($rss_href) { ?><li><a href="<?php echo $rss_href ?>" class="btn_b01 btn" title="RSS"><i class="fa fa-rss" aria-hidden="true"></i><span class="sound_only">RSS</span></a></li><?php } ?>
             <li>
@@ -83,7 +83,7 @@ if ($is_nogood) $colspan++;
             <?php if ($admin_href) { ?><li><a href="<?php echo $write_href ?>" class="btn_b01 btn" title="글쓰기"><i class="fa fa-pencil" aria-hidden="true"></i><span class="sound_only">글쓰기</span></a></li><?php } ?>
         	<?php if ($is_admin == 'super' || $is_auth) {  ?>
         	<li>
-        		<button type="button" class="btn_more_opt is_list_btn btn_b01 btn" title="게시판 리스트 옵션"><i class="fa fa-ellipsis-v" aria-hidden="true"></i><span class="sound_only">게시판 리스트 옵션</span></button>
+        		<button type="button" class="btn_more_opt is_list_btn btn_b01 btn" title="게시판 리스트 옵션"><i class="fa fa-ellipsis-v" aria-hidden="true"></i><span class="sound_only">리스트 옵션</span></button>
         		<?php if ($is_checkbox) { ?>	
 		        <ul class="more_opt is_list_btn position-absolute">  
 		            <li><button type="submit" name="btn_submit" value="선택삭제" onclick="document.pressed=this.value"><i class="fa fa-trash-o" aria-hidden="true"></i> 선택삭제</button></li>
@@ -97,11 +97,11 @@ if ($is_nogood) $colspan++;
     </div>
     <!-- } 게시판 페이지 정보 및 버튼 끝 -->
         	
-    <div class="tbl_head01 tbl_wrap row">
+    <div class="tbl_head01 tbl_wrap row px-1 px-lg-0 pt-2 pb-5 m-0">
         <table class="col-lg-8 m-auto table">
         <caption><?php echo $board['bo_subject'] ?> 목록</caption>
         <thead>
-        <tr class="tr_title">
+        <tr class="tr_title text-nowrap">
             <?php if ($is_checkbox) { ?>
             <th scope="col" class="all_chk chk_box">
             	<input type="checkbox" id="chkall" onclick="if (this.checked) all_checked(true); else all_checked(false);" class="selec_chk">
@@ -113,7 +113,7 @@ if ($is_nogood) $colspan++;
             <?php } ?>
             <th scope="col">번호</th>
             <th scope="col">제목</th>
-            <th scope="col">글쓴이</th>
+            
 
             <?php if ($is_good) { ?><th scope="col"><?php echo subject_sort_link('wr_good', $qstr2, 1) ?>추천 </a></th><?php } ?>
             <?php if ($is_nogood) { ?><th scope="col"><?php echo subject_sort_link('wr_nogood', $qstr2, 1) ?>비추천 </a></th><?php } ?>
@@ -136,7 +136,7 @@ if ($is_nogood) $colspan++;
             	</label>
             </td>
             <?php } ?>
-            <td class="td_num2">
+            <td class="td_num2 gnb_2da">
             <?php
             if ($list[$i]['is_notice']) // 공지사항
                 echo '<strong class="notice_icon">공지</strong>';
@@ -171,9 +171,7 @@ if ($is_nogood) $colspan++;
                     <?php if ($list[$i]['comment_cnt']) { ?><span class="sound_only">댓글</span><span class="cnt_cmt"><?php echo $list[$i]['wr_comment']; ?></span><span class="sound_only">개</span><?php } ?>
                 </div>
             </td>
-            <td class="td_name sv_use"><?php echo $list[$i]['name'] ?></td>
-            <?php if ($is_good) { ?><td class="td_num"><?php echo $list[$i]['wr_good'] ?></td><?php } ?>
-            <?php if ($is_nogood) { ?><td class="td_num"><?php echo $list[$i]['wr_nogood'] ?></td><?php } ?>
+            
             <td class="td_datetime gnb_2da"><?php echo $list[$i]['datetime2'] ?></td>
 
         </tr>
