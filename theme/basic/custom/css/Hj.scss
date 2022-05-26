@@ -22,6 +22,10 @@ textarea:focus{
     box-shadow: unset;
     border: 1px solid #767676 !important;
 }
+.btn:focus{
+    outline: unset !important;
+    box-shadow: unset !important;
+}
 
 /////////////// 관리자 로그아웃 ///////////////
 
@@ -508,7 +512,7 @@ textarea:focus{
 
 
 
-    //////////// gallery List(기본 게시판) 전체 수정 ////////////
+//////////// gallery List(기본 게시판) 전체 수정 ////////////
     .gall_con{
         .gall_info{
             .gall_date{
@@ -548,3 +552,40 @@ textarea:focus{
     #gall_allchk{
         font-size: 1.2rem;
     }
+
+
+
+//////////// board view.skin(기본 게시판 스킨) 수정 ////////////
+#bo_v_top{
+    .btn_bo_user{
+        .btn_more_opt{
+
+        }
+        .more_opt{
+            display: none;
+            left: 0;
+            right: 0;
+        }
+    }
+}
+#bo_v{
+    #bo_v_info{
+        .profile_info{
+            .profile_info_ct{
+                font-size: 1rem;
+                font-family: 'nexM';
+            }
+        }
+    }
+    #bo_v_con{
+        height: 25vw;
+        max-height: 480px;
+        border: 1px solid #767676;
+        text-align: left;
+        font-size: 1.5rem;
+    }
+}
+
+.bo_v_nb{
+    font-size: 1.2rem;
+}
