@@ -15,7 +15,7 @@ $list_count = (is_array($list) && $list) ? count($list) : 0;
         <?php for ($i=0; $i<$list_count; $i++) {  ?>
             <div class="box mt-5 col-md-6 col-lg-3 text-left text-md-center text-lg-left position-relative d-flex d-md-block align-items-center justify-content-between px-4 px-md-5">
                 <div class="d-flex flex-column">
-                    <div class="name mt-5">
+                    <div class="name mt-5 text-truncate">
                         <a href="<?php echo get_pretty_url($bo_table, $list[$i]['wr_id']); ?>">
                             <?php echo $list[$i]['wr_subject']?>
                         </a>

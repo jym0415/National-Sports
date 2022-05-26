@@ -1,3 +1,7 @@
+#wrapper {
+  min-height: calc(100vh - 370px);
+}
+
 #ft {
   background-color: #858585;
   background-image: url(/joy/theme/basic/custom/img/wavebg.svg);
@@ -303,7 +307,7 @@
   background-image: url(/joy/theme/basic/custom/img/whiteSK.png);
   background-size: 40%;
   background-repeat: no-repeat;
-  background-position: right;
+  background-position: right bottom;
 }
 
 #gallery .wavebg {
@@ -662,4 +666,111 @@
   text-indent: 8px;
   color: white;
   font-family: 'nexM';
+}
+
+#about {
+  min-height: 100vh;
+}
+
+#about .hjinner {
+  padding-top: 15%;
+}
+
+@media (max-width: 425px) {
+  #about .hjinner {
+    padding-top: 0;
+  }
+}
+
+#about .hjinner .about_sub {
+  font-size: 5rem;
+  line-height: 10rem;
+  word-break: keep-all;
+}
+
+@media (max-width: 425px) {
+  #about .hjinner .about_sub {
+    font-size: 2.2rem;
+    line-height: 5rem;
+  }
+}
+
+#about .hjinner .about_con {
+  font-size: 1.1rem;
+  line-height: 2.2rem;
+  word-break: keep-all;
+}
+
+@media (max-width: 425px) {
+  #about .hjinner .about_con {
+    font-size: 1rem;
+    padding: 0 30px;
+  }
+}
+
+#people {
+  min-height: 100vh;
+}
+
+#people .imgWrap {
+  position: relative;
+  height: 100%;
+}
+
+#people .imgWrap .teacher_name {
+  font-size: 2rem;
+  top: 0;
+  right: 0;
+  -webkit-transform: translate(50%, -150%);
+          transform: translate(50%, -150%);
+}
+
+#people .timlineWrap .text-left .time {
+  font-size: 1rem;
+  font-family: 'nexM';
+  color: #b7b7b7;
+}
+
+#people .timlineWrap .text-left .timeC {
+  font-size: 1.5rem;
+  font-family: 'nexL';
+  color: #747474;
+  line-height: 2rem;
+}
+
+#people .timlineWrap .event {
+  padding-bottom: 25px;
+  position: relative;
+}
+
+#people .timlineWrap .event:last-of-type {
+  padding-bottom: 0;
+  margin-bottom: 0;
+  border: none;
+}
+
+#people .timlineWrap .event:after {
+  position: absolute;
+  display: block;
+  left: 0;
+  background: #ffe100;
+  border-radius: 50%;
+  height: 11px;
+  width: 11px;
+  content: "";
+  top: 0;
+  -webkit-transform: translateX(-22.5px);
+          transform: translateX(-22.5px);
+}
+
+.timeline {
+  border-left: 4px solid #34C1B5;
+  background: fade(white, 3%);
+  position: relative;
+  line-height: 1.4em;
+  list-style: none;
+}
+
+#way {
+  height: 100vh;
 }
