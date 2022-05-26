@@ -37,6 +37,11 @@ textarea:focus {
   box-shadow: unset !important;
 }
 
+.text-truncate {
+  width: 100%;
+  display: inline-block;
+}
+
 #tnb {
   left: 0;
   right: 3%;
@@ -167,6 +172,7 @@ textarea:focus {
   top: 98%;
   transition: 0.5s;
   transition-delay: 0.1s;
+  z-index: 11111;
 }
 
 @media (min-width: 992px) {
@@ -600,19 +606,33 @@ textarea:focus {
   right: 0;
 }
 
+@media (max-width: 991px) {
+  #bo_v {
+    width: 95% !important;
+  }
+}
+
+#bo_v #bo_v_title {
+  display: inline-block;
+  width: 100%;
+}
+
 #bo_v #bo_v_info .profile_info .profile_info_ct {
   font-size: 1rem;
   font-family: 'nexM';
 }
 
 #bo_v #bo_v_con {
-  height: 25vw;
-  max-height: 480px;
-  border: 1px solid #767676;
+  height: auto;
+  min-height: 450px;
   text-align: left;
   font-size: 1.5rem;
 }
 
 .bo_v_nb {
   font-size: 1.2rem;
+}
+
+.bo_v_nb .nb_tit {
+  font-family: 'nexM';
 }

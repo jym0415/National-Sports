@@ -165,7 +165,7 @@ if ($is_nogood) $colspan++;
                     if (isset($list[$i]['icon_file'])) echo rtrim($list[$i]['icon_file']);
                     if (isset($list[$i]['icon_link'])) echo rtrim($list[$i]['icon_link']);
                     ?>
-                    <?php if ($list[$i]['comment_cnt']) { ?><span class="sound_only">댓글</span><span class="cnt_cmt"><?php echo $list[$i]['wr_comment']; ?></span><span class="sound_only">개</span><?php } ?>
+                    
                 </div>
             </td>
             
