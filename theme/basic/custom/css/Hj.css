@@ -478,6 +478,10 @@ textarea:focus {
   color: #34c1b5;
 }
 
+#bo_btn_top .btn_bo_user .btn_admin, #bo_btn_top .btn_bo_user .btn_b01, #bo_btn_top .btn_bo_user .btn_more_opt {
+  height: unset;
+}
+
 #bo_btn_top .btn_bo_user .btn_admin:focus, #bo_btn_top .btn_bo_user .btn_b01:focus, #bo_btn_top .btn_bo_user .btn_more_opt:focus {
   border: unset;
   outline: unset;
@@ -542,4 +546,45 @@ textarea:focus {
   width: auto;
   height: auto;
   overflow: visible !important;
+}
+
+.gall_con .gall_info .gall_date {
+  font-size: 1rem;
+}
+
+.gall_con .gall_img {
+  height: unset !important;
+  max-height: unset !important;
+}
+
+.gall_con .gall_img img {
+  border-radius: 7px;
+  width: 300px;
+  max-height: 168.75px !important;
+  height: auto !important;
+}
+
+@media (max-width: 400px) {
+  .gall_con .gall_img img {
+    width: 250px;
+    max-height: 140.63px !important;
+  }
+}
+
+#gall_ul {
+  width: 80%;
+}
+
+@media (max-width: 991px) {
+  #gall_ul {
+    width: 100%;
+  }
+}
+
+#gall_ul .gall_li .gall_box .gall_chk {
+  transform: translateY(-13px);
+}
+
+#gall_allchk {
+  font-size: 1.2rem;
 }

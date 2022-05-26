@@ -30,7 +30,7 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
         <ul class="btn_bo_user d-flex position-relative col-lg-8 mx-auto justify-content-end justify-content-sm-start p-lg-0">
             <?php if ($admin_href) { ?><li><a href="<?php echo $admin_href ?>" class="btn_admin btn" title="관리자"><i class="fa fa-cog fa-spin fa-fw"></i><span class="sound_only">관리자페이지</span></a></li><?php } ?>
             <?php if ($rss_href) { ?><li><a href="<?php echo $rss_href ?>" class="btn_b01 btn" title="RSS"><i class="fa fa-rss" aria-hidden="true"></i><span class="sound_only">RSS</span></a></li><?php } ?>
-            <?php if ($write_href) { ?><li><a href="<?php echo $write_href ?>" class="btn_b01 btn" title="글쓰기"><i class="fa fa-pencil" aria-hidden="true"></i><span class="sound_only">글쓰기</span></a></li><?php } ?>
+            <?php if ($admin_href) { ?><li><a href="<?php echo $write_href ?>" class="btn_b01 btn" title="글쓰기"><i class="fa fa-pencil" aria-hidden="true"></i><span class="sound_only">글쓰기</span></a></li><?php } ?>
             <?php if ($is_admin == 'super' || $is_auth) {  ?>
             <li>
                 <button type="button" class="btn_more_opt is_list_btn btn_b01 btn" title="게시판 리스트 옵션"><i class="fa fa-ellipsis-v" aria-hidden="true"></i><span class="sound_only">리스트 옵션</span></button>
@@ -48,22 +48,22 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
     <!-- } 게시판 관리자 설정 시작-->
 
     <?php if ($is_checkbox) { ?>
-    <div id="gall_allchk" class="all_chk chk_box">
+    <div id="gall_allchk" class="all_chk chk_box w-75 mx-auto text-left px-lg-5 px-0 pt-4">
         <input type="checkbox" id="chkall" onclick="if (this.checked) all_checked(true); else all_checked(false);" class="selec_chk">
-        <label for="chkall">
+        <label for="chkall" class="m-0">
             <span></span>
             <b class="sound_only">현재 페이지 게시물 </b> 전체선택
         </label>
     </div>
     <?php } ?>
 
-    <ul id="gall_ul" class="row">
+    <ul id="gall_ul" class="row mx-auto">
         <?php for ($i=0; $i<count($list); $i++) {
 
             $classes = array();
             
             $classes[] = 'gall_li';
-            $classes[] = 'col-'.$bo_gallery_cols;
+            $classes[] = 'col-xl-'.$bo_gallery_cols;
 
             if( $i && ($i % $bo_gallery_cols == 0) ){
                 $classes[] = 'box_clear';
@@ -75,9 +75,9 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 
             $line_height_style = ($board['bo_gallery_height'] > 0) ? 'line-height:'.$board['bo_gallery_height'].'px' : '';
          ?>
-        <li class="<?php echo implode(' ', $classes); ?>">
-            <div class="gall_box">
-                <div class="gall_chk chk_box">
+        <li class="<?php echo implode(' ', $classes); ?> col-md-6 col-10 mx-auto p-0 mx-md-0">
+        <div class="gall_box d-flex align-items-center justify-content-center my-3">
+                <?php if ($admin_href) { ?><div class="gall_chk chk_box mx-3">
                     <?php if ($is_checkbox) { ?>
                     <input type="checkbox" name="chk_wr_id[]" value="<?php echo $list[$i]['wr_id'] ?>" id="chk_wr_id_<?php echo $i ?>" class="selec_chk">
                     <label for="chk_wr_id_<?php echo $i ?>">
@@ -94,7 +94,7 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
                             echo $list[$i]['num'];
                          ?>
                     </span>
-                </div>
+                </div> <?php } ?>
                 <div class="gall_con">
                     <div class="gall_img" style="<?php if ($board['bo_gallery_height'] > 0) echo 'height:'.$board['bo_gallery_height'].'px;max-height:'.$board['bo_gallery_height'].'px'; ?>">
                         <a href="<?php echo $list[$i]['href'] ?>">
@@ -105,7 +105,7 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
                             $thumb = get_list_thumbnail($board['bo_table'], $list[$i]['wr_id'], $board['bo_gallery_width'], $board['bo_gallery_height'], false, true);
 
                             if($thumb['src']) {
-                                $img_content = '<img src="'.$thumb['src'].'" alt="'.$thumb['alt'].'" >';
+                                $img_content = '<img src="'.$thumb['ori'].'" alt="'.$thumb['alt'].'" >';
                             } else {
                                 $img_content = '<span class="no_image" style="'.$line_height_style.'">no image</span>';
                             }
@@ -117,9 +117,9 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
                     </div>
 
 
-                    <div class="gall_info">
+                    <div class="gall_info text-right">
                         <!-- <span class="sound_only">작성자 </span><?php echo $list[$i]['name'] ?> -->
-                        <span class="gall_date"><span class="sound_only">작성일 </span><i class="fa fa-clock-o" aria-hidden="true"></i> <?php echo $list[$i]['datetime2'] ?></span>
+                        <span class="gall_date"><span class="sound_only">작성일 </span><i class="fa-solid fa-calendar-days" aria-hidden="true"></i> <?php echo $list[$i]['datetime2'] ?></span>
                         <!-- <span class="gall_view"><span class="sound_only">조회 </span><i class="fa fa-eye" aria-hidden="true"></i> <?php echo $list[$i]['wr_hit'] ?></span> -->
                     </div>
                     <div class="gall_option">

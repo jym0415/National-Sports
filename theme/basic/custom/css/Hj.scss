@@ -450,6 +450,7 @@ textarea:focus{
 #bo_btn_top{
     .btn_bo_user{
         .btn_admin,.btn_b01,.btn_more_opt{
+            height: unset;
             &:focus{
                 border: unset;
                 outline: unset;
@@ -504,3 +505,46 @@ textarea:focus{
     width: auto;
     height: auto;
     overflow: visible !important;}
+
+
+
+    //////////// gallery List(기본 게시판) 전체 수정 ////////////
+    .gall_con{
+        .gall_info{
+            .gall_date{
+                font-size: 1rem;
+            }
+        }
+        .gall_img{
+            height: unset !important;
+            max-height: unset !important;            
+            img{
+                border-radius: 7px;
+                width: 300px;
+                max-height: 168.75px !important;
+                height: auto !important;
+                @media (max-width : 400px){
+                    width: 250px;
+                    max-height: 140.63px !important;
+                }
+            }
+        }
+    }
+
+    #gall_ul{
+        width: 80%;
+        @media(max-width : 991px){
+            width: 100%;
+        }
+        .gall_li{
+            .gall_box{
+                .gall_chk{
+                    transform: translateY(-13px);
+                }
+            }
+        }
+    }
+
+    #gall_allchk{
+        font-size: 1.2rem;
+    }
