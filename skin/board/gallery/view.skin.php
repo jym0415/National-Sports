@@ -3,35 +3,36 @@ if (!defined("_GNUBOARD_")) exit; // 개별 페이지 접근 불가
 include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 
 // add_stylesheet('css 구문', 출력순서); 숫자가 작을 수록 먼저 출력됨
-add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0);
+// add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0);
 ?>
+<style>
+    #container_title{display:none;}
+</style>
 
-<script src="<?php echo G5_JS_URL; ?>/viewimageresize.js"></script>
+<!-- <script src="<?php //echo G5_JS_URL; ?>/viewimageresize.js"></script> -->
 
 <!-- 게시물 읽기 시작 { -->
 
-<article id="bo_v" style="width:<?php echo $width; ?>">
+<article id="bo_v" style="width:<?php echo $width; ?>" class="py-5 my-5 w-75 mx-auto">
     <header>
-        <h2 id="bo_v_title">
+        <h2 id="bo_v_title class="py-md-5 pb-5 text-truncate"">
             <?php if ($category_name) { ?>
             <span class="bo_v_cate"><?php echo $view['ca_name']; // 분류 출력 끝 ?></span> 
             <?php } ?>
             <span class="bo_v_tit">
             <?php
-            echo cut_str(get_text($view['wr_subject']), 70); // 글제목 출력
+            echo cut_str(get_text($view['wr_subject']), 35); // 글제목 출력
             ?></span>
         </h2>
     </header>
 
     <section id="bo_v_info">
-        <h2>페이지 정보</h2>
-        <div class="profile_info">
+
+        <div class="profile_info text-right">
         	<div class="pf_img"><?php echo get_member_profile_img($view['mb_id']) ?></div>
         	<div class="profile_info_ct">
-        		<span class="sound_only">작성자</span> <strong><?php echo $view['name'] ?><?php if ($is_ip_view) { echo "&nbsp;($ip)"; } ?></strong><br>
-       		 	<span class="sound_only">댓글</span><strong><a href="#bo_vc"> <i class="fa fa-commenting-o" aria-hidden="true"></i> <?php echo number_format($view['wr_comment']) ?>건</a></strong>
-        		<span class="sound_only">조회</span><strong><i class="fa fa-eye" aria-hidden="true"></i> <?php echo number_format($view['wr_hit']) ?>회</strong>
-        		<strong class="if_date"><span class="sound_only">작성일</span><i class="fa fa-clock-o" aria-hidden="true"></i> <?php echo date("y-m-d H:i", strtotime($view['wr_datetime'])) ?></strong>
+        		<span class="sound_only">작성자</span> <?php echo $view['name'] ?><br>
+        		<div class="if_date"><span class="sound_only">작성일</span><i class="fa fa-clock-o" aria-hidden="true"></i> <?php echo date("y-m-d H:i", strtotime($view['wr_datetime'])) ?></div>
     		</div>
     	</div>
 
@@ -39,22 +40,29 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0
 	    <div id="bo_v_top">
 	        <?php ob_start(); ?>
 
-	        <ul class="btn_bo_user bo_v_com">
-				<li><a href="<?php echo $list_href ?>" class="btn_b01 btn" title="목록"><i class="fa fa-list" aria-hidden="true"></i><span class="sound_only">목록</span></a></li>
-	            <?php if ($reply_href) { ?><li><a href="<?php echo $reply_href ?>" class="btn_b01 btn" title="답변"><i class="fa fa-reply" aria-hidden="true"></i><span class="sound_only">답변</span></a></li><?php } ?>
-	            <?php if ($write_href) { ?><li><a href="<?php echo $write_href ?>" class="btn_b01 btn" title="글쓰기"><i class="fa fa-pencil" aria-hidden="true"></i><span class="sound_only">글쓰기</span></a></li><?php } ?>
-	        	<?php if($update_href || $delete_href || $copy_href || $move_href || $search_href) { ?>
-	        	<li>
-	        		<button type="button" class="btn_more_opt is_view_btn btn_b01 btn" title="게시판 리스트 옵션"><i class="fa fa-ellipsis-v" aria-hidden="true"></i><span class="sound_only">게시판 리스트 옵션</span></button>
-		        	<ul class="more_opt is_view_btn"> 
-			            <?php if ($update_href) { ?><li><a href="<?php echo $update_href ?>">수정<i class="fa fa-pencil-square-o" aria-hidden="true"></i></a></li><?php } ?>
-			            <?php if ($delete_href) { ?><li><a href="<?php echo $delete_href ?>" onclick="del(this.href); return false;">삭제<i class="fa fa-trash-o" aria-hidden="true"></i></a></li><?php } ?>
-			            <?php if ($copy_href) { ?><li><a href="<?php echo $copy_href ?>" onclick="board_move(this.href); return false;">복사<i class="fa fa-files-o" aria-hidden="true"></i></a></li><?php } ?>
-			            <?php if ($move_href) { ?><li><a href="<?php echo $move_href ?>" onclick="board_move(this.href); return false;">이동<i class="fa fa-arrows" aria-hidden="true"></i></a></li><?php } ?>
-			            <?php if ($search_href) { ?><li><a href="<?php echo $search_href ?>">검색<i class="fa fa-search" aria-hidden="true"></i></a></li><?php } ?>
-			        </ul> 
-	        	</li>
-	        	<?php } ?>
+	        <ul class="btn_bo_user bo_v_com d-flex">
+				<li>
+                    <a href="<?php echo $list_href ?>" class="btn_b01 btn" title="목록">
+                        <i class="fa fa-list" aria-hidden="true"></i>
+                        <span class="sound_only">목록</span>
+                    </a>
+                </li>
+                <?php if ($admin_href) { ?>
+                    <?php if ($reply_href) { ?><li><a href="<?php echo $reply_href ?>" class="btn_b01 btn" title="답변"><i class="fa fa-reply" aria-hidden="true"></i><span class="sound_only">답변</span></a></li><?php } ?>
+                    <?php if ($write_href) { ?><li><a href="<?php echo $write_href ?>" class="btn_b01 btn" title="글쓰기"><i class="fa fa-pencil" aria-hidden="true"></i><span class="sound_only">글쓰기</span></a></li><?php } ?>
+                    <?php if($update_href || $delete_href || $copy_href || $move_href || $search_href) { ?>
+                    <li>
+                        <button type="button" class="btn_more_opt is_view_btn btn_b01 btn" title="게시판 리스트 옵션"><i class="fa fa-ellipsis-v" aria-hidden="true"></i><span class="sound_only">게시판 리스트 옵션</span></button>
+                        <ul class="more_opt is_view_btn position-absolute"> 
+                            <?php if ($update_href) { ?><li><a href="<?php echo $update_href ?>">수정<i class="fa fa-pencil-square-o" aria-hidden="true"></i></a></li><?php } ?>
+                            <?php if ($delete_href) { ?><li><a href="<?php echo $delete_href ?>" onclick="del(this.href); return false;">삭제<i class="fa fa-trash-o" aria-hidden="true"></i></a></li><?php } ?>
+                            <?php if ($copy_href) { ?><li><a href="<?php echo $copy_href ?>" onclick="board_move(this.href); return false;">복사<i class="fa fa-files-o" aria-hidden="true"></i></a></li><?php } ?>
+                            <?php if ($move_href) { ?><li><a href="<?php echo $move_href ?>" onclick="board_move(this.href); return false;">이동<i class="fa fa-arrows" aria-hidden="true"></i></a></li><?php } ?>
+                            <?php if ($search_href) { ?><li><a href="<?php echo $search_href ?>">검색<i class="fa fa-search" aria-hidden="true"></i></a></li><?php } ?>
+                        </ul> 
+                    </li>
+                    <?php } ?>
+                <?php } ?>
 	        </ul>
 	        <script>
 

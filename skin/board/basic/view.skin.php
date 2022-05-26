@@ -30,7 +30,7 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
         	<div class="pf_img"><?php echo get_member_profile_img($view['mb_id']) ?></div>
         	<div class="profile_info_ct">
         		<span class="sound_only">작성자</span><?php echo $view['name'] ?><br>
-       		 	<!-- <span class="sound_only">댓글</span><strong><a href="#bo_vc"> <i class="fa fa-commenting-o" aria-hidden="true"></i> <?php echo number_format($view['wr_comment']) ?>건</a></strong> -->
+       		 	<!-- <span class="sound_only">댓글</span><strong><a href="#bo_vc"> <i class="fa fa-commenting-o" aria-hidden="true"></i> <?php //echo number_format($view['wr_comment']) ?>건</a></strong> -->
         		<!-- <span class="sound_only">조회</span><strong><i class="fa fa-eye" aria-hidden="true"></i> <?php //echo number_format($view['wr_hit']) ?>회</strong> -->
         		<div class="if_date"><span class="sound_only">작성일</span><i class="fa fa-clock-o" aria-hidden="true"></i> <?php echo date("y-m-d H:i", strtotime($view['wr_datetime'])) ?></div>
     		</div>
@@ -92,7 +92,7 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
         <!-- <h2 id="bo_v_atc_title">본문</h2> -->
         <!-- <div id="bo_v_share" class="text-right">
         	<?php include_once(G5_SNS_PATH."/view.sns.skin.php"); ?>
-	        <?php if ($scrap_href) { ?><a href="<?php echo $scrap_href;  ?>" target="_blank" class="btn btn_b03" onclick="win_scrap(this.href); return false;"><i class="fa fa-bookmark" aria-hidden="true"></i> 스크랩</a><?php } ?>
+	        <?php if ($scrap_href) { ?><a href="<?php //echo $scrap_href;  ?>" target="_blank" class="btn btn_b03" onclick="win_scrap(this.href); return false;"><i class="fa fa-bookmark" aria-hidden="true"></i> 스크랩</a><?php } ?>
 	    </div> -->
 
         <?php
