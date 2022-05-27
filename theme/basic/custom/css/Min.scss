@@ -596,5 +596,41 @@
 }
 #way{
     height: 100vh;
+    .national{
+        p{
+            font-size: 5rem;
+            line-height: 10rem;
+            word-break: keep-all;
+        }
+    }
+    .mapmap{
+        .adressbox{
+            .adMaker{
+                p{
+                    line-height: 3.5rem;
+                    font-size: 2.5rem;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    color: #ffe100;
+                    font-family: 'nexB';
+                    word-break: keep-all;
+                    @media(max-width:425px){
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+            .adress{
+                font-size: 1.5rem;
+                word-break: keep-all;
+                @media(max-width:768px){
+                    font-size: 0.9rem;
+                }
+                .adleft{
+                    color:#333
+                }
+            }
+        }
+    }
 }
 

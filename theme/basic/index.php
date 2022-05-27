@@ -51,7 +51,7 @@ include_once(G5_THEME_PATH.'/head.php');
                 <?php echo latest ('company','companyInfo',1,100)?>
             </div>
         </div>
-            <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=76dc363e0cd56e52668246ea9bf5bbcc"></script>
+            <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=b5f4a291b0874a7bb981fdcc23b552ae"></script>
                 <!-- appkey=카카오에서 받은 key값 -->
                 <script>
                 var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
