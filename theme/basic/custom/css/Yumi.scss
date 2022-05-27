@@ -62,14 +62,10 @@
 }
 .swiper-wrapper{
     img{
-        height: 80vh;
+        
         @media(min-width :767px ){
-            height: 1000px;
+            height: 100vh;
             max-height: 100vh;
-        }
-        /*반응형 이미지사이즈 */
-        @media(min-width:768px) and (max-width:1050px){
-                
         }
     }   
 }
@@ -110,9 +106,12 @@
     a{
         color: white;
         display: block;
-        border: 1px solid white;
+        background-color: #38B7AC;
+        &:hover{
+            background-color: #299a91;
+        }
         @media(min-width:767px){
-            font-size: 1rem;;
+            font-size: 1.5rem;;
         }
     }
 }

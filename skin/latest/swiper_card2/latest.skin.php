@@ -36,13 +36,13 @@ $list_count = (is_array($list) && $list) ? count($list) : 0;
                     </div>
                     <div class="sw_text position-absolute d-flex flex-column align-items-center justify-content-center text-center">
                         <div class="sw_sub"  data-aos="fade-up"  data-aos-once="true" data-aos-easing="easeOutElastic"  data-aos-duration="1000"><?php echo $list[$i]['wr_subject'] ;?></div>     
-                        <div class="sw_con pt-lg-5"  data-aos="fade-up"  data-aos-once="true" data-aos-easing="easeOutElastic"  data-aos-duration="1000"><?php echo $list[$i]['wr_content'] ;?></div>
-                        <div class="mainBtn d-flex pt-5">
+                        <div class="sw_con pt-lg-5"  data-aos="fade-up"  data-aos-once="true" data-aos-easing="easeOutElastic"  data-aos-duration="1500"><?php echo $list[$i]['wr_content'] ;?></div>
+                        <div class="mainBtn flex-row-reverse d-md-flex pt-5" data-aos="fade-up"  data-aos-once="true" data-aos-easing="easeOutElastic"  data-aos-duration="2000">
                             <div class="pb-2 pb-md-0">
-                                <a href="<?php echo $bo_1 ?>"><?php echo $bo_1_subj ?></a>
+                                <a href="<?php echo $bo_1 ?>" class="py-1 py-lg-3"><?php echo $bo_1_subj ?></a>
                             </div>          
                             <div class="">
-                                <a href="<?php echo $bo_2 ?>"><?php echo $bo_2_subj ?></a>
+                                <a href="<?php echo $bo_2 ?>"class="py-1 py-lg-3"><?php echo $bo_2_subj ?></a>
                             </div>
                         </div>     
                     </div>
