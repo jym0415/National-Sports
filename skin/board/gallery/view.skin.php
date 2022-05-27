@@ -13,9 +13,9 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 
 <!-- 게시물 읽기 시작 { -->
 
-<article id="bo_v" style="width:<?php echo $width; ?>" class="py-5 my-5 w-75 mx-auto">
+<article id="bo_v" style="width:<?php echo $width; ?>" class="pt-5 mt-5 w-75 mx-auto">
     <header>
-        <h2 id="bo_v_title class="py-md-5 pb-5 text-truncate"">
+        <h2 id="bo_v_title" class="py-md-5 pb-5 text-truncate">
             <?php if ($category_name) { ?>
             <span class="bo_v_cate"><?php echo $view['ca_name']; // 분류 출력 끝 ?></span> 
             <?php } ?>
@@ -51,7 +51,7 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
                     <?php if ($reply_href) { ?><li><a href="<?php echo $reply_href ?>" class="btn_b01 btn" title="답변"><i class="fa fa-reply" aria-hidden="true"></i><span class="sound_only">답변</span></a></li><?php } ?>
                     <?php if ($write_href) { ?><li><a href="<?php echo $write_href ?>" class="btn_b01 btn" title="글쓰기"><i class="fa fa-pencil" aria-hidden="true"></i><span class="sound_only">글쓰기</span></a></li><?php } ?>
                     <?php if($update_href || $delete_href || $copy_href || $move_href || $search_href) { ?>
-                    <li>
+                    <li class="position-relative">
                         <button type="button" class="btn_more_opt is_view_btn btn_b01 btn" title="게시판 리스트 옵션"><i class="fa fa-ellipsis-v" aria-hidden="true"></i><span class="sound_only">게시판 리스트 옵션</span></button>
                         <ul class="more_opt is_view_btn position-absolute"> 
                             <?php if ($update_href) { ?><li><a href="<?php echo $update_href ?>">수정<i class="fa fa-pencil-square-o" aria-hidden="true"></i></a></li><?php } ?>
@@ -89,17 +89,17 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
     </section>
 
     <section id="bo_v_atc">
-        <h2 id="bo_v_atc_title">본문</h2>
-        <div id="bo_v_share">
+        <!-- <h2 id="bo_v_atc_title">본문</h2>
+        <div id="bo_v_share"> -->
         	<?php include_once(G5_SNS_PATH."/view.sns.skin.php"); ?>
-	        <?php if ($scrap_href) { ?><a href="<?php echo $scrap_href;  ?>" target="_blank" class="btn btn_b03" onclick="win_scrap(this.href); return false;"><i class="fa fa-bookmark" aria-hidden="true"></i> 스크랩</a><?php } ?>
+
 	    </div>
 
         <?php
         // 파일 출력
         $v_img_count = count($view['file']);
         if($v_img_count) {
-            echo "<div id=\"bo_v_img\">\n";
+            echo "<div id=\"bo_v_img\" class=\"border-top pt-5 w-75 mx-auto my-3\">\n";
 
             foreach($view['file'] as $view_file) {
                 echo get_file_thumbnail($view_file);
@@ -110,7 +110,7 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
          ?>
 
         <!-- 본문 내용 시작 { -->
-        <div id="bo_v_con"><?php echo get_view_thumbnail($view['content']); ?></div>
+        <div id="bo_v_con" class="my-3 border-bottom p-md-5 p-3 w-75 mx-auto">><?php echo get_view_thumbnail($view['content']); ?></div>
         <?php //echo $view['rich_content']; // {이미지:0} 과 같은 코드를 사용할 경우 ?>
         <!-- } 본문 내용 끝 -->
 
@@ -215,15 +215,15 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
     <?php } ?>
     
     <?php if ($prev_href || $next_href) { ?>
-    <ul class="bo_v_nb">
-        <?php if ($prev_href) { ?><li class="btn_prv"><span class="nb_tit"><i class="fa fa-chevron-up" aria-hidden="true"></i> 이전글</span><a href="<?php echo $prev_href ?>"><?php echo $prev_wr_subject;?></a> <span class="nb_date"><?php echo str_replace('-', '.', substr($prev_wr_date, '2', '8')); ?></span></li><?php } ?>
-        <?php if ($next_href) { ?><li class="btn_next"><span class="nb_tit"><i class="fa fa-chevron-down" aria-hidden="true"></i> 다음글</span><a href="<?php echo $next_href ?>"><?php echo $next_wr_subject;?></a>  <span class="nb_date"><?php echo str_replace('-', '.', substr($next_wr_date, '2', '8')); ?></span></li><?php } ?>
+    <ul class="bo_v_nb text-left w-75 mx-auto pb-5 mb-5">
+        <?php if ($prev_href) { ?><li class="btn_prv row m-0 justify-content-center"><span class="nb_tit col-4 p-0"><i class="fa fa-chevron-up" aria-hidden="true"></i> 이전글</span><a href="<?php echo $prev_href ?>" class="col-8 pr-0 text-truncate"><?php echo $prev_wr_subject;?></a> </li><?php } ?>
+        <?php if ($next_href) { ?><li class="btn_next row m-0 justify-content-center"><span class="nb_tit col-4 p-0"><i class="fa fa-chevron-down" aria-hidden="true"></i> 다음글</span><a href="<?php echo $next_href ?>" class="col-8 pr-0 text-truncate"><?php echo $next_wr_subject;?></a>  </li><?php } ?>
     </ul>
     <?php } ?>
 
     <?php
     // 코멘트 입출력
-    include_once(G5_BBS_PATH.'/view_comment.php');
+    // include_once(G5_BBS_PATH.'/view_comment.php');
 	?>
 </article>
 <!-- } 게시판 읽기 끝 -->

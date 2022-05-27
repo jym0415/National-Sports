@@ -45,7 +45,7 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0
             <?php echo $page ?> 페이지
         </div>
 
-        <ul class="btn_bo_user">
+        <ul class="btn_bo_user d-flex py-3">
         	<?php if ($admin_href) { ?><li><a href="<?php echo $admin_href ?>" class="btn_admin btn" title="관리자"><i class="fa fa-cog fa-spin fa-fw"></i><span class="sound_only">관리자</span></a></li><?php } ?>
             <?php if ($rss_href) { ?><li><a href="<?php echo $rss_href ?>" class="btn_b01 btn" title="RSS"><i class="fa fa-rss" aria-hidden="true"></i><span class="sound_only">RSS</span></a></li><?php } ?>
             <li>
