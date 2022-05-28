@@ -216,8 +216,8 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
     
     <?php if ($prev_href || $next_href) { ?>
     <ul class="bo_v_nb text-left">
-        <?php if ($prev_href) { ?><li class="btn_prv row m-0 justify-content-center"><span class="nb_tit col-4 p-0"><i class="fa fa-chevron-up" aria-hidden="true"></i> 이전글</span><a href="<?php echo $prev_href ?>" class="col-8 pr-0 text-truncate"><?php echo $prev_wr_subject;?></a> <span class="nb_date"></span></li><?php } ?>
-        <?php if ($next_href) { ?><li class="btn_next row m-0 justify-content-center"><span class="nb_tit col-4 p-0"><i class="fa fa-chevron-down" aria-hidden="true"></i> 다음글</span><a href="<?php echo $next_href ?>" class="col-8 pr-0 text-truncate"><?php echo $next_wr_subject;?></a>  <span class="nb_date"></span></li><?php } ?>
+        <?php if ($prev_href) { ?><li class="btn_prv row m-0 justify-content-center"><span class="nb_tit col-md-2 col-4 p-0"><i class="fa fa-chevron-up" aria-hidden="true"></i> 이전글</span><a href="<?php echo $prev_href ?>" class="col-md-6 col-8 pr-0 text-truncate"><?php echo $prev_wr_subject;?></a> <span class="nb_date"></span></li><?php } ?>
+        <?php if ($next_href) { ?><li class="btn_next row m-0 justify-content-center"><span class="nb_tit col-md-2 col-4 p-0"><i class="fa fa-chevron-down" aria-hidden="true"></i> 다음글</span><a href="<?php echo $next_href ?>" class="col-md-6 col-8 pr-0 text-truncate"><?php echo $next_wr_subject;?></a>  <span class="nb_date"></span></li><?php } ?>
     </ul>
     <?php } ?>
 

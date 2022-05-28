@@ -37,7 +37,7 @@ textarea:focus{
     left: 0;
     right: 3%;
     top: 0.5rem;
-    z-index: 1000;
+    z-index: 1111111;
     .hd_login{
         font-family: 'nexM'
     }
@@ -136,7 +136,7 @@ textarea:focus{
             #gnb_1dul{
                 left: 0;
                 right: 0;
-                top: 98%;
+                top: 100%;
                 transition: 0.5s;
                 transition-delay: 0.1s;
                 z-index: 11111;
@@ -601,5 +601,21 @@ textarea:focus{
     font-size: 1.2rem;
     .nb_tit{
         font-family: 'nexM';
+    }
+}
+
+#bo_v_img{
+    @media(max-width: 991px){
+        width: 95% !important;
+    }
+    img{
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+.bo_v_nb{
+    @media(max-width: 575px){
+        width: 95% !important;
     }
 }
