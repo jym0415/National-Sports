@@ -26,6 +26,10 @@
   }
 }
 
+#ft .adult img {
+  width: 85%;
+}
+
 @media (max-width: 767px) {
   #ft .ft_wr {
     display: -webkit-box;
@@ -403,6 +407,12 @@
 #gallery .hjinner .dailyBWrap .minjiBT-next .st0,
 #gallery .hjinner .dailyBWrap .minjiBT-next .st1 {
   fill: black;
+}
+
+@media (max-width: 457px) {
+  #gallery .hjinner .dailyBWrap .swiper-container .swiper-wrapper .swiper-slide.minjislide {
+    padding: 0 5%;
+  }
 }
 
 #gallery .hjinner .dailyBWrap .swiper-container .swiper-wrapper .swiper-slide.minjislide img {
@@ -784,23 +794,23 @@
   list-style: none;
 }
 
-#way {
+#wayway {
   height: 100vh;
 }
 
-#way .national p {
+#wayway .national p {
   font-size: 5rem;
   line-height: 10rem;
   word-break: keep-all;
 }
 
 @media (max-width: 426px) {
-  #way .national p {
+  #wayway .national p {
     font-size: 2.2rem;
   }
 }
 
-#way .mapmap .adressbox .adMaker p {
+#wayway .mapmap .adressbox .adMaker p {
   line-height: 3.5rem;
   font-size: 2.5rem;
   top: 50%;
@@ -813,23 +823,23 @@
 }
 
 @media (max-width: 425px) {
-  #way .mapmap .adressbox .adMaker p {
+  #wayway .mapmap .adressbox .adMaker p {
     font-size: 1.5rem;
   }
 }
 
-#way .mapmap .adressbox .adress {
+#wayway .mapmap .adressbox .adress {
   font-size: 1.5rem;
   word-break: keep-all;
 }
 
 @media (max-width: 768px) {
-  #way .mapmap .adressbox .adress {
+  #wayway .mapmap .adressbox .adress {
     font-size: 0.9rem;
   }
 }
 
-#way .mapmap .adressbox .adress .adleft {
+#wayway .mapmap .adressbox .adress .adleft {
   color: #333;
 }
 /*# sourceMappingURL=Min.css.map */

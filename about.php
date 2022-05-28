@@ -38,7 +38,7 @@ include_once(G5_THEME_PATH.'/head.php');
 </div>
 
 <!--오시는길-->
-<div id="way">
+<div id="wayway">
     <div class="hjinner mx-0">
         <div class="national mb-5 pb-5">
             <p class="mb-sm-5 pb-sm-5">위치안내</p>

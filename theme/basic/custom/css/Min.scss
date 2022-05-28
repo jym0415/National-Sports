@@ -17,6 +17,9 @@
             width: 13rem;
             transform: translate(15%, -112%);
         } 
+        img{
+            width: 85%;
+        }
     }
     .ft_wr{
         @media(max-width:767px){
@@ -284,6 +287,9 @@
             .swiper-container{
                 .swiper-wrapper{
                     .swiper-slide.minjislide{
+                        @media(max-width:457px){
+                            padding: 0 5%;
+                        }
                         img{
                             height: 100%;
                             border-radius: 15px;
@@ -601,7 +607,7 @@
     line-height: 1.4em;
     list-style: none;
 }
-#way{
+#wayway{
     height: 100vh;
     .national{
         p{

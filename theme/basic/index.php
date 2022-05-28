@@ -38,7 +38,7 @@ include_once(G5_THEME_PATH.'/head.php');
 </div>
 
 <!-- 오시는길 -->
-<div id="way" class="pb-5">
+<div id="way">
     <div class="hjinner m-auto pb-3 pb-md-5">
         <div class="mapWrap row mx-0">
             <div class="makercolor d-flex justify-content-center w-100 position-relative d-flex d-md-none">
@@ -47,7 +47,7 @@ include_once(G5_THEME_PATH.'/head.php');
             </div>
             <div id="map" style="width:100%;height:400px;"class="mapleft col-12 col-md-6 d-none d-md-flex">
             </div>
-            <div class="mapText ft_company col-12 col-md-6 d-flex justify-content-center align-items-center pt-3 pt-md-0">
+            <div class="mapText ft_company col-12 col-md-6 d-flex justify-content-center align-items-center pt-3 pt-md-0 mb-5 pb-5 mb-md-0 pb-md-0">
                 <?php echo latest ('company','companyInfo',1,100)?>
             </div>
         </div>

@@ -11,7 +11,7 @@ $thumb_height = 250;
 <!-- 갤러리 스와이퍼 #gallery -->
 <div class="hjinner m-auto py-5">
     <div class="py-5 my-md-5 mb-5">
-        <div class="dailySub py-5 my-md-5 mb-5 position-relative">
+        <div class="dailySub my-md-5 mb-5 position-relative">
             <p class="text-left py-5"><?php echo $bo_subject?></p>
             <p class="gallery position-absolute my-5">GALLERY</p>
         </div>
