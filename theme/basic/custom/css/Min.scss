@@ -109,6 +109,7 @@
                     font-size: 1.6rem;
                     font-family: 'nexM';
                     height: 100px;
+                    max-width: 215px;
                     @media(max-width:992px){
                         height: 50px;
                     }
@@ -318,9 +319,12 @@
             }
         }
         .youT{
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             letter-spacing: 0.15rem;
             text-indent: 0.15rem;
+            @media(max-width: 426px){
+                font-size: 0.9rem;
+            }
             .ycontent{
                 line-height: 2rem;
             }
@@ -345,11 +349,14 @@
     .mapWrap{
         .mapText{
             p{
-                font-size: 1.2rem;
+                font-size: 1.1rem;
                 line-height: 2rem;
                 letter-spacing: 0.15rem;
                 text-indent: 0.15rem;
                 word-wrap: break-word;
+                @media(max-width: 426px){
+                    font-size: 0.9rem;
+                }
             }
         }
     }
@@ -601,6 +608,9 @@
             font-size: 5rem;
             line-height: 10rem;
             word-break: keep-all;
+            @media(max-width:426px){
+                font-size: 2.2rem;
+            }
         }
     }
     .mapmap{

@@ -127,6 +127,7 @@
   font-size: 1.6rem;
   font-family: 'nexM';
   height: 100px;
+  max-width: 215px;
 }
 
 @media (max-width: 992px) {
@@ -443,9 +444,15 @@
 }
 
 #youtube .youWrap .youT {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   letter-spacing: 0.15rem;
   text-indent: 0.15rem;
+}
+
+@media (max-width: 426px) {
+  #youtube .youWrap .youT {
+    font-size: 0.9rem;
+  }
 }
 
 #youtube .youWrap .youT .ycontent {
@@ -467,11 +474,17 @@
 }
 
 #way .mapWrap .mapText p {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   line-height: 2rem;
   letter-spacing: 0.15rem;
   text-indent: 0.15rem;
   word-wrap: break-word;
+}
+
+@media (max-width: 426px) {
+  #way .mapWrap .mapText p {
+    font-size: 0.9rem;
+  }
 }
 
 #map {
@@ -781,6 +794,12 @@
   word-break: keep-all;
 }
 
+@media (max-width: 426px) {
+  #way .national p {
+    font-size: 2.2rem;
+  }
+}
+
 #way .mapmap .adressbox .adMaker p {
   line-height: 3.5rem;
   font-size: 2.5rem;
@@ -813,3 +832,4 @@
 #way .mapmap .adressbox .adress .adleft {
   color: #333;
 }
+/*# sourceMappingURL=Min.css.map */

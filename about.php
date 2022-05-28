@@ -41,15 +41,15 @@ include_once(G5_THEME_PATH.'/head.php');
 <div id="way">
     <div class="hjinner mx-0">
         <div class="national mb-5 pb-5">
-            <p class="mb-sm-5 pb-sm-5">오시는길</p>
+            <p class="mb-sm-5 pb-sm-5">위치안내</p>
         </div>
         <div class="mapmap"> 
             <div class="adressbox row align-items-center">
                 <div class="adMaker col-12 col-lg-6 position-relative">
                     <a href="https://map.kakao.com/link/to/내셔널스포츠,37.8078663,127.079215" class="">
                         <img src="/joy/theme/basic/custom/img/maker.png" alt="">
+                        <p class="navi px-3 position-absolute">kakao Navi</p>
                     </a>
-                    <p class="navi px-3 position-absolute">kakao Navi</p>
                 </div>
                 <div class="adress col-12 col-lg-6 mt-3 mt-lg-0">
                     <div class="row justify-content-around my-3">
@@ -60,11 +60,11 @@ include_once(G5_THEME_PATH.'/head.php');
                         <p class="adleft text-left col-3 d-none d-lg-flex">전화번호</p>
                         <p class="text-center text-lg-left col-9">010-7563-2519</p>
                     </div>
-                    <div class="row justify-content-around my-3">
+                    <!-- <div class="row justify-content-around my-3">
                         <p class="adleft text-left col-3 d-none d-lg-flex">대중교통</p>
                         <p class="text-center text-lg-left col-9">지하철 2, 4, 5호선 동대문역사문화공원역<br/>
                             2, 4호선 5번 출구, 5호선 6번 출구</p>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             
